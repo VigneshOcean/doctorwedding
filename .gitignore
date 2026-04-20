@@ -1,0 +1,21 @@
+# Database files
+*.sql
+*.db
+
+# Log files
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temp/test files
+login/test_*.php
+test_*.php
+
+# IDE files
+.vscode/
+.idea/
+
+# Compiled files
+*.cache

@@ -1,0 +1,21 @@
+﻿Checking the two Sridevis found earlier...
+Array
+(
+    [id] => 3173
+    [username] => HM277027
+    [profile_id] => HM6598515
+    [name] => Sridevi
+    [age] => 42
+    [gender] => female
+)
+
+Array
+(
+    [id] => 27832
+    [username] => HM758965
+    [profile_id] => 
+    [name] => Sridevi
+    [age] => 33
+    [gender] => female
+)
+

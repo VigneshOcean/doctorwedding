@@ -1,0 +1,63 @@
+
+
+# BEGIN cPanel-generated php ini directives, do not edit
+# Manual editing of this file may result in unexpected behavior.
+# To make changes to this file, use the cPanel MultiPHP INI Editor (Home >> Software >> MultiPHP INI Editor)
+# For more information, read our documentation (https://go.cpanel.net/EA4ModifyINI)
+<IfModule php5_module>
+   php_flag asp_tags On
+   php_flag display_errors On
+   php_value max_execution_time 180
+   php_value max_input_time 180
+   php_value max_input_vars 1000
+   php_value memory_limit 2048M
+   php_value post_max_size 64M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/cpanel/php/sessions/ea-php56"
+   php_value upload_max_filesize 64M
+   php_flag zlib.output_compression On
+</IfModule>
+<IfModule lsapi_module>
+   php_flag asp_tags On
+   php_flag display_errors On
+   php_value max_execution_time 180
+   php_value max_input_time 180
+   php_value max_input_vars 1000
+   php_value memory_limit 2048M
+   php_value post_max_size 64M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/cpanel/php/sessions/ea-php56"
+   php_value upload_max_filesize 64M
+   php_flag zlib.output_compression On
+</IfModule>
+# END cPanel-generated php ini directives, do not edit
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php82” package as the default “PHP” programming language.
+# <IfModule mime_module>
+#   AddHandler application/x-httpd-ea-php82 .php .php8 .phtml
+# </IfModule>
+# php -- END cPanel-generated handler, do not edit
+
+# ========================
+# ADVANCED MVC ROUTING (MOD_REWRITE)
+# ========================
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Prevent accessing hidden directories and files like .env or .git
+    RewriteCond %{SCRIPT_FILENAME} -d
+    RewriteCond %{SCRIPT_FILENAME} -f
+    RewriteRule "(^|/)\." - [F]
+
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Don't try routing if it's an existing file or folder
+    # We allow the router's legacy file fallback to handle real old PHP files if needed,
+    # or just let apache serve it straight. Let's let apache serve existing files.
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Redirect all other requests to Front Controller (index.php)
+    RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>

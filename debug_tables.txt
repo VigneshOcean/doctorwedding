@@ -1,0 +1,15 @@
+﻿Tables in database:
+admin
+caste
+contact
+education
+getcontact_history
+likes
+marriage_notification
+message
+news
+plans
+register
+subcaste
+validity_history
+wallet_history

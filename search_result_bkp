@@ -1,0 +1,614 @@
+<?php 
+include("include/connect.php");
+error_reporting(0);
+session_start();
+if(isset($_POST['submit']))
+{
+$command=$_POST['command'];
+$gender=$_POST['gender'];
+$from_age=$_POST['age1'];
+$to_age=$_POST['age2'];
+$caste=$_POST['caste'];
+$photo=$_POST['photo'];
+$education=$_POST['education'];
+$_SESSION['gender']=$gender;
+$_SESSION['from_age']=$from_age;
+$_SESSION['to_age']=$to_age;
+$_SESSION['caste']=$caste;
+
+$_SESSION['education']=$education;
+$_SESSION['command']=$command;
+$_SESSION['photo']=$photo;
+}
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<?php include("include/title.php"); ?>
+<script type="text/javascript" src="js/index_js.js"></script>
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<link type="text/css" rel="stylesheet" href="css/header-footer.css" />
+<link type="text/css" rel="stylesheet" href="css/common.css" />
+<!--<script type="text/javascript" src="fancybox/jquery.fancybox-1.3.0.pack.js"></script>-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+</head>
+<body class="back">
+<style>
+        
+         
+        /* dialog div must be hidden */
+        #basicModal{
+            display:none;
+        }
+        </style><strong></strong>
+<style type="text/css">
+.paginate {
+font-family:Arial, Helvetica, sans-serif;
+padding: 3px;
+margin: 3px;
+}
+.paginate a {
+	padding:2px 5px 2px 5px;
+	margin:2px;
+	border:1px solid #999;
+	text-decoration:none;
+	color: #0099FF;
+}
+.paginate a:hover, .paginate a:active {
+	border: 1px solid #999;
+	color: #3300CC;
+}
+.paginate span.current {
+    margin: 2px;
+	padding: 2px 5px 2px 5px;
+border: 1px solid #999;
+font-weight: bold;
+background-color: #999;
+color: #FFF;
+}
+.paginate span.disabled {
+padding:2px 5px 2px 5px;
+margin:2px;
+border:1px solid #eee;
+color:#DDD;
+}
+.searching_jo
+{
+  background: none repeat scroll 0 0 #FFFFCC;
+    border: 1px solid #006699;
+    border-radius: 10px 10px 10px 10px;
+    margin-bottom: 5px;
+    margin-left: 38px;
+    padding: 5px;
+    width: 813px;
+
+}
+</style>
+
+
+<link href="extension/Highslides/css/highslides.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="extension/Highslides/highslide-with-html.js"></script>
+
+    <script type="text/javascript" src="extension/Highslides/highslide_manage.js"></script>
+
+    <script type="text/javascript">
+
+        hs.graphicsDir = 'extension/Highslides/graphics/';
+
+        hs.outlineType = 'rounded-white';
+
+        hs.outlineWhileAnimating = true;
+
+</script>
+
+<script  type="text/javascript">
+$(document).ready(function () {
+agelimit('F');
+})
+</script>
+	<div id="body"><!--body id start-->
+<?php include("include/header.php"); ?>
+<br />
+<div class="plr">
+<?php include("include/menu.php"); ?>
+	<p class="cb"></p>
+	
+	<br />
+<div class="heading pb5px bdrB mb2px">
+<h1>Advance Search</h1>
+</div>
+<p class="tree">&bull;<a href="index.php">Home</a>&bull; Advance Search</p>
+<br />
+
+
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+
+<tr valign="top">
+<td>
+<p class="refine_bg2 large b p5px15px">Quick Search</p>
+<p class="cb"></p>
+<div class="p5px bgfbfff8 bdrbed563">
+<form action="search_result.php" method="post" name="topsearch">
+<input type="hidden" name="command" id="command" value="search_profile" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+<tr valign="top">
+<td class="p5px10px" width="28%"><p class="mb5px">Looking for</p>
+<select class="input w75" name="gender" onChange="agelimit(this.value);">
+	<option value="female">Bride </option>
+	<option value="male">Groom </option>
+</select>
+</td>
+<td width="28%" class="p5px10px"><p class="mb5px">Age</p>
+<select class="input vam w33" name="age1" id="age1">
+<?php
+for($i=18;$i<=60;$i++)
+{
+?>
+<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+<?php
+}
+?>
+</select>
+to
+<select class="input vam w33" name="age2" id="age2">
+<?php
+for($i=18;$i<=60;$i++)
+{
+?>
+<option value="<?php echo $i; ?>"  <?php if($i==40) { ?>selected<?php } ?> ><?php echo $i; ?></option>
+<?php
+}
+?></select></td>
+<td class="p5px10px"><p class="mb5px">Education</p>
+<select class="input w66" name="education" id="education">
+<option value="">Select</option>
+<?php 
+$kal=mysqli_query($con,"select * from education where temp_id=1 order by id desc");
+while($kal11=mysqli_fetch_array($kal))
+{
+?>
+<option value="<?php echo $kal11['education']; ?>"><?php echo $kal11['education']; ?></option>
+<?php
+}
+?>
+</select></td>
+</tr>
+
+<tr valign="top">
+<td class="p5px10px"><p class="mb5px">Caste</p>
+<select class="input w66" name="caste" id="caste" onchange="getcity(this.value);">
+<option value="">Select</option>
+<?php
+$man=mysqli_query($con,"select * from caste where temp_id=1 order by caste asc");
+while($man1=mysqli_fetch_array($man))
+ {
+ ?>
+<option value="<?php echo $man1['id']; ?>"><?php echo ucwords($man1['caste']); ?></option>
+<?php
+}
+?>
+</select>
+
+</td>
+
+<td class="p5px10px" width="28%"><p class="mb5px">Photo</p>
+<input name="photo" type="radio" value="0"/> Without photo 
+<input class="vam" name="photo" type="radio" value="1"  >With photo
+<input class="vam" name="photo" type="radio" value="2"  checked="checked"  >All
+
+</td>
+<td class="p5px10px"><p class="mb5px"></p>
+<br />
+<input type="submit" name="submit" id="submit" class="bt" value="Search Profiles" style='background: url("images/bg.png") no-repeat scroll 0 -960px transparent;
+    border: 0 none; cursor:pointer; color: #FFFFFF; font-weight: bold; height: 25px; margin-bottom: 8px; outline: medium none; width: 120px;' />
+</td>
+
+</tr>
+
+
+
+</table>
+</form>
+
+
+
+</div>
+<br />
+
+
+</td>
+<td width="220" class="pl15px"></td>
+</tr>
+</table>
+
+
+
+
+
+
+<?php
+if(isset($_SESSION['command']))
+{
+$gender=$_SESSION['gender'];
+$from_age=$_SESSION['from_age'];
+$to_age=$_SESSION['to_age'];
+$caste=$_SESSION['caste'];
+$subcaste='';
+$education=$_SESSION['education'];
+$command=$_SESSION['command'];
+$photo=$_SESSION['photo'];
+if($caste=='' && $subcaste=='' && $education=='')
+{
+$aa=" where gender='$gender' and  age>='$from_age' and age<='$to_age' and status='1'";
+}
+if($caste!='' && $subcaste=='' && $education=='')
+{
+$aa=" where gender='$gender' and  age>='$from_age' and age<='$to_age'  and religion='$caste' and status='1'";
+}
+if($caste=='' && $subcaste!='' && $education=='')
+{
+$aa=" where gender='$gender' and  age>='$from_age' and age<='$to_age'  and caste='$subcaste' and status='1'";
+}
+if($caste=='' && $subcaste=='' && $education!='')
+{
+$aa=" where gender='$gender' and  age>='$from_age' and age<='$to_age'  and education like '%$education%' and status='1'";
+}
+if($caste!='' && $subcaste!='' && $education=='')
+{
+$aa=" where gender='$gender' and  age>='$from_age' and age<='$to_age' and religion='$caste' and caste='$subcaste' and status='1'";
+}
+if($caste!='' && $subcaste=='' && $education!='')
+{
+$aa=" where gender='$gender' and  age>='$from_age' and age<='$to_age' and religion='$caste' and education like '%$education%' and status='1'";
+}
+if($caste=='' && $subcaste!='' && $education!='')
+{
+$aa=" where gender='$gender' and  age>='$from_age' and age<='$to_age' and caste='$subcaste' and education like '%$education%' and status='1'";
+}
+if($caste!='' && $subcaste!='' && $education!='')
+{
+$aa=" where gender='$gender' and  age>='$from_age' and age<='$to_age' and religion='$caste' and caste='$subcaste' and education like '%$education%' and status='1'";
+}
+
+if(isset($photo) && $photo!='')
+{
+ if($photo==0)
+ {
+   $aa.=" and uploadedfile='' ";
+ }
+ if($photo==1)
+ {
+   $aa.=" and uploadedfile!='' ";
+ }
+}
+
+ $tableName="register";
+   $targetpage = "search_result.php"; 	
+	$limit = 5; 
+	//echo "SELECT COUNT(*) as num FROM $tableName";
+	//echo "SELECT COUNT(*) as num FROM $tableName ORDER BY id DESC";
+	$query = "SELECT COUNT(*) as num FROM $tableName ".$aa;
+	$total_pages = mysqli_fetch_array(mysqli_query($con, $query));
+	//print_r($total_pages);
+	$total_pages = $total_pages[num];
+	
+	//echo $total_pages;
+	$stages = 3;
+	$page = mysqli_escape_string($_GET['page']);
+	//echo $page;
+	if($page)
+	{
+		$start = ($page - 1) * $limit; 
+		//echo $start;
+	}
+	else
+	{
+		$start = 0;	
+		}	
+	
+    // Get page data
+	//echo "SELECT * FROM $tableName ".$aa." order by id desc LIMIT $start, $limit";
+	$query1 = "SELECT * FROM $tableName ".$aa." order by id desc LIMIT $start, $limit";
+	$result = mysqli_query($con,$query1);
+	
+	// Initial page num setup
+	if ($page == 0){$page = 1;}
+	$prev = $page - 1;	
+	$next = $page + 1;							
+	$lastpage = ceil($total_pages/$limit);		
+	$LastPagem1 = $lastpage - 1;					
+	
+	
+	$paginate = '';
+	if($lastpage > 1)
+	{	
+    $paginate .= "<div class='paginate'>";
+        if ($page > 1)
+		{
+			$query1 = "SELECT * FROM $tableName  ".$aa." order by id desc  LIMIT $start, $limit";
+				$result = mysqli_query($con,$query1);
+			$paginate.= "<a href='$targetpage?page=$prev'>previous</a>";
+		}else{
+			$paginate.= "<span class='disabled'>previous</span>";	}
+			
+
+		
+		// Pages	
+		if ($lastpage < 7 + ($stages * 2))	// Not enough pages to breaking it up
+		{	
+			for ($counter = 1; $counter <= $lastpage; $counter++)
+			{
+			//echo $counter;
+				if ($counter == $page)
+				{
+					$paginate.= "<span class='current'>$counter</span>";
+				}else{
+				$query1 = "SELECT * FROM $tableName  ".$aa." order by id desc  LIMIT $start, $limit";
+				$result = mysqli_query($con,$query1);
+					$paginate.= "<a href='$targetpage?page=$counter'>$counter</a>";}					
+			}
+		}
+		elseif($lastpage > 5 + ($stages * 2))	// Enough pages to hide a few?
+		{
+			// Beginning only hide later pages
+			if($page < 1 + ($stages * 2))		
+			{
+				for ($counter = 1; $counter < 4 + ($stages * 2); $counter++)
+				{
+					if ($counter == $page){
+						$paginate.= "<span class='current'>$counter</span>";
+					}else{
+					
+						$paginate.= "<a href='$targetpage?page=$counter'>$counter</a>";}					
+				}
+				$paginate.= "...";
+				$paginate.= "<a href='$targetpage?page=$LastPagem1'>$LastPagem1</a>";
+				$paginate.= "<a href='$targetpage?page=$lastpage'>$lastpage</a>";		
+			}
+			// Middle hide some front and some back
+			elseif($lastpage - ($stages * 2) > $page && $page > ($stages * 2))
+			{
+				$paginate.= "<a href='$targetpage?page=1'>1</a>";
+				$paginate.= "<a href='$targetpage?page=2'>2</a>";
+				$paginate.= "...";
+				for ($counter = $page - $stages; $counter <= $page + $stages; $counter++)
+				{
+					if ($counter == $page){
+						$paginate.= "<span class='current'>$counter</span>";
+					}else{
+						$paginate.= "<a href='$targetpage?page=$counter'>$counter</a>";}					
+				}
+				$paginate.= "...";
+				$paginate.= "<a href='$targetpage?page=$LastPagem1'>$LastPagem1</a>";
+				$paginate.= "<a href='$targetpage?page=$lastpage'>$lastpage</a>";		
+			}
+			// End only hide early pages
+			else
+			{
+				$paginate.= "<a href='$targetpage?page=1'>1</a>";
+				$paginate.= "<a href='$targetpage?page=2'>2</a>";
+				$paginate.= "...";
+				for ($counter = $lastpage - (2 + ($stages * 2)); $counter <= $lastpage; $counter++)
+				{
+					if ($counter == $page){
+						$paginate.= "<span class='current'>$counter</span>";
+					}else{
+						$paginate.= "<a href='$targetpage?page=$counter'>$counter</a>";}					
+				}
+			}
+		}
+					
+		// Next
+		if ($page < $counter - 1)
+		{ 
+		$query1 = "SELECT * FROM $tableName  ".$aa." order by id desc  LIMIT $start, $limit";
+				$result = mysqli_query($con,$query1);
+		
+			$paginate.= "<a href='$targetpage?page=$next'>next</a>";
+		}else{
+			$paginate.= "<span class='disabled'>next</span>";
+			}
+			
+		$paginate.= "</div>";		
+	
+	
+}
+ //echo $total_pages.' Results';
+ // pagination
+ echo $paginate;
+ ?>
+ <span style="margin-left:1%; float:right;"><?php echo $total_pages; ?> Profiles Found</span>
+ <br />
+ <ul>
+<div id="accordion">	
+<?php
+$i=1;
+
+if(mysqli_num_rows($result)>0)
+{
+while($usprod=mysqli_fetch_array($result))
+{
+$id=$usprod['id'];
+$caste1=$usprod['religion'];
+$man=mysqli_query($con,"select * from caste where id='$caste1'");
+$man11=mysqli_fetch_array($man);
+$subcaste11=$usprod['caste'];
+$man112=mysqli_query($con,"select * from subcaste where id='$subcaste11'");
+$man111=mysqli_fetch_array($man112);
+?>
+            
+<table width="100%" style="border:#006699 solid 1px; margin-top:10px;">
+  
+  <tr>
+ 
+  <td width="20%" height="33" align="right"><span style="color:#0033FF; font-weight:bold; font-size:14px;">Name</span></td>
+  <td width="1%">:</td>
+  <td width="28%"><span style="color:#FF0000; font-size:14px;"><?php echo  ucwords($usprod['name']); ?></span></td>
+  <td width="22%" align="right"><span style="color:#0033FF; font-weight:bold; font-size:14px;">UserId</span></td>
+  <td width="1%">:</td>
+   <td width="28%"><span style="color:#FF0000; font-size:14px;"><?php echo  ucwords($usprod['username']); ?></span></td>
+  </tr>
+  <tr>
+  <td height="34" align="right"><span style="color:#0033FF; font-weight:bold; font-size:14px;">Date of Birth---Age</span></td>
+  <td>:</td>
+  <td><span style="color:#FF0000; font-size:14px;"><?php echo  $usprod['dob']; ?>---<?php echo  $usprod['age']; ?></span></td>
+  <td align="right"><span style="color:#0033FF; font-weight:bold; font-size:14px;">Time of Birth</span></td>
+  <td>:</td>
+   <td><span style="color:#FF0000; font-size:14px;"><?php echo $usprod['tob']; ?></span></td>
+  </tr>
+  
+  <tr>
+  <td height="34" align="right"><span style="color:#0033FF; font-weight:bold; font-size:14px;">Caste</span></td>
+  <td>:</td>
+  <td><span style="color:#FF0000; font-size:14px;"><?php echo ucwords($man11['caste']); ?></span></td>
+  <td align="right"><span style="color:#0033FF; font-weight:bold; font-size:14px;">Sub Caste</span></td>
+  <td>:</td>
+   <td><span style="color:#FF0000; font-size:14px;"><?php echo ucwords($man111['subcaste']); ?></span></td>
+  </tr>
+  <tr>
+  <td height="32" align="right"><span style="color:#0033FF; font-weight:bold; font-size:14px;">Star</span></td>
+  <td>:</td>
+  <td><span style="color:#FF0000; font-size:14px;"><?php echo  ucwords($usprod['star']); ?></span></td>
+  <td align="right"><span style="color:#0033FF; font-weight:bold; font-size:14px;">Moonsign</span></td>
+  <td>:</td>
+   <td><span style="color:#FF0000; font-size:14px;"><?php echo  ucwords($usprod['moonsign']); ?></span></td>
+  </tr>
+  
+  <tr>
+  <td height="30" align="right"><span style="color:#0033FF; font-weight:bold; font-size:14px;">Job Details</span></td>
+  <td>:</td>
+  <td><span style="color:#FF0000; font-size:14px;"><?php echo  ucwords($usprod['job']); ?></span></td>
+  <td align="right"><span style="color:#0033FF; font-weight:bold; font-size:14px;">Salary</span></td>
+  <td>:</td>
+   <td><span style="color:#FF0000; font-size:14px;"><?php echo  ucwords($usprod['salary']); ?></span></td>
+  </tr>
+  
+  
+  <tr>
+  <td colspan="6" align="center">
+<!-- <a  href="full_view.php?userid=<?php echo $usprod['id'];?>" onClick="return hs.htmlExpand(this, { objectType: 'ajax'} )"><button class="btn btn-minier btn-yellow"  style='background: url("images/bg.png") no-repeat scroll 0 -960px transparent;
+    border: 0 none; cursor:pointer; color: #FFFFFF; font-weight: bold; height: 25px; margin-bottom: 8px; outline: medium none; width: 120px;'>view more..</button></a>-->
+    
+<input type='button' class="btn btn-minier btn-yellow showDialog"  style='background: url("images/bg.png") no-repeat scroll 0 -960px transparent;
+    border: 0 none; cursor:pointer; color: #FFFFFF; font-weight: bold; height: 25px; margin-bottom: 8px; outline: medium none; width: 120px;' value='view more..' id='showDialog' name="<?php echo $usprod['id'];?>" />
+    <img src="images/loading.gif" id="imgLoader" style="display:none;" class="imgLoader" />
+    
+    </td>
+  </tr>
+  
+  
+  
+  </table> 
+            
+            
+            
+            
+
+<?php
+}
+}
+?>
+</div>
+</ul>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <?php
+
+}
+?>
+
+
+
+
+
+
+
+</div>
+<?php include("include/footer.php"); ?>
+</div>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-16625285-7']);
+_gaq.push(['_setDomainName', '.matrimonialsindia.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<link rel="stylesheet" href="jquery-ui.css" />
+<!-- include the jquery library -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ 
+<!-- include the jquery ui library -->
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script>
+// show the dialog on click of a button
+$( ".showDialog" ).click(function(){
+ var user_id=this.name;
+  $(".ui-dialog").css( "left","10%" );
+ //$(".ui-dialog").removeAttr( 'style' );
+ //$(".ui-dialog").addClass("customclass");
+    /* here you can specify the url */
+    var url = "sample.php?user_id="+user_id;
+     
+    /* container of the content loaded from a url */
+    var tag = $("<div></div>");
+     
+   // console.log("url: " + this.id);
+      $(this).next(".imgLoader").show();
+    /* show the image loader */
+   // $('.imgLoader').show();
+    $.ajax({
+        url: url,
+        success: function( data ) {
+         $(".ui-dialog").css( "left","10%" );
+		 
+		 $('body').css('overflow','hidden');
+		 
+		 
+		 // $(".ui-dialog").addClass("customclass");
+            tag.html(data).dialog({			
+			close: function(event, ui) {
+            $('body').css('overflow','scroll');
+        },
+			resizable: false,
+                modal: true,
+                title: "Profile details",
+                width: 900,
+                height: 500,
+				draggable: false
+            }).dialog('open');
+ 
+            /* hide the image loader */
+            $('.imgLoader').hide();
+			
+          //  console.log("success!");
+        }
+    });
+     
+});
+</script>
+<style>
+.customclass { top: 10%;   width: 80%; left: 11%; }
+</style>
+ </body>
+
+</html>
