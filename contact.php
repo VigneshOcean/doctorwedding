@@ -63,7 +63,7 @@
         </div>
     </div>
 
-    <div class="row g-5">
+    <div class="row g-5 justify-content-center">
         <!-- Form and Video Column -->
         <div class="col-lg-7">
             <div class="video-wrapper">

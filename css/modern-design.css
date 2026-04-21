@@ -8,13 +8,25 @@ body {
     font-family: 'Inter', Arial, sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1 {
     font-family: 'Playfair Display', serif;
+    color: #1b2e1b;
+}
+
+h1 span,
+h2 span,
+h3 span {
+    color: #07642f;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 30px;
 }
 
 /* Header Styling */
@@ -38,7 +50,14 @@ h6 {
 }
 
 .crtlogo {
-    height: 60px;
+    height: 105px;
+    width: auto;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.05));
+}
+
+.crtlogo:hover {
+    transform: scale(1.03);
 }
 
 .navlinks {
@@ -155,7 +174,7 @@ h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.1) 70%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 40%, rgba(255, 255, 255, 0) 100%);
     z-index: 1;
 }
 
@@ -168,22 +187,73 @@ h6 {
 }
 
 .hero-text-container h1 {
-    font-size: 54px;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    font-size: 68px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    text-shadow: none;
+    color: #1b2e1b;
 }
 
 .hero-text-container h1 span {
-    color: #5aab2a;
+    color: #07642f;
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 700;
 }
 
 .hero-text-container p {
-    font-size: 19px;
+    font-size: 22px;
     line-height: 1.6;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
-    opacity: 0.95;
+    color: #4b5563;
+    max-width: 500px;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+/* News Banner Card - Modernized */
+.news-banner-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    position: relative;
+    border-left: 6px solid #07642f;
+}
+
+.news-banner-card h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #07642f;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.news-content-box {
+    background: #f8fcf5;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.news-banner-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #1b2e1b;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.news-banner-card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 0;
 }
 
 /* Background Image */
@@ -211,22 +281,18 @@ h6 {
 /* Form Card (Common for Search & Login) */
 .register-form,
 .login-banner-form {
-    width: 360px;
+    width: 380px;
     flex: 1 1 auto;
-    /* Allow growth to match heights */
-    padding: 25px 30px;
-    /* More compact padding */
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 24px;
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+    padding: 15px 20px;
+    background: #ffffff;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
     min-height: 100%;
-    /* Fill the flex container height */
 }
+
 
 .login-banner-form {
     position: relative;
@@ -253,13 +319,13 @@ h6 {
 
 .login-banner-form .login-header-group {
     text-align: center;
-    margin-bottom: 25px;
-    padding-top: 5px;
+    margin-bottom: 5px;
+    padding-top: 0;
 }
 
 .login-banner-form h2 {
-    font-size: 26px;
-    margin-bottom: 5px;
+    font-size: 24px;
+    margin-bottom: 2px;
 }
 
 .login-banner-form .login-subtitle {
@@ -298,7 +364,7 @@ h6 {
     background: #fff;
     overflow: hidden;
     transition: all 0.3s ease;
-    height: 46px;
+    height: 42px;
     align-items: center;
 }
 
@@ -375,19 +441,20 @@ h6 {
 .form-row {
     display: flex;
     flex-direction: column;
-    gap: 4px;
-    /* Tight space between label and input */
+    gap: 3px;
+    width: 100%;
+    margin-bottom: 8px;
 }
 
 /* Inputs & Select */
 .register-form select,
 .register-form input {
-    padding: 4px 10px;
-    height: 32px;
-    border-radius: 6px;
+    padding: 6px 12px;
+    height: 40px;
+    border-radius: 8px;
     border: 1px solid #e0e0e0;
-    background: rgba(255, 255, 255, 0.95);
-    font-size: 12px;
+    background: #f9f9f9;
+    font-size: 14px;
     font-family: 'Inter', sans-serif;
     color: #333;
     width: 100%;
@@ -396,19 +463,14 @@ h6 {
     line-height: 1;
 }
 
-/* Form Row for Search Layout */
-.form-row {
-    width: 100%;
-}
-
 .form-row.d-flex {
     width: 100%;
+    flex-direction: row;
 }
 
 .form-row.d-flex>select {
     width: calc(50% - 4px);
-    height: 32px;
-    /* Account for gap */
+    height: 40px;
 }
 
 /* input focus */
@@ -428,22 +490,19 @@ h6 {
 .banner-btn {
     margin-top: auto !important;
     width: 100%;
-    height: 40px;
-    /* Reduced to standard 40px height */
+    height: 42px;
     padding: 0 15px;
-    background: linear-gradient(135deg, #07642f, #5aab2a);
+    background: linear-gradient(90deg, #1b732d 0%, #46a139 100%);
     border: none;
-    border-radius: 8px;
-    /* Slightly smaller radius for smaller button */
+    border-radius: 12px;
     color: white !important;
-    font-size: 14px;
-    /* Standard font size */
-    font-weight: 700;
+    font-size: 15px;
+    font-weight: 600;
     font-family: 'Inter', sans-serif;
     letter-spacing: 0.5px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(104, 159, 56, 0.2);
+    box-shadow: 0 4px 15px rgba(7, 100, 47, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -451,9 +510,9 @@ h6 {
 }
 
 .banner-btn:hover {
-    background: linear-gradient(135deg, #558b2f, #4a9020);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(104, 159, 56, 0.35);
+    background: linear-gradient(90deg, #46a139 0%, #1b732d 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(7, 100, 47, 0.35);
     color: white !important;
 }
 
@@ -476,11 +535,11 @@ h6 {
     font-size: 42px;
     font-weight: 600;
     margin-top: 10px;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 
 .feature-card-tittle h2 span {
-    color: #5aab2a;
+    color: #07642f;
     text-decoration: none;
 }
 
@@ -596,11 +655,11 @@ h6 {
     font-size: 40px;
     font-weight: 600;
     color: #1b2e1b;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .plan-heading span {
-    color: #6fae3d;
+    color: #07642f;
 }
 
 
@@ -653,7 +712,7 @@ h6 {
     right: -20px;
     width: 40px;
     height: 40px;
-    background: #6fae3d;
+    background: #07642f;
     border-radius: 50%;
     transform: scale(1);
     transform-origin: 50% 50%;
@@ -766,8 +825,8 @@ h6 {
 
 .plan-card button {
     background: white;
-    color: #6fae3d;
-    border: 2px solid #6fae3d;
+    color: #07642f;
+    border: 2px solid #07642f;
     padding: 12px 30px;
     border-radius: 30px;
     font-size: 15px;
@@ -781,7 +840,7 @@ h6 {
 /* Button hover */
 
 /* .plan-card button:hover {
-    background: #6fae3d;
+    background: #07642f;
     color: white;
     box-shadow: 0 6px 20px rgba(111, 174, 61, 0.35);
     transform: translateY(-3px);
@@ -793,7 +852,7 @@ h6 {
 /* ============================= */
 
 .platinum {
-    border: 2px solid #6fae3d;
+    border: 2px solid #07642f;
     transform: scale(1.05);
 }
 
@@ -861,7 +920,7 @@ h6 {
 }
 
 .video-heading span {
-    color: #5aab2a;
+    color: #07642f;
 }
 
 .content-box p {
@@ -1018,8 +1077,9 @@ h6 {
 }
 
 .main-title span {
-    color: #5aab2a;
+    color: #07642f;
     display: inline-block;
+    font-style: italic;
 }
 
 .main-title span::after {
@@ -1089,7 +1149,7 @@ h6 {
 
 .stat-icon {
     background: #e8f5e9;
-    color: #5aab2a;
+    color: #07642f;
     width: 55px;
     height: 55px;
     display: flex;
@@ -1326,7 +1386,7 @@ h6 {
 }
 
 .screen-btn {
-    background: linear-gradient(90deg, #6abf2e, #4a8c1c);
+    background: linear-gradient(90deg, #07642f, #1b732d);
     color: #fff;
     font-size: 9px;
     font-weight: 600;
@@ -1483,7 +1543,7 @@ h6 {
 .about-us-banner .aboutus-child {
     position: absolute;
     left: 80px;
-    top: 50%;
+    top: 75%;
     transform: translateY(-50%);
     max-width: 550px;
     z-index: 2;
@@ -1493,8 +1553,34 @@ h6 {
 
 
 /* About Us Page banner content height set*/
+.about-us-banner {
+    position: relative;
+    width: 100%;
+    min-height: 350px;
+    background-image: url('../image/about us banner image.svg');
+    background-size: cover;
+    background-position: center 15%;
+    display: flex;
+    align-items: center;
+    padding-bottom: 0;
+}
+
+.about-us-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+    z-index: 1;
+}
+
 .aboutus-child {
-    height: 600px
+    position: relative;
+    z-index: 2;
+    padding-left: 80px;
+    width: 100%;
 }
 
 /* About Us Page banner content*/
@@ -1526,31 +1612,29 @@ h6 {
 /* text content */
 .about-us-heading {
     position: relative;
-    max-width: 500px;
-    top: 50%;
-    transform: translateY(-50%);
+    max-width: 600px;
 }
 
 .about-us-heading h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 54px;
-    font-weight: 700;
-    line-height: 1.2;
+    font-size: 58px;
+    font-weight: 800;
+    line-height: 1.1;
     margin-bottom: 20px;
     color: #ffffff;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .about-us-heading h1 span {
-    color: #5aab2a;
+    color: #07642f;
+    font-style: italic;
 }
 
 .about-us-heading p {
-    font-size: 19px;
+    font-size: 20px;
     line-height: 1.6;
     color: #ffffff;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
-    opacity: 0.95;
+    max-width: 550px;
+    margin-top: 15px;
+    margin-bottom: 0;
 }
 
 /* About Us Page Our Story section content*/
@@ -1578,7 +1662,7 @@ h6 {
 }
 
 .our-story-heading span {
-    color: #5fae3e;
+    color: #07642f;
     /* your site green color */
 }
 
@@ -1629,7 +1713,7 @@ h6 {
 
 .aboutus-mission-section h2 span,
 .why-choose-us-section h2 span {
-    color: #6fae3d;
+    color: #07642f;
 }
 
 
@@ -1657,7 +1741,7 @@ h6 {
 .mission-section-image img,
 .why-choose-us-image img {
     width: 100%;
-    border: 1px solid #5fae3e;
+    border: 1px solid #07642f;
     border-radius: 8px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
     transition: transform 0.5s ease;
@@ -1701,7 +1785,7 @@ h6 {
 .about-stats-box h2 {
     font-size: 32px;
     font-weight: 700;
-    color: #5fae3e;
+    color: #07642f;
     letter-spacing: 0.5px;
     margin-bottom: 5px;
 }
@@ -1774,7 +1858,7 @@ h6 {
     font-size: 14px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #6fae3d;
+    color: #07642f;
     margin-bottom: 10px;
     font-weight: 500;
 }
@@ -1789,7 +1873,7 @@ h6 {
 
 /* Highlight word */
 .search-title span {
-    color: #6fae3d;
+    color: #07642f;
 }
 
 /* Subtitle / description */
@@ -1830,7 +1914,7 @@ h6 {
 
 .payment-plan-card:hover {
     transform: translateY(-10px);
-    border-color: #6fae3d;
+    border-color: #07642f;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -1847,7 +1931,7 @@ h6 {
 .payment-plan-card h2 {
     font-size: 32px;
     margin-bottom: 25px;
-    color: #6fae3d;
+    color: #07642f;
 }
 
 /* FEATURES */
@@ -1864,16 +1948,16 @@ h6 {
     margin-top: 20px;
     padding: 10px 24px;
     border-radius: 25px;
-    border: 2px solid #6fae3d;
+    border: 2px solid #07642f;
     background: transparent;
-    color: #6fae3d;
+    color: #07642f;
     font-weight: 600;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .payment-plan-card button:hover {
-    background: #6fae3d;
+    background: #07642f;
     color: white;
 }
 
@@ -1909,7 +1993,7 @@ h6 {
 
 .payment-form-group input:focus {
     outline: none;
-    border-color: #6fae3d;
+    border-color: #07642f;
 }
 
 /* ============================= */
@@ -1965,7 +2049,7 @@ h6 {
 
 /* Highlight word */
 .contact-us-heading h1 span {
-    color: #6fae3d;
+    color: #07642f;
 }
 
 
@@ -2002,11 +2086,11 @@ h6 {
 }
 
 .map h2 span {
-    color: #6fae3d;
+    color: #07642f;
 }
 
 .contact-us-details h3 {
-    color: #6fae3d;
+    color: #07642f;
     font-size: 20px;
     margin-top: 15px;
 }
@@ -2719,7 +2803,7 @@ body {
 }
 
 .payment-user-form .btn {
-    background: linear-gradient(135deg, #07642f, #5aab2a);
+    background: linear-gradient(135deg, #07642f, #07642f);
     border: none;
     color: white;
     font-size: 15px;
@@ -3245,7 +3329,7 @@ body {
 }
 
 .profile-dropdown .profile-nav-btn {
-    background: linear-gradient(135deg, #07642f, #5aab2a);
+    background: linear-gradient(135deg, #07642f, #07642f);
     color: #fff !important;
     font-weight: 700;
     font-size: 15px;
@@ -3305,7 +3389,7 @@ body {
 #editBtn,
 .register-form button,
 .btn-photo {
-    background: linear-gradient(135deg, #07642f, #5aab2a) !important;
+    background: linear-gradient(135deg, #07642f, #07642f) !important;
     border: none !important;
     color: white !important;
     font-weight: 700 !important;
@@ -3460,7 +3544,7 @@ body {
 .proceed-btn {
     width: 100%;
     padding: 15px;
-    background: linear-gradient(135deg, #07642f, #5aab2a);
+    background: linear-gradient(135deg, #07642f, #07642f);
     color: #fff;
     border: none;
     border-radius: 12px;
@@ -3938,7 +4022,7 @@ body {
 }
 
 .btn-join-now {
-    background: linear-gradient(135deg, #689f38, #5aab2a) !important;
+    background: linear-gradient(135deg, #07642f, #1b732d) !important;
     color: #ffffff !important;
     height: 38px;
     /* Compact height for strip */
@@ -4154,7 +4238,7 @@ body {
     }
 
     .btn-join-now {
-        background: linear-gradient(135deg, #689f38, #5aab2a) !important;
+        background: linear-gradient(135deg, #07642f, #1b732d) !important;
         color: #ffffff !important;
         height: 38px;
         /* Compact height for strip */
@@ -4316,7 +4400,7 @@ body {
             background-size: cover !important;
             background-position: center top !important;
             z-index: 1 !important;
-            background-image: url('../image/WhatsApp Image 2026-03-03 at 10.45.50 PM.jpeg') !important;
+            background-image: url('../image/homepagebanner.svg') !important;
         }
 
         .hero-overlay {
@@ -4326,14 +4410,14 @@ body {
             left: 0 !important;
             width: 100% !important;
             height: 100% !important;
-            background: rgba(0, 0, 0, 0.6) !important;
+            background: rgba(255, 255, 255, 0.85) !important;
             z-index: 2 !important;
         }
 
         .hero-text-container {
             position: relative !important;
             z-index: 10 !important;
-            color: white !important;
+            color: #1b2e1b !important;
             margin-left: 0 !important;
             margin-right: 0 !important;
             text-align: center !important;
@@ -4342,15 +4426,16 @@ body {
         }
 
         .hero-text-container h1 {
-            color: white !important;
-            font-size: 28px !important;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
+            color: #1b2e1b !important;
+            font-size: 32px !important;
+            text-shadow: none !important;
         }
 
         .hero-text-container p {
-            color: rgba(255, 255, 255, 0.9) !important;
-            font-size: 14px !important;
-            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5) !important;
+            color: #4b5563 !important;
+            font-size: 15px !important;
+            text-shadow: none !important;
+            font-weight: 500 !important;
         }
 
         .hero-forms-wrapper {
@@ -4368,16 +4453,19 @@ body {
 
         .register-form,
         .login-banner-form {
-            background: rgba(255, 255, 255, 0.95) !important;
-            backdrop-filter: blur(10px) !important;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important;
+            background: #ffffff !important;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
             width: 100% !important;
             max-width: 100% !important;
-            padding: 20px !important;
+            padding: 25px !important;
             border-radius: 16px !important;
+            border: none !important;
         }
 
         /* Navbar Customization */
+        .crtlogo {
+            height: 75px !important;
+        }
         .navbar-collapse {
             background: white !important;
             padding: 15px !important;
@@ -4513,6 +4601,7 @@ body {
         }
 
         .footer-logo {
+            height: 70px !important;
             margin-left: auto !important;
             margin-right: auto !important;
             display: block !important;
@@ -4533,7 +4622,7 @@ body {
         .about-us-banner .aboutus-child {
             position: relative !important;
             left: 0 !important;
-            top: 50% !important;
+            top: 80% !important;
             transform: translateY(-50%) !important;
             max-width: 100% !important;
             padding: 0 20px !important;

@@ -56,8 +56,12 @@
         color: #68ad00 !important;
     }
     .footer-logo {
-        height: 60px;
+        height: 90px;
         width: auto;
+        transition: transform 0.3s ease;
+    }
+    .footer-logo:hover {
+        transform: scale(1.05);
     }
 </style>
 
@@ -66,7 +70,7 @@
         <div class="row g-4 footer-container">
             <!-- Column 1: Logo & Social -->
             <div class="col-lg-4 col-md-6 footer-box">
-                <img src="image/newlogo.svg" class="footer-logo mb-4" alt="Footer Logo">
+                <img src="image/footerlogo.svg" class="footer-logo mb-4" alt="Footer Logo">
                 <p style="color: #ccc !important; font-size: 15px; line-height: 1.7; margin-bottom: 20px;">
                     Trusted matrimony service helping lakhs of people find their perfect life partner across India.
                 </p>
