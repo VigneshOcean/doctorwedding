@@ -17,12 +17,14 @@ class Database {
             $this->host = "localhost";
             $this->user = "root";
             $this->pass = "";
+            $this->dbname = "matrimony";
         } else {
             $this->host = "localhost";
-            $this->user = "hmmattdk_testuser";
-            $this->pass = "Micandmac@12";
+            $this->user = "doctorweddihm_doctorwed";
+            $this->pass = "zGhJ@]&168W^w;tK";
+            $this->dbname = "doctorweddihm_doctorwedding";
         }
-        $this->dbname = "matrimony";
+       
 
         try {
             $dsn = "mysql:host=" . $this->host . ";dbname=" . $this->dbname . ";charset=utf8mb4";

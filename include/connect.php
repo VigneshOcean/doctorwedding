@@ -10,12 +10,13 @@ if ($_SERVER['HTTP_HOST'] == 'localhost' || $_SERVER['REMOTE_ADDR'] == '127.0.0.
     $servername = "localhost";
     $username = "root";
     $password = "";
+    $dbname = "matrimony";
 } else {
     $servername = "localhost";
-    $username = "hmmattdk_testuser";
-    $password = "Micandmac@12";
+    $username = "doctorweddihm_doctorwed";
+    $password = "zGhJ@]&168W^w;tK";
+    $dbname = "doctorweddihm_doctorwedding";
 }
-$dbname = "matrimony";
 
 // Direct connect with database
 $con = mysqli_connect($servername, $username, $password, $dbname);
