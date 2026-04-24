@@ -12,7 +12,7 @@ else
 <!DOCTYPE html>
 <html lang="en">
 <head><meta charset="utf-8" />
-<title>Happy Marriage:Contact details</title>
+<title>Doctor Wedding:Contact details</title>
 <meta name="description" content="Common form elements and layouts" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -102,7 +102,7 @@ $count_e=mysqli_num_rows($e);
  <th>Job Details</th>
 <th>Salary</th> 
 <th>Get Contact On</th>
-<th>Wallet Depit (₹)</th>
+<th>Wallet Depit (&#8377;)</th>
 <!--<th>Send Interest</th>
 <th>Delete </th>-->
 </tr>
@@ -137,7 +137,7 @@ $row_e11=mysqli_fetch_array($e11);
 <td><?php echo ucwords($row_iu['job']); ?></td>
 <td><?php echo ucwords($row_iu['salary']); ?></td>
 <td><?php echo $row_e['c_date']; ?></td>
-<td><?php echo $row_e['cost']; ?> (₹)</td>
+<td><?php echo $row_e['cost']; ?> (&#8377;)</td>
 <!--<td align="center">
 <?php
 if($send_interest=='yes')

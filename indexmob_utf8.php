@@ -1,4 +1,4 @@
-﻿<?php 
+<?php 
 include("include/connect.php");
 ?>
 <script type="text/javascript">
@@ -186,7 +186,7 @@ nav.main-nav ul li a {
             <li><a href="#" class="fa fa-twitter"></a></li>
             <li><a href="#" class="fa fa-google-plus"></a></li>
           </ul>
-          <ul class="authentication pt10"><img alt="Phone " width="19" height="15" class="vam" src="images/icon_receiver.gif"> Call Us : <b>044 4386 3901</b>
+          <ul class="authentication pt10"><img alt="Phone " width="19" height="15" class="vam" src="images/icon_receiver.gif"> Call Us : <b>7338821446</b>
           </ul>
         </div>
       </div>
@@ -444,9 +444,9 @@ $row_e122=mysqli_fetch_array($e122);
 <div class="col-md-3 col-sm-6">
   <h5>Contact details</h5>
   <ul class="contact-info has-bg-image contain" data-bg-image="images/footer-map-bg.png">
-    <li> <i class="fa fa-mobile"></i> <a href="tel:#">+91 90940 10909 / 7299234446</a> </li>
-    <li> <i class="fa fa-phone"></i> <a href="tel:#">044 4386 3901</a> </li>
-    <li> <i class="fa fa-envelope"></i> <a href="mailto:#">hmlucky03@gmail.com</a> </li>
+    <li> <i class="fa fa-mobile"></i> <a href="tel:#">7338821446</a> </li>
+    <li> <i class="fa fa-phone"></i> <a href="tel:#">7338821446</a> </li>
+    <li> <i class="fa fa-envelope"></i> <a href="mailto:#">doctorwedding2026@gmail.com</a> </li>
   </ul>
 </div>
           <div class="col-md-3 col-sm-6">
@@ -469,7 +469,7 @@ $row_e122=mysqli_fetch_array($e122);
         <ul class="links">
           <li><a href="#">Web Design by Ocean Softwares</a></li>
         </ul>
-        <p>Copyright &copy; 2018 <a href="#">www.hmmatrimony.com - only for Adidravidar</a>. All Rights reserved.</p>
+        <p>Copyright &copy; 2018 <a href="#">www.doctorwedding.com - only for Adidravidar</a>. All Rights reserved.</p>
       </div>
     </div>
     <!-- end .uou-block-4a -->
@@ -518,3 +518,6 @@ $(document).ready(function(){
 }</style>
 </body>
 </html>
+
+
+

@@ -86,7 +86,7 @@ class ApiController {
     }
     protected function sendSms($number, $message, $templateId) {
         $encodedMessage = urlencode($message);
-        $url = "http://site.ping4sms.com/api/httpapi?username=hmmatrimony&password=success&sender=HMMATR&route=2&number=" . $number . "&sms=" . $encodedMessage . "&templateid=" . $templateId;
+        $url = "http://site.ping4sms.com/api/httpapi?username=DOCTORimony&password=success&sender=DOCTOR&route=2&number=" . $number . "&sms=" . $encodedMessage . "&templateid=" . $templateId;
         
         try {
             $curl = curl_init();
@@ -101,4 +101,5 @@ class ApiController {
         }
     }
 }
+
 

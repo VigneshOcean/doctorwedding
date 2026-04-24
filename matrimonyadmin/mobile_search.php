@@ -24,7 +24,7 @@ echo "<script language='javascript'>window.location='mobile_search_result.php';<
 <!DOCTYPE html>
 <html lang="en">
 <head><meta charset="utf-8" />
-<title>Happy Marriage:Mobile no Search</title>
+<title>Doctor Wedding:Mobile no Search</title>
 <meta name="description" content="Common form elements and layouts" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />

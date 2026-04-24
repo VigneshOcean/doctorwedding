@@ -86,7 +86,7 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Gateway - Adidravidar Matrimony</title>
+    <title>Payment Gateway - Doctor Wedding</title>
     <link rel="stylesheet" href="css/modern-design.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
@@ -123,7 +123,7 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
             </div>
             <div class="col-4 text-end">
                 <?php if($plan_id != 7) { ?>
-                    <h3 class="fw-bold mb-0 text-dark" style="font-family: Arial, sans-serif;">₹<?php echo $amount_plan; ?></h3>
+                    <h3 class="fw-bold mb-0 text-dark" style="font-family: Arial, sans-serif;">&#8377;<?php echo $amount_plan; ?></h3>
                 <?php } ?>
             </div>
         </div>
@@ -137,8 +137,8 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
         <input type="hidden" name="key" value="<?php echo $MERCHANT_KEY ?>" />
         <input type="hidden" name="hash" value="<?php echo $hash ?>"/>
         <input type="hidden" name="txnid" value="<?php echo $txnid ?>" />
-        <input type="hidden" name="furl" value="https://hmmatrimony.com/index.php?failure" />
-        <input type="hidden" name="surl" value="https://hmmatrimony.com/index.php?sucess" />
+        <input type="hidden" name="furl" value="https://doctorwedding.com/index.php?failure" />
+        <input type="hidden" name="surl" value="https://doctorwedding.com/index.php?sucess" />
         <input type="hidden" name="service_provider" value="payu_paisa" />
         <input type="hidden" name="productinfo" value="<?php echo $name_plan; ?>" />
 
@@ -149,21 +149,21 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
                 <div class="form-check radio-group-modern mb-2">
                     <input class="form-check-input" type="radio" name="amount" id="amt1000" value="1000" required onclick="setAmt(1000)">
                     <label class="form-check-label w-100" for="amt1000">
-                        ₹1,000 <span class="text-muted float-end small">15 Days - 20 Contacts</span>
+                        &#8377;1,000 <span class="text-muted float-end small">15 Days - 20 Contacts</span>
                     </label>
                 </div>
 
                 <div class="form-check radio-group-modern mb-2">
                     <input class="form-check-input" type="radio" name="amount" id="amt2000" value="2000" onclick="setAmt(2000)">
                     <label class="form-check-label w-100" for="amt2000">
-                        ₹2,000 <span class="text-muted float-end small">6 Month - Only Renewal</span>
+                        &#8377;2,000 <span class="text-muted float-end small">6 Month - Only Renewal</span>
                     </label>
                 </div>
 
                 <div class="form-check radio-group-modern">
                     <input class="form-check-input" type="radio" name="amount" id="amt3000" value="3000" onclick="setAmt(3000)">
                     <label class="form-check-label w-100" for="amt3000">
-                        ₹3,000 <span class="text-muted float-end small">6 Month - New Registration</span>
+                        &#8377;3,000 <span class="text-muted float-end small">6 Month - New Registration</span>
                     </label>
                 </div>
             </div>
@@ -241,3 +241,4 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
 <?php include("include/footer.php"); ?>
 </body>
 </html>
+

@@ -53,7 +53,7 @@ h2 {
     height: 105px;
     width: auto;
     transition: all 0.3s ease;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.05));
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.05));
 }
 
 .crtlogo:hover {
@@ -72,7 +72,7 @@ h2 {
 .navlinks a {
     text-decoration: none;
     /* remove underline */
-    color: #000;    
+    color: #000;
     /* black text */
     font-size: 16px;
     font-weight: 600;
@@ -274,8 +274,7 @@ h2 {
     display: flex;
     gap: 20px;
     z-index: 2;
-    align-items: stretch;
-    /* This ensures equal height columns */
+    align-items: flex-start;
 }
 
 /* Form Card (Common for Search & Login) */
@@ -395,9 +394,8 @@ h2 {
 }
 
 .banner-footer {
-    padding-top: 10px;
-    min-height: 55px;
-    /* More compact height while keeping buttons aligned */
+    padding-top: 8px;
+    min-height: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -488,7 +486,7 @@ h2 {
 
 /* Banner & Master Buttons Consolidation */
 .banner-btn {
-    margin-top: auto !important;
+    margin-top: 15px;
     width: 100%;
     height: 42px;
     padding: 0 15px;
@@ -912,6 +910,11 @@ h2 {
     animation-range: entry 0% cover 30%;
 }
 
+
+.video-heading span {
+    color: #07642f;
+}
+
 .content-box h2 {
     font-size: 36px;
     font-weight: 700;
@@ -919,9 +922,6 @@ h2 {
     color: #222;
 }
 
-.video-heading span {
-    color: #07642f;
-}
 
 .content-box p {
     font-size: 17px;
@@ -1534,9 +1534,9 @@ h2 {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 600px; /* Only cover text area */
     height: 100%;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.1) 60%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0) 100%) !important;
     z-index: 1;
 }
 
@@ -1570,9 +1570,9 @@ h2 {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 600px;
     height: 100%;
-    background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0) 100%) !important;
     z-index: 1;
 }
 
@@ -1620,7 +1620,7 @@ h2 {
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 20px;
-    color: #ffffff;
+    color: #1b2e1b;
 }
 
 .about-us-heading h1 span {
@@ -1631,7 +1631,7 @@ h2 {
 .about-us-heading p {
     font-size: 20px;
     line-height: 1.6;
-    color: #ffffff;
+    color: #2c3e50;
     max-width: 550px;
     margin-top: 15px;
     margin-bottom: 0;
@@ -4466,6 +4466,7 @@ body {
         .crtlogo {
             height: 75px !important;
         }
+
         .navbar-collapse {
             background: white !important;
             padding: 15px !important;

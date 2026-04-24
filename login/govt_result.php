@@ -22,7 +22,7 @@ $mygender=$row_uu['gender'];
 <!DOCTYPE html>
 <html lang="en">
 <head><meta charset="utf-8" />
-<title>Happy Marriage:Search Result</title>
+<title>Doctor Wedding:Search Result</title>
 <meta name="description" content="Common form elements and layouts" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -883,7 +883,7 @@ else
                  <li><b> 1500</b>(6 Month - Unlimited Contacts - Only Renewal)</li>
                 <li><b> 2000</b>(6 Month - Unlimited Contacts - New Registartion) </li>
           </ul>
-            <h2> <a   class="btn btn-success" href="https://hmmatrimony.com/paynow.php?plan_id=7">
+            <h2> <a   class="btn btn-success" href="https://doctorwedding.com/paynow.php?plan_id=7">
 <i class="icon-money"></i>Add Balance</a></h2> 
         </div>
         <div class="modal-footer">
@@ -914,3 +914,4 @@ else
 <?php
 }
 ?>
+

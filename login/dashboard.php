@@ -111,8 +111,8 @@ $username=$ar1['name'];
 							</div>
 							<div style="   display: none;">
 <span style="color:#009933; font-weight:bold;">	<?php echo $username; ?> 
- திருமணம் முடிந்தது என �
-றிவிக்க :</span>
+ à®¤à®¿à®°à¯à®®à®£à®®à¯ à®®à¯à®Ÿà®¿à®¨à¯à®¤à®¤à¯ à®Žà®© à®
+à®±à®¿à®µà®¿à®•à¯à®• :</span>
 <a  onclick="marriage_notify(<?php echo $id; ?>)" class="btn btn-danger" href="javascript:void(0)" >
 <i class="icon-exclamation-sign"></i>Notify us</a>
 </div>
@@ -122,7 +122,7 @@ $username=$ar1['name'];
 								<!-- PAGE CONTENT BEGINS -->
 <div class="alert alert-block alert-success">
 <button type="button" class="close" data-dismiss="alert"><i class="icon-remove"></i></button>
-<i class="icon-ok green"></i>Welcome to<strong class="green">  Adi Dravidar Matrimony</strong> !
+<i class="icon-ok green"></i>Welcome to<strong class="green">  Doctor Wedding</strong> !
 <br>
 <?php
 if(isset($riw_ghj['valid_for']) && $riw_ghj['valid_for']!='')
@@ -142,11 +142,11 @@ if(isset($riw_ghj['valid_for']) && $riw_ghj['valid_for']!='')
     <div class="infobox infobox-green" style="width: 500px; height:auto;">
   <div class="infobox-data">
     <div class="infobox-content" style="color:red; font-weight:bold;">
-      <span class="blinking">முக்கிய �
-றிவிப்பு :  </span><br/>
-        நமக்கு வேறு எங்கும் கிளைகள் கிடையாது.<br/>
-        கொரியர் �
-னுப்பி பணம் பெற முயன்றால் ஏமாற வேண்டாம் <br/>      
+      <span class="blinking">à®®à¯à®•à¯à®•à®¿à®¯ à®
+à®±à®¿à®µà®¿à®ªà¯à®ªà¯ :  </span><br/>
+        à®¨à®®à®•à¯à®•à¯ à®µà¯‡à®±à¯ à®Žà®™à¯à®•à¯à®®à¯ à®•à®¿à®³à¯ˆà®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®¯à®¾à®¤à¯.<br/>
+        à®•à¯Šà®°à®¿à®¯à®°à¯ à®
+à®©à¯à®ªà¯à®ªà®¿ à®ªà®£à®®à¯ à®ªà¯†à®± à®®à¯à®¯à®©à¯à®±à®¾à®²à¯ à®à®®à®¾à®± à®µà¯‡à®£à¯à®Ÿà®¾à®®à¯ <br/>      
     For Security reason, We have introduced wallet for your profile. Contact admin for upgrading your wallet balance.
     </div>
   </div>
@@ -270,11 +270,11 @@ $count_a3=mysqli_num_rows($a3);
 <!--<div class="infobox infobox-green" style="width: 500px; height:auto;">-->
 <!--  <div class="infobox-data">-->
 <!--    <div class="infobox-content" style="color:red; font-weight:bold;">-->
-<!--      <span class="blinking">�
-ன்பான வாடிக்கையாளர்களே !!</span><br/>-->
-<!--        01-07-2019 �
-ன்று முதல் பதிவு கட்டணம் உயரவிருப்பதால்<br/>-->
-<!--        தற்போது இருக்கும் கட்டணத்திலே Registration மற்றும் Renewal  செய்துகொள்ளுமாறு கேட்டுக்கொள்கிறோம்  <br/> -->
+<!--      <span class="blinking">à®
+à®©à¯à®ªà®¾à®© à®µà®¾à®Ÿà®¿à®•à¯à®•à¯ˆà®¯à®¾à®³à®°à¯à®•à®³à¯‡ !!</span><br/>-->
+<!--        01-07-2019 à®
+à®©à¯à®±à¯ à®®à¯à®¤à®²à¯ à®ªà®¤à®¿à®µà¯ à®•à®Ÿà¯à®Ÿà®£à®®à¯ à®‰à®¯à®°à®µà®¿à®°à¯à®ªà¯à®ªà®¤à®¾à®²à¯<br/>-->
+<!--        à®¤à®±à¯à®ªà¯‹à®¤à¯ à®‡à®°à¯à®•à¯à®•à¯à®®à¯ à®•à®Ÿà¯à®Ÿà®£à®¤à¯à®¤à®¿à®²à¯‡ Registration à®®à®±à¯à®±à¯à®®à¯ Renewal  à®šà¯†à®¯à¯à®¤à¯à®•à¯Šà®³à¯à®³à¯à®®à®¾à®±à¯ à®•à¯‡à®Ÿà¯à®Ÿà¯à®•à¯à®•à¯Šà®³à¯à®•à®¿à®±à¯‹à®®à¯  <br/> -->
 <!--    </div>-->
 <!--  <table width='100%' border="1" style="color:#006600 !important;">-->
 <!--      <tr><td width='35%' style='font-weight:bold;'>Existing Plan</td><td  width='35%' style='font-weight:bold;'>New Plan</td><td  width='30%' style='font-weight:bold;'>Renewal</td></tr>-->
@@ -284,8 +284,8 @@ $count_a3=mysqli_num_rows($a3);
   
 <!--   <div class="infobox-data">-->
 <!--    <div class="infobox-content" style="color:red; font-weight:bold;">-->
-<!--        தொடர்புக்கு : 044 4386 3901<br/>-->
-<!--        Renewal தொடர்பான சந்தேகங்களுக்கு தொடர்க : 97108 40909-->
+<!--        à®¤à¯Šà®Ÿà®°à¯à®ªà¯à®•à¯à®•à¯ : 7338821446<br/>-->
+<!--        Renewal à®¤à¯Šà®Ÿà®°à¯à®ªà®¾à®© à®šà®¨à¯à®¤à¯‡à®•à®™à¯à®•à®³à¯à®•à¯à®•à¯ à®¤à¯Šà®Ÿà®°à¯à®• : 97108 40909-->
 <!--      </div>-->
 <!--  </div> -->
   
@@ -310,7 +310,7 @@ $count_a3=mysqli_num_rows($a3);
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;">
- <p>   	<?php echo $username; ?> உங்களுக்கு திருமணம் முடித்தால் தெரியப்படுத்தவும்
+ <p>   	<?php echo $username; ?> à®‰à®™à¯à®•à®³à¯à®•à¯à®•à¯ à®¤à®¿à®°à¯à®®à®£à®®à¯ à®®à¯à®Ÿà®¿à®¤à¯à®¤à®¾à®²à¯ à®¤à¯†à®°à®¿à®¯à®ªà¯à®ªà®Ÿà¯à®¤à¯à®¤à®µà¯à®®à¯
  </p><a  onclick="marriage_notify(<?php echo $id; ?>)" class="btn btn-danger" href="javascript:void(0)" >
 <i class="icon-exclamation-sign"></i>Notify us</a>
 </div>
@@ -784,3 +784,4 @@ $("#fancybox-manual-a").click(function() {
 	</body>
 </html>
 <?php } ?>
+

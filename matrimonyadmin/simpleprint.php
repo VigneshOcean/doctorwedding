@@ -13,7 +13,7 @@ $usprod=mysqli_fetch_array($prod);
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Adidravidar matrimony [www.hmmatrimony.com]</title>
+<title>Doctor Wedding [www.doctorwedding.com]</title>
 </head>
 <body onload="window.print();">
 <table width="100%" cellpadding="5" cellspacing="5">
@@ -54,7 +54,7 @@ if($horo!='')
 <td  align="right"><span style="color:#0033FF; font-weight:bold; font-size:14px;">Horoscope</span></td>
 <td>:</td>
 <td colspan="4">
-<img src="http://hmmatrimony.com/matrimonyadmin/horo/<?php echo $usprod['horo']; ?>" height="300" width="500" />
+<img src="http://doctorwedding.com/matrimonyadmin/horo/<?php echo $usprod['horo']; ?>" height="300" width="500" />
 </td>
 </tr>
 <?php
@@ -64,3 +64,4 @@ if($horo!='')
 </table>
 </body>
 </html>
+

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms & Conditions - Adidravidar Matrimony</title>
+    <title>Terms & Conditions - Doctor Wedding</title>
     <link rel="stylesheet" href="css/modern-design.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -33,13 +33,13 @@
 <div class="container">
     <div class="page-container">
         <h1 class="section-title">Terms & Conditions</h1>
-        <span class="subtitle">Effective Date: June 2025 | By registering on HM Matrimony, you agree to these Terms and Conditions.</span>
+        <span class="subtitle">Effective Date: June 2025 | By registering on Doctor Wedding, you agree to these Terms and Conditions.</span>
 
         <div class="policy-section">
             <h3><span>1</span> Eligibility</h3>
             <ul class="policy-list">
                 <li>You must be an Indian citizen, aged 18 years or above, and unmarried, divorced, or widowed</li>
-                <li>Registration is exclusively for members of the Adidravidar community</li>
+                <li>Registration is exclusively for members of the community</li>
                 <li>You must provide accurate and truthful information during registration</li>
                 <li>Creating fake, duplicate, or misleading profiles is strictly prohibited</li>
             </ul>
@@ -48,9 +48,9 @@
         <div class="policy-section">
             <h3><span>2</span> Membership Plans</h3>
             <ul class="policy-list">
-                <li><strong>Silver Plan:</strong> ₹3,000 — Valid for 6 Months</li>
-                <li><strong>Gold Plan:</strong> ₹4,000 — Valid for 1 Year</li>
-                <li><strong>Platinum Plan:</strong> ₹7,000 — Valid Until Marriage</li>
+                <li><strong>Silver Plan:</strong> &#8377;3,000 &mdash; Valid for 6 Months</li>
+                <li><strong>Gold Plan:</strong> &#8377;4,000 &mdash; Valid for 1 Year</li>
+                <li><strong>Platinum Plan:</strong> &#8377;7,000 &mdash; Valid Until Marriage</li>
                 <li>Wallet top-up option available for additional services</li>
             </ul>
             <p class="highlight-box">All plans grant access to profile search, match viewing, and contact features within the platform.</p>
@@ -62,14 +62,14 @@
                 <li>Provide genuine information including name, age, education, occupation, and photo</li>
                 <li>Do not misuse contact details of other members for purposes other than matrimony</li>
                 <li>Do not engage in harassment, fraud, or any activity that harms other members</li>
-                <li>Notify HM Matrimony immediately upon successful marriage to deactivate your profile</li>
+                <li>Notify Doctor Wedding immediately upon successful marriage to deactivate your profile</li>
                 <li>Keep your login credentials confidential and do not share your account with others</li>
             </ul>
         </div>
 
         <div class="policy-section">
             <h3><span>4</span> Profile & Content Policy</h3>
-            <p>HM Matrimony reserves the right to review, edit, or remove any profile or photo that contains false information, obscene content, or content that violates community standards. Profiles inactive for more than 6 months after membership expiry may be archived or deleted.</p>
+            <p>Doctor Wedding reserves the right to review, edit, or remove any profile or photo that contains false information, obscene content, or content that violates community standards. Profiles inactive for more than 6 months after membership expiry may be archived or deleted.</p>
         </div>
 
         <div class="policy-section">
@@ -78,18 +78,18 @@
                 <li>All membership fees are to be paid in advance before accessing premium features</li>
                 <li>Payments can be made via the website payment portal or at our registered branch</li>
                 <li>Receipts will be issued for all payments; please retain for your records</li>
-                <li>HM Matrimony is not responsible for payment failures due to third-party banking issues</li>
+                <li>Doctor Wedding is not responsible for payment failures due to third-party banking issues</li>
             </ul>
         </div>
 
         <div class="policy-section">
             <h3><span>6</span> Limitation of Liability</h3>
-            <p>HM Matrimony acts as a platform to connect individuals for matrimonial purposes. We do not verify every detail provided by members and are not responsible for any disputes, misrepresentations, or outcomes arising from matches made through the platform. Members are advised to independently verify profiles before making commitments.</p>
+            <p>Doctor Wedding acts as a platform to connect individuals for matrimonial purposes. We do not verify every detail provided by members and are not responsible for any disputes, misrepresentations, or outcomes arising from matches made through the platform. Members are advised to independently verify profiles before making commitments.</p>
         </div>
 
         <div class="policy-section">
             <h3><span>7</span> Termination</h3>
-            <p>HM Matrimony reserves the right to suspend or permanently terminate any account found to be in violation of these Terms without prior notice. Members found engaging in fraud, harassment, or misuse of the platform will be reported to appropriate authorities.</p>
+            <p>Doctor Wedding reserves the right to suspend or permanently terminate any account found to be in violation of these Terms without prior notice. Members found engaging in fraud, harassment, or misuse of the platform will be reported to appropriate authorities.</p>
         </div>
 
         <div class="policy-section">
@@ -99,7 +99,7 @@
 
         <div class="policy-section">
             <h3><span>9</span> Amendments</h3>
-            <p>HM Matrimony may update these Terms from time to time. Continued use of the platform after changes constitutes your acceptance of the revised Terms.</p>
+            <p>Doctor Wedding may update these Terms from time to time. Continued use of the platform after changes constitutes your acceptance of the revised Terms.</p>
         </div>
     </div>
 </div>
@@ -109,3 +109,4 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+

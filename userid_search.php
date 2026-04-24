@@ -135,7 +135,7 @@ if (isset($_REQUEST['submit']) || isset($_GET['user_id'])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Member ID Search - Adidravidar Matrimony</title>
+    <title>Member ID Search - Doctor Wedding</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
@@ -176,7 +176,7 @@ if (isset($_REQUEST['submit']) || isset($_GET['user_id'])) {
                         <div class="input-group">
                             <span class="input-group-text bg-white border-end-0 rounded-start-4"><i class="bi bi-person-badge text-success"></i></span>
                             <input type="text" name="user_id" class="form-control border-start-0 rounded-end-4" 
-                                   placeholder="Enter ID (e.g. HM123456)" 
+                                   placeholder="Enter ID" 
                                    value="<?php echo isset($_REQUEST['user_id']) ? htmlspecialchars($_REQUEST['user_id']) : ''; ?>" required>
                         </div>
                     </div>

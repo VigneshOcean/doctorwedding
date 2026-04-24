@@ -18,11 +18,11 @@ if($command=="verify")
         $username=$b.$a;
         $s=rand(10000,99999);	
         mysqli_query($con,"update register set otp_status='1',status='1',username='$username',password='$s' where id='$reg_id'");	
-        //$message=urlencode ("Happy Marriage Matrimony - Username:".$username." and Password: ".$s." Kindly use : www.hmmatrimony.com");
-        $message=urlencode ("Thanks for registration with Happy Marriage Matrimony.Username:".$username." and Password: ".$s." -HMMATR");
+        //$message=urlencode ("Doctor Wedding - Username:".$username." and Password: ".$s." Kindly use : www.doctorwedding.com");
+        $message=urlencode ("Thanks for registration with Doctor Wedding.Username:".$username." and Password: ".$s." -DOCTOR");
         $curl = curl_init();
-        //curl_setopt($curl, CURLOPT_URL, "http://bhashsms.com/api/sendmsg.php?user=hmmatrimony&pass=success&sender=HMMATR&priority=ndnd&stype=normal&phone=".$mobile_no."&text=".$message."");
-        curl_setopt($curl, CURLOPT_URL, "http://site.ping4sms.com/api/httpapi?username=hmmatrimony&password=success&sender=HMMATR&route=2&number=".$mobile_no."&sms=".$message."&templateid=1207162823556605196");
+        //curl_setopt($curl, CURLOPT_URL, "http://bhashsms.com/api/sendmsg.php?user=DOCTORimony&pass=success&sender=DOCTOR&priority=ndnd&stype=normal&phone=".$mobile_no."&text=".$message."");
+        curl_setopt($curl, CURLOPT_URL, "http://site.ping4sms.com/api/httpapi?username=DOCTORimony&password=success&sender=DOCTOR&route=2&number=".$mobile_no."&sms=".$message."&templateid=1207162823556605196");
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
         $result = curl_exec($curl);
         curl_close($curl);
@@ -130,15 +130,15 @@ else
         $reg_id = mysqli_insert_id($con);
         if($profile!='admin')
         {
-            //$message=urlencode ("Happy Marriage Matrimony.Your OTP is :".$a." Kindly use : www.hmmatrimony.com");
-            $message=urlencode ("Happy Marriage Matrimony.Your OTP is :".$a." Kindly use : www.hmmatrimony.com -HMMATR");
+            //$message=urlencode ("Doctor Wedding.Your OTP is :".$a." Kindly use : www.doctorwedding.com");
+            $message=urlencode ("Doctor Wedding.Your OTP is :".$a." Kindly use : www.doctorwedding.com -DOCTOR");
             $curl = curl_init();
-            //curl_setopt($curl, CURLOPT_URL, "http://bhashsms.com/api/sendmsg.php?user=hmmatrimony&pass=success&sender=HMMATR&priority=ndnd&stype=normal&phone=".$mobile."&text=".$message.""); 
-            curl_setopt($curl, CURLOPT_URL, "http://site.ping4sms.com/api/httpapi?username=hmmatrimony&password=success&sender=HMMATR&route=2&number=".$mobile."&sms=".$message."&templateid=1207162823560830391");
+            //curl_setopt($curl, CURLOPT_URL, "http://bhashsms.com/api/sendmsg.php?user=DOCTORimony&pass=success&sender=DOCTOR&priority=ndnd&stype=normal&phone=".$mobile."&text=".$message.""); 
+            curl_setopt($curl, CURLOPT_URL, "http://site.ping4sms.com/api/httpapi?username=DOCTORimony&password=success&sender=DOCTOR&route=2&number=".$mobile."&sms=".$message."&templateid=1207162823560830391");
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
             $result = curl_exec($curl);
             curl_close($curl);
-    		 echo "<script type=text/javascript>alert('Thank you for your Registration  with Happy marriage matrimony. We have sent you OTP to Verify Your Mobile number')
+    		 echo "<script type=text/javascript>alert('Thank you for your Registration  with Doctor Wedding. We have sent you OTP to Verify Your Mobile number')
             window.location='verify_mobile.php?mobile_no=".$mobile."&reg_id=".$reg_id."';
             </script>";
         }
@@ -167,3 +167,4 @@ window.location='contact.php'
 </script>";
 }
 ?>
+

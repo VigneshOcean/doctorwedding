@@ -13,7 +13,7 @@ $usprod=mysqli_fetch_array($prod);
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Adidravidar matrimony [www.doctorwedding.com]</title>
+<title>Doctor Wedding [www.doctorwedding.com]</title>
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="./jquery/html2canvas.js">
@@ -64,12 +64,12 @@ a:hover, a:active {
 <table width="100%" cellpadding="5" cellspacing="5">
 <tr>
     <td colspan="6" align="center" style="font-weight: bold; font-size: 20px;">
-        HM Matrimony
+        Doctor Wedding
     </td>
 </tr>
 <tr>
     <td colspan="6" align="center" style="font-size: 16px;">
-        28/49,South usman road,T Nagar,Chennai-600 017 &nbsp;&nbsp;&nbsp;&nbsp; Mobile No      :+91 90940 10909 / 044 4386 3901
+        28/49,South usman road,T Nagar,Chennai-600 017 &nbsp;&nbsp;&nbsp;&nbsp; Mobile No      :7338821446
     </td>
 </tr>
 
@@ -211,7 +211,7 @@ if($horo!='')
 <td  align="right"><span style="color:#0033FF; font-weight:bold; font-size:14px;">Horoscope</span></td>
 <td>:</td>
 <td colspan="4">
-<img src="http://hmmatrimony.com/matrimonyadmin/horo/<?php echo $usprod['horo']; ?>" height="300" width="500" />
+<img src="http://doctorwedding.com/matrimonyadmin/horo/<?php echo $usprod['horo']; ?>" height="300" width="500" />
 </td>
 </tr>
 <?php
@@ -227,7 +227,7 @@ if($uploadedfile!='')
 <td>:</td>
 <td colspan="4">
 <?php if($usprod['uploadedfile']=='') { echo '<span style="color:#FF0000; font-weight:bold;">Picture not found</span>'; } else { ?>
-<img src="http://hmmatrimony.com/profile/<?php echo $usprod['uploadedfile']; ?>" height="300" width="300" />
+<img src="http://doctorwedding.com/profile/<?php echo $usprod['uploadedfile']; ?>" height="300" width="300" />
 <?php } ?>
 </td>
 </tr>
@@ -238,3 +238,6 @@ if($uploadedfile!='')
 </div>
 </body>
 </html>
+
+
+

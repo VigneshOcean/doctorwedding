@@ -14,10 +14,10 @@ $useremail=$b['email'];
 $address=$b['address'];
 
 		
-		$from="hmlucky03@gmail.com";
+		$from="doctorwedding2026@gmail.com";
 	$to = stripslashes($_POST['email']);
     $mime_boundary="==Multipart_Boundary_x".md5(mt_rand())."x";
-    $subject="Contact Details from HAPPY MARRIAGE MATRIMONY"; 
+    $subject="Contact Details from Doctor Wedding"; 
   	$message ='<table width="372"  border="0" cellpadding="0" cellspacing="0" style="border:1px solid; border-color:#0099FF">
  <tr class="fnt">
     <td height="31" colspan="3" bgcolor="#84c8f8" class="fnt" align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:15px; font-weight:bold; color:#000000">Contact Details</td>
@@ -80,3 +80,4 @@ window.close();
 }
 
 ?>
+

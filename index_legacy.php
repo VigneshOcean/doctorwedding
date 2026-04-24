@@ -180,7 +180,7 @@ if (isset($_POST['submit'])) {
             <form class="login-banner-form" method="POST" action="login/logincheck.php" onsubmit="return validlogin();">
                 <input type="hidden" name="command" value="login">
 
-                <div class="login-header-group">
+                <div class="login-header-group mb-3">
                     <h2>Member <span>Login</span></h2>
                     <div class="login-subtitle">Welcome back! Please login to your account</div>
                 </div>
@@ -203,7 +203,7 @@ if (isset($_POST['submit'])) {
                     </div>
                 </div>
 
-                <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="d-flex justify-content-between align-items-center mb-2">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" name="remember_me" id="remember_banner"
                             value="Y" style="width: 15px; height: 15px;">
@@ -214,7 +214,7 @@ if (isset($_POST['submit'])) {
                         Password?</a>
                 </div>
 
-                <button type="submit" class="btn banner-btn">
+                <button type="submit" class="btn banner-btn shadow-sm d-flex">
                     <i class="bi bi-box-arrow-in-right me-2"></i>Log in to Account
                 </button>
 

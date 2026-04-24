@@ -53,7 +53,7 @@
     }
     .contact-details .bi {
         font-size: 18px;
-        color: #68ad00 !important;
+        color: #fff !important;
     }
     .footer-logo {
         height: 90px;
