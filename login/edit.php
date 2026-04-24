@@ -13,7 +13,7 @@ if (!isset($_SESSION['id'])) {
 
 	<head>
 		<meta charset="utf-8" />
-		<title>Happy Marriage:Edit Profile</title>
+		<title>Doctor Wedding:Edit Profile</title>
 		<meta name="description" content="Common form elements and layouts" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />

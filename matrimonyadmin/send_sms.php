@@ -13,7 +13,7 @@ $caste_id=$_REQUEST['caste_id'];
 <!DOCTYPE html>
 <html lang="en">
 <head><meta charset="utf-8" />
-<title>Happy Marriage:Name Search</title>
+<title>Doctor Wedding:Name Search</title>
 <meta name="description" content="Common form elements and layouts" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />

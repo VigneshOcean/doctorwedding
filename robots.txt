@@ -1,4 +1,4 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
 
-Sitemap: https://hmmatrimony.com/sitemap.xml
+Sitemap: https://doctorwedding.com/sitemap.xml

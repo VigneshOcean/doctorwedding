@@ -177,8 +177,8 @@ function numbersonly(e){
       <input type="hidden" name="key" value="<?php echo $MERCHANT_KEY ?>" />
       <input type="hidden" name="hash" value="<?php echo $hash ?>"/>
       <input type="hidden" name="txnid" value="<?php echo $txnid ?>" />
-      <input  type="hidden" name="furl" value="http://hmmatrimony.com/index.php?failure" />
-       <input  type="hidden" name="surl" value="http://hmmatrimony.com/index.php?sucess" />
+      <input  type="hidden" name="furl" value="http://doctorwedding.com/index.php?failure" />
+       <input  type="hidden" name="surl" value="http://doctorwedding.com/index.php?sucess" />
        <input type="hidden" name="service_provider" value="payu_paisa" size="64" />
        <input   type="hidden" name="amount" value="<?php echo $amount_plan; ?>" />
        <input   type="hidden" name="productinfo" value="<?php echo $name_plan; ?>" />

@@ -22,7 +22,7 @@ $mygender=$row_uu['gender'];
 <!DOCTYPE html>
 <html lang="en">
 <head><meta charset="utf-8" />
-<title>Happy Marriage:UserId Search</title>
+<title>Doctor Wedding:UserId Search</title>
 <meta name="description" content="Common form elements and layouts" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -479,7 +479,7 @@ else
 {
 ?>
 <div style="float:left;">
-<span style="color:#009933; font-weight:bold;">விருப்பம் தெரிவிக்க :</span>
+<span style="color:#009933; font-weight:bold;">à®µà®¿à®°à¯à®ªà¯à®ªà®®à¯ à®¤à¯†à®°à®¿à®µà®¿à®•à¯à®• :</span>
 <a class="btn btn-app btn-yellow btn-xs" href="javascript:void(0)" <?php if($valid_string==''){ echo 'title="Upgrade your plan to avail this feature" onClick="noaccess()" ';   } else { ?> onClick="getssts(<?php echo $usprod['id']; ?>)" <?php } ?> ><i class="icon-heart bigger-160"></i>Like</a></div> 
 <?php
 }
@@ -491,8 +491,8 @@ if($count_aa=='0')
 {
 ?>
 <div style="float:right;">
-<span style="color:#009933; font-weight:bold;">திருமணம் முடிந்தது என �
-றிவிக்க :</span>
+<span style="color:#009933; font-weight:bold;">à®¤à®¿à®°à¯à®®à®£à®®à¯ à®®à¯à®Ÿà®¿à®¨à¯à®¤à®¤à¯ à®Žà®© à®
+à®±à®¿à®µà®¿à®•à¯à®• :</span>
 <a  onclick="marriage_notify(<?php echo $id; ?>,<?php echo $pp_id; ?>)" class="btn btn-app btn-danger btn-xs" href="javascript:void(0)" >
 <i class="icon-exclamation-sign"></i>Notify us</a></div>  
 <?php

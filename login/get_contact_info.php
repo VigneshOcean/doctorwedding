@@ -22,9 +22,9 @@ $res=mysqli_query($con,"select * from register where id='$profileid'");
 $row=mysqli_fetch_array($res);
 $name=$row['name'];	
 $clientmobile=$row['mobile'];	
-/*$message=urlencode ("Mr/Miss ".$name.",Your profile has been liked by ".$sendername."(".$username.")-hmmatrimony.com only for adidravidar.Contact:9171113312 -HMMATR");
+/*$message=urlencode ("Mr/Miss ".$name.",Your profile has been liked by ".$sendername."(".$username.")-doctorwedding.com only for adidravidar.Contact:7338821446 -DOCTOR");
 $curl = curl_init();
-curl_setopt($curl, CURLOPT_URL, "http://site.ping4sms.com/api/httpapi?username=hmmatrimony&password=success&sender=HMMATR&route=2&number=".$clientmobile."&sms=".$message."&templateid=1207162823550804186"); 
+curl_setopt($curl, CURLOPT_URL, "http://site.ping4sms.com/api/httpapi?username=DOCTORimony&password=success&sender=DOCTOR&route=2&number=".$clientmobile."&sms=".$message."&templateid=1207162823550804186"); 
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 $result = curl_exec($curl);
 curl_close($curl);*/
@@ -41,3 +41,4 @@ if($s){
 }
 }
 ?>
+

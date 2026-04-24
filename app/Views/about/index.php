@@ -47,7 +47,7 @@
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="mission-section-image">
-                        <img src="image/Our Mission Section.svg" alt="Our Mission">
+                        <img src="image/ourmission.png" alt="Our Mission">
                     </div>
                 </div>
             </div>

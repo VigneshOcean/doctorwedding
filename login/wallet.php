@@ -14,7 +14,7 @@ $row_f=mysqli_fetch_array($f);
 <!DOCTYPE html>
 <html lang="en">
 <head><meta charset="utf-8" />
-<title>Happy Marriage:Wallet</title>
+<title>Doctor Wedding:Wallet</title>
 <meta name="description" content="Static &amp; Dynamic Tables" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -178,8 +178,8 @@ if(isset($walet_validity_mess))
 <i class="icon-remove"></i></button><i class="icon-remove red"></i>
 <strong class="red"><?php if($walet_validity_mess=='0') { echo 'Your Wallet going to Expiry'; } if($walet_validity_mess=='1') {  echo 'Wallet already Expired'; } ?></strong>!</div>
 	<?php } ?>
-<h2> Wallet Balance - <?php if($walet_validity_mess!=1) { echo  $usprod['wallet']; } else { echo 0;} ?> (₹) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a   class="btn btn-success" href="https://hmmatrimony.com/paynow.php?plan_id=7">
+<h2> Wallet Balance - <?php if($walet_validity_mess!=1) { echo  $usprod['wallet']; } else { echo 0;} ?> (&#8377;) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a   class="btn btn-success" href="https://doctorwedding.com/paynow.php?plan_id=7">
 <i class="icon-money"></i>Add Balance</a></h2>
 <table style="font-size:18px;">
 <tr>
@@ -220,7 +220,7 @@ if(isset($walet_validity_mess))
 <thead>
 <tr>
 <th>S.No</th>
-<th>Wallet Amount (₹)</th>
+<th>Wallet Amount (&#8377;)</th>
 <th>Valid From</th>
 <th>Valid To</th>
 <th>Status</th>
@@ -239,7 +239,7 @@ while($row_e=mysqli_fetch_array($e))
 ?>
 <tr>
     <td><?php echo $i; ?></td>
-<td><?php echo $row_e['amount']; ?> (₹)</td>
+<td><?php echo $row_e['amount']; ?> (&#8377;)</td>
 <td><?php echo $row_e['valid_from']; ?></td>
 <td><?php echo $row_e['valid_to']; ?></td>
 <td><?php 
@@ -324,3 +324,4 @@ $i++;
 <?php
 }
 ?>
+

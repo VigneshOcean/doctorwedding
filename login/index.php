@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 		<meta charset="utf-8" />
-		<title>Login Page - Happy Marriage</title>
+		<title>Login Page - Doctor Wedding</title>
 		<meta name="description" content="User login page" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -53,7 +53,7 @@ return true;
 									<span class="red">HappyMarriage </span>
 									<span class="white">Matrimony	</span>
 								</h1>
-								<h4 class="blue">&copy; www.hmmatrimony.com</h4>
+								<h4 class="blue">&copy; www.doctorwedding.com</h4>
 							</div>
 							<div class="space-6"></div>
 							<div class="position-relative">
@@ -221,3 +221,4 @@ return true;
 		</script>
 	</body>
 </html>
+

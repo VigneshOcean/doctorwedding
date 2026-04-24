@@ -5,7 +5,7 @@
 				<i class="icon-heart"></i>
 
 
-				Adi Dravidar Matrimony
+				Doctor Wedding
 
 
 			</small>
@@ -74,7 +74,7 @@
 					<?php if (@$walet_validity_mess != 1) { ?>
 						<span class="badge badge-important"><?php echo $wallet; ?></span>
 					<?php } else { ?>
-						<span class="badge badge-important" style="font-family: Arial, sans-serif;">0 (₹)</span>
+						<span class="badge badge-important" style="font-family: Arial, sans-serif;">0 (&#8377;)</span>
 					<?php } ?>
 				</a>
 
@@ -92,9 +92,9 @@
 									Your Wallet Balance
 								</span>
 								<?php if (@$walet_validity_mess != 1) { ?>
-									<span class="pull-right badge badge-info"><?php echo $wallet; ?> (₹)</span>
+									<span class="pull-right badge badge-info"><?php echo $wallet; ?> (&#8377;)</span>
 								<?php } else { ?>
-									<span class="pull-right badge badge-info">0 (₹)</span>
+									<span class="pull-right badge badge-info">0 (&#8377;)</span>
 								<?php } ?>
 							</div>
 						</a>

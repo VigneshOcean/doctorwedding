@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Member Login - Adidravidar Matrimony</title>
+    <title>Member Login - Doctor Wedding</title>
     <link rel="stylesheet" href="css/modern-design.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <style>
@@ -108,7 +108,11 @@
                 <a href="#" class="small text-muted text-decoration-none">Forgot Password?</a>
             </div>
 
-            <button type="submit" class="btn btn-green">Login to Your Account</button>
+            <div class="text-center">
+                <button type="submit" class="btn banner-btn shadow-sm d-flex mx-auto" style="width: 250px;">
+                    <i class="bi bi-box-arrow-in-right me-2"></i>Login to Your Account
+                </button>
+            </div>
         </form>
 
         <div class="login-footer">

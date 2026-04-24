@@ -12,7 +12,7 @@ $num=mysqli_num_rows($result);
  {
  $pri.="<table width='100%'>
  <tr>
- <td rowspan='5' width='20%'><img src='http://www.hmmatrimony.com/profile/".$row_result['uploadedfile']."' width='200' height='250'/></td>
+ <td rowspan='5' width='20%'><img src='http://www.doctorwedding.com/profile/".$row_result['uploadedfile']."' width='200' height='250'/></td>
  <td width='40%'>".$row_result['username']."</td><td width='40%'>".$row_result['name']."</td></tr>
  <tr><td>".$row_result['dob']." / ".$row_result['tob']."</td><td>".$row_result['edu_det']."</td></tr>
  <tr><td>".$row_result['moonsign']."</td> <td>".$row_result['star']."</td></tr>

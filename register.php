@@ -262,7 +262,7 @@
 											<table style="font-size:15px;" width="100%" border="0" cellpadding="0"
 												cellspacing="0">
 												<tr>
-													<td class="p5px10px">Name/ <font face="Latha" size="-3">பெயர்</font>
+													<td class="p5px10px">Name/ <font face="Latha" size="-3">à®ªà¯†à®¯à®°à¯</font>
 														<span class="star">*</span></td>
 													<td class="p5px b gray">:</td>
 													<td class="p5px10px">
@@ -273,7 +273,7 @@
 													</td>
 												</tr>
 												<tr>
-													<td class="p5px10px">Gender/ <font face="Latha" size="-3">பாலினம்
+													<td class="p5px10px">Gender/ <font face="Latha" size="-3">à®ªà®¾à®²à®¿à®©à®®à¯
 														</font> <span class="star">*</span></td>
 													<td class="p5px b gray">:</td>
 													<td class="p5px10px"><input name="gender_type" type="radio"
@@ -312,7 +312,7 @@
 													</td>
 												</tr>
 												<tr>
-													<td class="p5px10px">DOB/ <font face="Latha" size="-3">பிறந்த நாள்
+													<td class="p5px10px">DOB/ <font face="Latha" size="-3">à®ªà®¿à®±à®¨à¯à®¤ à®¨à®¾à®³à¯
 														</font> <span class="star">*</span></td>
 													<td class="p5px b gray">:</td>
 													<td class="p5px10px">
@@ -323,7 +323,7 @@
 													</td>
 												</tr>
 												<tr>
-													<td class="p5px10px">TOB/ <font face="Latha" size="-3">பிறந்த நேரம்
+													<td class="p5px10px">TOB/ <font face="Latha" size="-3">à®ªà®¿à®±à®¨à¯à®¤ à®¨à¯‡à®°à®®à¯
 														</font>
 													</td>
 													<td class="p5px b gray">:</td>
@@ -428,7 +428,7 @@
 
 												<tr>
 													<td width="35%" class="p5px10px">Star(Nakshatra)/ <font face="Latha"
-															size="-3">நட்சத்திரம்</font>
+															size="-3">à®¨à®Ÿà¯à®šà®¤à¯à®¤à®¿à®°à®®à¯</font>
 													</td>
 													<td class="p5px b gray">:</td>
 													<td class="p5px10px">
@@ -469,7 +469,7 @@
 
 												<tr>
 													<td width="35%" class="p5px10px">Moonsign/ <font face="Latha"
-															size="-3">ராசி்</font>
+															size="-3">à®°à®¾à®šà®¿à¯</font>
 													</td>
 													<td class="p5px b gray">:</td>
 													<td class="p5px10px">
@@ -532,7 +532,7 @@
 												</tr>
 												<tr>
 													<td width="35%" class="p5px10px">Height/ <font face="Latha"
-															size="-3">உயரம்</font>
+															size="-3">à®‰à®¯à®°à®®à¯</font>
 													</td>
 													<td class="p5px b gray">:</td>
 													<td class="p5px10px">
@@ -641,7 +641,7 @@
 												</tr>
 												<tr valign="top">
 													<td width="35%" class="p5px10px">Email/ <font face="Latha"
-															size="-3">மின்னஞ்சல்</font>
+															size="-3">à®®à®¿à®©à¯à®©à®žà¯à®šà®²à¯</font>
 													</td>
 													<td class="p5px b gray" width="5">:</td>
 													<td class="p5px10px"><input type="text" class="input w90"
@@ -670,7 +670,7 @@
 
 												<tr>
 													<td width="35%" class="p5px10px">Education/ <font face="Latha"
-															size="-3">கல்வி</font>
+															size="-3">à®•à®²à¯à®µà®¿</font>
 													</td>
 													<td class="p5px b gray">:</td>
 													<td class="p5px10px">
@@ -701,7 +701,7 @@
 												</tr>
 												<tr>
 													<td width="35%" class="p5px10px">Job/ <font face="Latha" size="-3">
-															வேலை</font>
+															à®µà¯‡à®²à¯ˆ</font>
 													</td>
 													<td class="p5px b gray">:</td>
 													<td class="p5px10px"><input type="text" class="input w90" name="job"
@@ -728,7 +728,7 @@
 												</tr>
 												<tr>
 													<td width="35%" class="p5px10px">Salary/ <font face="Latha"
-															size="-3">சம்பளம்</font>
+															size="-3">à®šà®®à¯à®ªà®³à®®à¯</font>
 													</td>
 													<td class="p5px b gray">:</td>
 													<td class="p5px10px"><input type="text" class="input w90"
@@ -754,7 +754,7 @@
 												</tr>
 												<tr valign="top">
 													<td width="35%" class="p5px10px">Father's Name/ <font face="Latha"
-															size="-3">தந்தை பெயர்</font>
+															size="-3">à®¤à®¨à¯à®¤à¯ˆ à®ªà¯†à®¯à®°à¯</font>
 													</td>
 													<td class="p5px b gray" width="5">:</td>
 													<td class="p5px10px"><input type="text" class="input w90"
@@ -764,7 +764,7 @@
 												</tr>
 												<tr valign="top">
 													<td width="35%" class="p5px10px">Father's Occupation/ <font
-															face="Latha" size="-3">தந்தை பதவி்</font>
+															face="Latha" size="-3">à®¤à®¨à¯à®¤à¯ˆ à®ªà®¤à®µà®¿à¯</font>
 													</td>
 													<td class="p5px b gray" width="5">:</td>
 													<td class="p5px10px"><input type="text" class="input w90"
@@ -783,7 +783,7 @@
 												</tr>
 												<tr valign="top">
 													<td width="35%" class="p5px10px">Mother's Name/ <font face="Latha"
-															size="-3">தாய் பெயர்</font>
+															size="-3">à®¤à®¾à®¯à¯ à®ªà¯†à®¯à®°à¯</font>
 													</td>
 													<td class="p5px b gray" width="5">:</td>
 													<td class="p5px10px"><input type="text" class="input w90"
@@ -793,7 +793,7 @@
 												</tr>
 												<tr valign="top">
 													<td width="35%" class="p5px10px">Mother's Occupation/ <font
-															face="Latha" size="-3">தாய் பதவி்</font>
+															face="Latha" size="-3">à®¤à®¾à®¯à¯ à®ªà®¤à®µà®¿à¯</font>
 													</td>
 													<td class="p5px b gray" width="5">:</td>
 													<td class="p5px10px"><input type="text" class="input w90"
@@ -803,7 +803,7 @@
 												</tr>
 												<tr>
 													<td width="35%" class="p5px10px"> No of Brothers/ <font face="Latha"
-															size="-3">சகோதரர்கள் எண்ணிக்கை்</font>
+															size="-3">à®šà®•à¯‹à®¤à®°à®°à¯à®•à®³à¯ à®Žà®£à¯à®£à®¿à®•à¯à®•à¯ˆà¯</font>
 													</td>
 													<td class="p5px b gray">:</td>
 													<td class="p5px10px">
@@ -822,7 +822,7 @@
 												</tr>
 												<tr>
 													<td width="35%" class="p5px10px">No of Brothers Married/ <font
-															face="Latha" size="-3">திருமணமான சகோதரன் எண்ணிக்கை</font>
+															face="Latha" size="-3">à®¤à®¿à®°à¯à®®à®£à®®à®¾à®© à®šà®•à¯‹à®¤à®°à®©à¯ à®Žà®£à¯à®£à®¿à®•à¯à®•à¯ˆ</font>
 													</td>
 													<td class="p5px b gray">:</td>
 													<td class="p5px10px">
@@ -847,7 +847,7 @@
 												</tr>
 												<tr>
 													<td width="35%" class="p5px10px"> No of Sisters/ <font face="Latha"
-															size="-3">சகோதரிகள் எண்ணிக்கை</font>
+															size="-3">à®šà®•à¯‹à®¤à®°à®¿à®•à®³à¯ à®Žà®£à¯à®£à®¿à®•à¯à®•à¯ˆ</font>
 													</td>
 													<td class="p5px b gray">:</td>
 													<td class="p5px10px">
@@ -866,7 +866,7 @@
 												</tr>
 												<tr>
 													<td width="35%" class="p5px10px">No of Sisters Married/ <font
-															face="Latha" size="-3">திருமணமான சகோதரிகள் எண்ணிக்கை</font>
+															face="Latha" size="-3">à®¤à®¿à®°à¯à®®à®£à®®à®¾à®© à®šà®•à¯‹à®¤à®°à®¿à®•à®³à¯ à®Žà®£à¯à®£à®¿à®•à¯à®•à¯ˆ</font>
 													</td>
 													<td class="p5px b gray">:</td>
 													<td class="p5px10px">
@@ -906,7 +906,7 @@
 
 												<tr valign="top">
 													<td width="35%" class="p5px10px">Expectation/ <font face="Latha"
-															size="-3">எதிர்பார்த்து இருத்தல்</font>
+															size="-3">à®Žà®¤à®¿à®°à¯à®ªà®¾à®°à¯à®¤à¯à®¤à¯ à®‡à®°à¯à®¤à¯à®¤à®²à¯</font>
 													</td>
 													<td class="p5px b gray" width="5">:</td>
 													<td class="p5px10px"><textarea name="expectation" id="expectation"
@@ -962,7 +962,7 @@
 									<tr valign="top">
 										<td class="p20px" style="padding-left:316px;" colspan="2">
 											<p> <input class="vam" type="checkbox" name="terms" id="terms"
-													checked="checked" /> I agree to the Happy Marriage Matrimony <span
+													checked="checked" /> I agree to the Doctor Wedding <span
 													class="red">
 													<a href="#">Terms and Conditions.</a>
 													<!--<a href="javascript:openwin('terms.html', 600, 450);">Terms and Conditions.</a>-->

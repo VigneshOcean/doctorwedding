@@ -22,11 +22,11 @@ $row=mysqli_fetch_array($res);
 $username=$row['username'];	
 $pass=$row['password'];	
 $clientmobile=$row['mobile'];	
-//$message=urlencode ("Thanks for registration with Happy Marriage Matrimony.Username:".$username." and Password: ".$pass);
-$message=urlencode ("Thanks for registration with Happy Marriage Matrimony.Username:".$username." and Password: ".$pass." -HMMATR");
+//$message=urlencode ("Thanks for registration with Doctor Wedding.Username:".$username." and Password: ".$pass);
+$message=urlencode ("Thanks for registration with Doctor Wedding.Username:".$username." and Password: ".$pass." -DOCTOR");
 $curl = curl_init();
-//curl_setopt($curl, CURLOPT_URL, "http://bhashsms.com/api/sendmsg.php?user=hmmatrimony&pass=success&sender=HMMATR&priority=ndnd&stype=normal&phone=".$clientmobile."&text=".$message.""); 
-curl_setopt($curl, CURLOPT_URL, "http://site.ping4sms.com/api/httpapi?username=hmmatrimony&password=success&sender=HMMATR&route=2&number=".$clientmobile."&sms=".$message."&templateid=1207162823556605196");
+//curl_setopt($curl, CURLOPT_URL, "http://bhashsms.com/api/sendmsg.php?user=DOCTORimony&pass=success&sender=DOCTOR&priority=ndnd&stype=normal&phone=".$clientmobile."&text=".$message.""); 
+curl_setopt($curl, CURLOPT_URL, "http://site.ping4sms.com/api/httpapi?username=DOCTORimony&password=success&sender=DOCTOR&route=2&number=".$clientmobile."&sms=".$message."&templateid=1207162823556605196");
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 $result = curl_exec($curl);
 curl_close($curl);
@@ -47,3 +47,4 @@ VALUES (
 echo "<script type='text/javascript'>window.close();</script>";
 
 ?>
+

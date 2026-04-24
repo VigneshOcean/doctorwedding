@@ -76,10 +76,10 @@ if(!mysqli_query($con, "insert into register(name,gender,profile,refernce,dob,ag
 }
 
 $to12=$email;
-$sub12="Greetings from HAPPY MARRIAGE MATRIMONY";
+$sub12="Greetings from Doctor Wedding";
 $msg12='<table width="372"  border="0" cellpadding="0" cellspacing="0" style="border:1px solid; border-color:#0099FF">
  <tr class="fnt">
-    <td height="31" colspan="3" bgcolor="#84c8f8" class="fnt" align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:15px; font-weight:bold; color:#000000">Greetings From HAPPY MARRIAGE MATRIMONY </td>
+    <td height="31" colspan="3" bgcolor="#84c8f8" class="fnt" align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:15px; font-weight:bold; color:#000000">Greetings From Doctor Wedding </td>
   </tr>
   <tr class="fnt">
     <td width="23"  >&nbsp;</td>
@@ -98,7 +98,7 @@ $msg12='<table width="372"  border="0" cellpadding="0" cellspacing="0" style="bo
 </table>
 ';
 //echo $msg1;exit;
-$sender="hmlucky03@gmail.com";
+$sender="doctorwedding2026@gmail.com";
 // now we'll build the message headers
        $headers1 = "From: $sender\r\n" .
          "MIME-Version: 1.0\r\n" .
@@ -120,10 +120,10 @@ $sender="hmlucky03@gmail.com";
 			
 
 $to1=$email;
-$sub1="Greetings from HAPPY MARRIAGE MATRIMONY";
+$sub1="Greetings from Doctor Wedding";
 $msg1="<table width='372'  border='0' cellpadding='0' cellspacing='0' style='border:1px solid; border-color:#0099FF'>
  <tr class='fnt'>
-    <td height='31' colspan='3' bgcolor='#84c8f8' class='fnt' align='center' style='font-family:Arial, Helvetica, sans-serif; font-size:15px; font-weight:bold; color:#000000'>Greetings From HAPPY MARRIAGE MATRIMONY </td>
+    <td height='31' colspan='3' bgcolor='#84c8f8' class='fnt' align='center' style='font-family:Arial, Helvetica, sans-serif; font-size:15px; font-weight:bold; color:#000000'>Greetings From Doctor Wedding </td>
   </tr>
 <tr class='fnt'>
     <td width='23'  >&nbsp;</td>
@@ -142,7 +142,7 @@ $msg1="<table width='372'  border='0' cellpadding='0' cellspacing='0' style='bor
 </table>
 ";
 //echo $msg1;exit;
-$sender="hmlucky03@gmail.com";
+$sender="doctorwedding2026@gmail.com";
 // now we'll build the message headers
        $headers = 'From: $sender'."\r\n" .
           'X-Mailer:PHP/'.phpversion();
@@ -173,7 +173,7 @@ $c_date=date('d-m-Y');
 mysqli_query($con, "insert into contact(name,email,mobile,msg,c_date)values ('$name','$email','$mobile','$msg','$c_date')") or die(mysqli_error($con));
 
 
-$to="hmlucky03@gmail.com";
+$to="doctorwedding2026@gmail.com";
  	$from = stripslashes($_POST['email']);
     $mime_boundary="==Multipart_Boundary_x".md5(mt_rand())."x";
     $subject="$name Enquiry Details"; 
@@ -244,3 +244,4 @@ window.location='contact.php'
 </script>";
 }
 ?>
+

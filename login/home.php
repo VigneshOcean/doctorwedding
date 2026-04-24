@@ -12,7 +12,7 @@ if (!isset($_SESSION['id'])) {
 
 	<head>
 		<meta charset="utf-8" />
-		<title>Happy Marriage:Profile details</title>
+		<title>Doctor Wedding:Profile details</title>
 		<meta name="description" content="Common form elements and layouts" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -240,8 +240,8 @@ if (!isset($_SESSION['id'])) {
 								<h1>Profile Details</h1>
 							</div>
 							<div style=" ">
-								<span style="color:#009933; font-weight:bold;"> <?php echo $username; ?> உங்களுக்கு திருமணம்
-									முடித்தால் தெரியப்படுத்தவும்
+								<span style="color:#009933; font-weight:bold;"> <?php echo $username; ?> à®‰à®™à¯à®•à®³à¯à®•à¯à®•à¯ à®¤à®¿à®°à¯à®®à®£à®®à¯
+									à®®à¯à®Ÿà®¿à®¤à¯à®¤à®¾à®²à¯ à®¤à¯†à®°à®¿à®¯à®ªà¯à®ªà®Ÿà¯à®¤à¯à®¤à®µà¯à®®à¯
 									<a onclick="marriage_notify(<?php echo $id; ?>)" class="btn btn-danger"
 										href="javascript:void(0)">
 										<i class="icon-exclamation-sign"></i>Notify us</a>

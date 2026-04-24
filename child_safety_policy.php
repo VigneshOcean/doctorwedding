@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Child Safety Policy - Adidravidar Matrimony</title>
+    <title>Child Safety Policy - Doctor Wedding</title>
     <link rel="stylesheet" href="css/modern-design.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -151,12 +151,12 @@
     <div class="container">
         <div class="page-container">
             <h1 class="section-title">Child Safety Policy</h1>
-            <span class="subtitle">Effective Date: June 2025 | HM Matrimony is committed to maintaining a safe,
+            <span class="subtitle">Effective Date: June 2025 | Doctor Wedding is committed to maintaining a safe,
                 responsible, and trusted matrimonial platform exclusively for adults.</span>
 
             <div class="policy-section">
                 <h3><span>1</span> Minimum Age Requirement</h3>
-                <p>HM Matrimony is strictly a platform for adults. Registration and use of our services is permitted
+                <p>Doctor Wedding is strictly a platform for adults. Registration and use of our services is permitted
                     only for individuals who are:</p>
                 <ul class="policy-list">
                     <li>18 years of age or older (as per the legal marriageable age in India)</li>
@@ -195,8 +195,8 @@
                 <h3><span>4</span> Reporting Underage Profiles</h3>
                 <p>If you come across a profile that appears to belong to a minor, please report it immediately:</p>
                 <ul class="policy-list">
-                    <li><strong>Email:</strong> hmlucky03@gmail.com with the profile ID and your concern.</li>
-                    <li><strong>Phone:</strong> 044 4386 3901 or +91 90940 10909.</li>
+                    <li><strong>Email:</strong> doctorwedding2026@gmail.com with the profile ID and your concern.</li>
+                    <li><strong>Phone:</strong> +91 7338821446.</li>
                     <li><strong>Visit:</strong> 28/49, South Usman Road, T Nagar, Chennai - 600 017.</li>
                 </ul>
                 <p class="mt-3 small text-muted">This contact is actively monitored to handle child safety concerns and
@@ -204,7 +204,7 @@
                 <p class="mt-3 small text-muted">If you come across a profile that appears to belong to a minor, please
                     report it immediately:</p>
                 <ul class="policy-list">
-                    <li>Email: hmlucky03@gmail.com with the profile ID and your concern</li>
+                    <li>Email: doctorwedding2026@gmail.com with the profile ID and your concern</li>
                 </ul>
                 <p class="mt-3 small text-muted">All reports will be reviewed within 24 hours and appropriate action
                     will be taken promptly.</p>
@@ -213,7 +213,7 @@
             <div class="policy-section">
                 <h3><span>5</span> Protection from Exploitation</h3>
                 <ul class="policy-list">
-                    <li>HM Matrimony does not permit any form of child exploitation, grooming, or abuse on this
+                    <li>Doctor Wedding does not permit any form of child exploitation, grooming, or abuse on this
                         platform.</li>
                     <li>Any member found attempting to contact or exploit a minor will be immediately banned and
                         reported to the Tamil Nadu Police Cybercrime Division.</li>
@@ -223,7 +223,7 @@
 
             <div class="policy-section">
                 <h3><span>6</span> Parental Responsibility</h3>
-                <p>Parents and guardians are advised to monitor their children's internet activity. HM Matrimony is not
+                <p>Parents and guardians are advised to monitor their children's internet activity. Doctor Wedding is not
                     designed for or accessible to minors, but we encourage responsible digital parenting to ensure
                     children do not access adult matrimonial platforms.</p>
             </div>
@@ -238,8 +238,8 @@
 
             <div class="contact-info-footer">
                 <h4>Safety Concerns?</h4>
-                <p><i class="bi bi-envelope"></i> Email: hmlucky03@gmail.com</p>
-                <p><i class="bi bi-telephone"></i> Phone: 044 4386 3901</p>
+                <p><i class="bi bi-envelope"></i> Email: doctorwedding2026@gmail.com</p>
+                <p><i class="bi bi-telephone"></i> Phone: 7338821446</p>
                 <p><i class="bi bi-geo-alt"></i> 28/49, South Usman Road, T Nagar, Chennai - 600017</p>
             </div>
         </div>
@@ -251,3 +251,5 @@
 </body>
 
 </html>
+
+

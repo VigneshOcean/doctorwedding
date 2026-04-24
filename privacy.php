@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Adidravidar Matrimony</title>
+    <title>Privacy Policy - Doctor Wedding</title>
     <link rel="stylesheet" href="css/modern-design.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -36,7 +36,7 @@
 <div class="container">
     <div class="page-container">
         <h1 class="section-title">Privacy Policy</h1>
-        <span class="subtitle">Effective Date: June 2025 | HM Matrimony (Adidravidar Matrimonial Service)</span>
+        <span class="subtitle">Effective Date: June 2025 | Doctor Wedding (Professional Matrimonial Service)</span>
 
         <div class="policy-section">
             <h3><span>1</span> Information We Collect</h3>
@@ -52,7 +52,7 @@
         <div class="policy-section">
             <h3><span>2</span> How We Use Your Information</h3>
             <ul class="policy-list">
-                <li>To create and display your matrimonial profile to suitable matches within the Adidravidar community</li>
+                <li>To create and display your matrimonial profile to suitable matches within the community</li>
                 <li>To facilitate search and contact between registered members</li>
                 <li>To process membership payments and manage your account</li>
                 <li>To send match suggestions, notifications, and service updates via SMS or email</li>
@@ -62,7 +62,7 @@
 
         <div class="policy-section">
             <h3><span>3</span> Profile Visibility</h3>
-            <p>Your profile — including name, photo, age, education, and caste — is visible to other registered members of HM Matrimony. Sensitive details such as your full address and phone number are shared only upon mutual interest or as per your privacy settings.</p>
+            <p>Your profile, including name, photo, age, education, and caste is visible to other registered members of Doctor Wedding. Sensitive details such as your full address and phone number are shared only upon mutual interest or as per your privacy settings.</p>
         </div>
 
         <div class="policy-section">
@@ -72,7 +72,7 @@
 
         <div class="policy-section">
             <h3><span>5</span> Data Security</h3>
-            <p>We use industry-standard security measures including secure servers and encrypted connections to protect your personal data. However, members are advised not to share login credentials or personal financial details with anyone claiming to represent HM Matrimony.</p>
+            <p>We use industry-standard security measures including secure servers and encrypted connections to protect your personal data. However, members are advised not to share login credentials or personal financial details with anyone claiming to represent Doctor Wedding.</p>
         </div>
 
         <div class="policy-section">
@@ -86,20 +86,20 @@
                 <li>Request access to or correction of your personal profile information at any time</li>
                 <li>Request deletion of your account and associated data</li>
                 <li>Opt out of promotional SMS/email communications</li>
-                <li>Contact us for any privacy concerns at hmlucky03@gmail.com</li>
+                <li>Contact us for any privacy concerns at doctorwedding2026@gmail.com</li>
             </ul>
         </div>
 
         <div class="policy-section">
             <h3><span>8</span> Children's Privacy</h3>
-            <p>HM Matrimony is strictly for adults aged 18 and above. We do not knowingly collect data from minors. Any profile found to belong to a minor will be immediately removed.</p>
+            <p>Doctor Wedding is strictly for adults aged 18 and above. We do not knowingly collect data from minors. Any profile found to belong to a minor will be immediately removed.</p>
         </div>
 
         <div class="contact-info-footer">
             <h4>Privacy Concerns?</h4>
-            <p><i class="bi bi-globe"></i> Website: www.hmmatrimony.com</p>
-            <p><i class="bi bi-envelope"></i> Email: hmlucky03@gmail.com</p>
-            <p><i class="bi bi-telephone"></i> Phone: 044 4386 3901</p>
+            <p><i class="bi bi-globe"></i> Website: www.doctorwedding.com</p>
+            <p><i class="bi bi-envelope"></i> Email: doctorwedding2026@gmail.com</p>
+            <p><i class="bi bi-telephone"></i> Phone: 7338821446</p>
         </div>
     </div>
 </div>
@@ -109,3 +109,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
+

@@ -191,7 +191,7 @@ function process_image_upload($uploadedfile,$new_extension)
     $result = create_watermark_from_string(
         $uploaded_file_path,
         $processed_file_path,
-        'www.hmmatrimony.com',
+        'www.doctorwedding.com',
         'Font.ttf',
         $font_size,
         'CCCCCC',
@@ -211,8 +211,8 @@ function process_image_upload($uploadedfile,$new_extension)
  //process_image_upload('98779583_ruckmangathan.jpg','jpg');
  
  
-$con=mysql_connect("localhost","hmmatrim_mani","Micandmac@12") or die("not connected.");
-mysql_select_db("hmmatrim_matrimony",$con) or die("database not found.");
+$con=mysql_connect("localhost","DOCTORim_mani","Micandmac@12") or die("not connected.");
+mysql_select_db("DOCTORim_matrimony",$con) or die("database not found.");
 $reg=mysqli_query($con, "select * from register where uploadedfile!=''  order by id asc limit 50,20")or die(mysqli_error($con));
 while($row_reg=mysqli_fetch_array($reg))
 {

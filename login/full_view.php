@@ -12,7 +12,7 @@ if (!isset($_SESSION['id'])) {
 
 	<head>
 		<meta charset="utf-8" />
-		<title>Happy Marriage:Profile details</title>
+		<title>Doctor Wedding:Profile details</title>
 		<meta name="description" content="Common form elements and layouts" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -510,7 +510,7 @@ if (!isset($_SESSION['id'])) {
 
 									?>
 									<div style="float:left;">
-										<span style="color:#009933; font-weight:bold;">விருப்பம் தெரிவிக்க :</span>
+										<span style="color:#009933; font-weight:bold;">à®µà®¿à®°à¯à®ªà¯à®ªà®®à¯ à®¤à¯†à®°à®¿à®µà®¿à®•à¯à®• :</span>
 										<a class="btn btn-app btn-yellow btn-xs" href="javascript:void(0)" <?php if ($valid_string == '') {
 											echo 'title="Upgrade your plan to avail this feature" onClick="noaccess()" ';
 										} else { ?> onClick="getssts(<?php echo $usprod['id']; ?>)"
@@ -525,8 +525,8 @@ if (!isset($_SESSION['id'])) {
 								if ($count_aa == '0') {
 									?>
 									<div style="float:right;">
-										<span style="color:#009933; font-weight:bold;">திருமணம் முடிந்தது என �
-											றிவிக்க :</span>
+										<span style="color:#009933; font-weight:bold;">à®¤à®¿à®°à¯à®®à®£à®®à¯ à®®à¯à®Ÿà®¿à®¨à¯à®¤à®¤à¯ à®Žà®© ï¿½
+											à®±à®¿à®µà®¿à®•à¯à®• :</span>
 										<a onclick="marriage_notify(<?php echo $id; ?>,<?php echo $userid; ?>)"
 											class="btn btn-app btn-danger btn-xs" href="javascript:void(0)">
 											<i class="icon-exclamation-sign"></i>Notify us</a>
@@ -855,7 +855,7 @@ if (!isset($_SESSION['id'])) {
 													$profile_img = "profile/" . $filename;
 												} else {
 													// Fallback for paths or external references if applicable
-													$profile_img = "https://hmmatrimony.com/profile/" . $filename;
+													$profile_img = "https://doctorwedding.com/profile/" . $filename;
 												}
 											}
 											?>
@@ -886,7 +886,7 @@ if (!isset($_SESSION['id'])) {
 													$horo_path = "../matrimonyadmin/horo/" . $horo_file;
 													if (!file_exists($horo_path)) {
 														// Try external fallback if not local
-														$horo_path = "https://hmmatrimony.com/matrimonyadmin/horo/" . $horo_file;
+														$horo_path = "https://doctorwedding.com/matrimonyadmin/horo/" . $horo_file;
 													}
 													?>
 													<a href="<?php echo $horo_path; ?>" data-fancybox-group="gallery"
@@ -956,7 +956,7 @@ if (!isset($_SESSION['id'])) {
 							<li><b> 2000</b>(6 Month - Unlimited Contacts - Only Renewal)</li>
 							<li><b> 3000</b>(6 Month - Unlimited Contacts - New Registartion) </li>
 						</ul>
-						<h2> <a class="btn btn-success" href="https://hmmatrimony.com/paynow.php?plan_id=7">
+						<h2> <a class="btn btn-success" href="https://doctorwedding.com/paynow.php?plan_id=7">
 								<i class="icon-money"></i>Add Balance</a></h2>
 					</div>
 					<div class="modal-footer">
@@ -1292,3 +1292,4 @@ if (!isset($_SESSION['id'])) {
 	<?php
 }
 ?>
+

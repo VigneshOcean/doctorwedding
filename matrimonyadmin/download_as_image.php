@@ -22,7 +22,7 @@ try
 
     // run the conversion and write the result to a file
 
-    $client->convertUrlToFile("https://hmmatrimony.com/matrimonyadmin/take_snap.php?user_id=26625", "example.png");
+    $client->convertUrlToFile("https://doctorwedding.com/matrimonyadmin/take_snap.php?user_id=26625", "example.png");
 
 }
 

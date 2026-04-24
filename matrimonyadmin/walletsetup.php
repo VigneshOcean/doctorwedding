@@ -13,7 +13,7 @@ $userid=$_REQUEST['userid'];
 <!DOCTYPE html>
 <html lang="en">
 <head><meta charset="utf-8" />
-<title>Happy Marriage:Add Wallet Amount</title>
+<title>Doctor Wedding:Add Wallet Amount</title>
 <meta name="description" content="Common form elements and layouts" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -159,7 +159,7 @@ $count_e=mysqli_num_rows($e);
 <thead>
 <tr>
 <th>S.No</th>
-<th>Wallet Amount (₹)</th>
+<th>Wallet Amount (&#8377;)</th>
 <th>Valid From</th>
   <th>Valid To</th>
 </tr>
@@ -177,7 +177,7 @@ $e_id=$row_e['id'];
 ?>
 <tr>
 <td><?php echo $i; ?></td>
-<td> <?php echo $row_e['amount']; ?> (₹) </td>
+<td> <?php echo $row_e['amount']; ?> (&#8377;) </td>
 <td> <?php echo $row_e['valid_from']; ?> </td>
  <td><?php echo $row_e['valid_to']; ?> </td>
 </tr>	

@@ -58,7 +58,7 @@ function get_avatar_local($gender) {
                     $profile_img = "profile/" . $filename;
                 } else {
                     // Fallback to absolute URL if local check fails (common on live servers)
-                    $profile_img = "https://hmmatrimony.com/profile/" . $filename;
+                    $profile_img = "https://doctorwedding.com/profile/" . $filename;
                 }
             }
             ?>

@@ -248,7 +248,7 @@ if (isset($_POST['submit'])) {
             <li><a href="#" class="fa fa-google-plus"></a></li>
           </ul>
           <ul class="authentication pt10"><img alt="Phone " width="19" height="15" class="vam"
-              src="images/icon_receiver.gif"> Call Us : <b>044 4386 3901</b>
+              src="images/icon_receiver.gif"> Call Us : <b>7338821446</b>
           </ul>
         </div>
       </div>
@@ -272,7 +272,7 @@ if (isset($_POST['submit'])) {
             <div class="col-sm-7">
               <!--            <div class="text-area">
               <div class="position-center-center col-md-10">
-                <h1> Here comes the social networking platform that you’ve been waiting for</h1>
+                <h1> Here comes the social networking platform that youâ€™ve been waiting for</h1>
                 <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue conseqaut nibbhi ellit ipsum consectetur. </h6>
               </div>
             </div> -->
@@ -484,11 +484,11 @@ if (isset($_POST['submit'])) {
             <p class="tab blink"><?php echo $row_e122['news_heading']; ?></p>
             <div class="qst_b">
               <span class="blink" style="color:#006600; font-weight:700;">
-                <!--<p class="tab blinker">**புதிய**</p>
-ஆதிதிராவிடர் திருமண தகவல் மைய இணையதளத்த்திற்கு �
-ன்புடன் வரவேற்கிறோம்</span/>
+                <!--<p class="tab blinker">**à®ªà¯à®¤à®¿à®¯**</p>
+à®†à®¤à®¿à®¤à®¿à®°à®¾à®µà®¿à®Ÿà®°à¯ à®¤à®¿à®°à¯à®®à®£ à®¤à®•à®µà®²à¯ à®®à¯ˆà®¯ à®‡à®£à¯ˆà®¯à®¤à®³à®¤à¯à®¤à¯à®¤à®¿à®±à¯à®•à¯ ï¿½
+à®©à¯à®ªà¯à®Ÿà®©à¯ à®µà®°à®µà¯‡à®±à¯à®•à®¿à®±à¯‹à®®à¯</span/>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span style="color:red;">எங்களுக்கு வேறு எங்கும் கிளைகள் கிடையாது  </span>
+                    <span style="color:red;">à®Žà®™à¯à®•à®³à¯à®•à¯à®•à¯ à®µà¯‡à®±à¯ à®Žà®™à¯à®•à¯à®®à¯ à®•à®¿à®³à¯ˆà®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®¯à®¾à®¤à¯  </span>
 -->
                 <?php echo $row_e122['descrip']; ?>
             </div>
@@ -519,9 +519,9 @@ if (isset($_POST['submit'])) {
         <div class="col-md-3 col-sm-6">
           <h5>Contact details</h5>
           <ul class="contact-info has-bg-image contain" data-bg-image="images/footer-map-bg.png">
-            <li> <i class="fa fa-mobile"></i> <a href="tel:#">+91 90940 10909 / 7299234446</a> </li>
-            <li> <i class="fa fa-phone"></i> <a href="tel:#">044 4386 3901</a> </li>
-            <li> <i class="fa fa-envelope"></i> <a href="mailto:#">hmlucky03@gmail.com</a> </li>
+            <li> <i class="fa fa-mobile"></i> <a href="tel:#">7338821446</a> </li>
+            <li> <i class="fa fa-phone"></i> <a href="tel:#">7338821446</a> </li>
+            <li> <i class="fa fa-envelope"></i> <a href="mailto:#">doctorwedding2026@gmail.com</a> </li>
           </ul>
         </div>
         <div class="col-md-3 col-sm-6">
@@ -548,7 +548,7 @@ if (isset($_POST['submit'])) {
       <ul class="links">
         <li><a href="#">Web Design by Ocean Softwares</a></li>
       </ul>
-      <p>Copyright &copy; 2018 <a href="#">www.hmmatrimony.com - only for Adidravidar</a>. All Rights reserved.</p>
+      <p>Copyright &copy; 2018 <a href="#">www.doctorwedding.com - only for Adidravidar</a>. All Rights reserved.</p>
     </div>
   </div>
   <!-- end .uou-block-4a -->
@@ -600,3 +600,5 @@ if (isset($_POST['submit'])) {
 </body>
 
 </html>
+
+

@@ -281,10 +281,10 @@ $row_aaaaa=mysqli_fetch_array($aaaaa);
 <p class="qst"><i></i><span>News and Events</span><b></b></p>
 <p class="cb"></p>
 <div class="qst_b">
-<span class="blink" style="color:#006600; font-weight:700;">ஆதிதிராவிடர் திருமண தகவல் மைய இனையதளத்திற்கு �
+<span class="blink" style="color:#006600; font-weight:700;">ஆதிதிராவிடர் திருமண தகவல் மைய இனையதளத்திற்கு �
 ன்புடன் வரவேற்கிறோம்</span><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<span style="color:red;">வேறு மையத்திலிருந்து கொரியர் �
+<span style="color:red;">வேறு மையத்திலிருந்து கொரியர் �
 னுப்பி பணம் பெற முயன்றால் ஏமாறவேண்டாம் </span>
 </div>
 <p class="qsb"><i></i><b></b></p>

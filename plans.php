@@ -6,7 +6,7 @@ include("include/connect.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Membership Plans - Adidravidar Matrimony</title>
+    <title>Membership Plans - Doctor Wedding</title>
     <link rel="stylesheet" href="css/modern-design.css">
     <style>
         body { font-family: 'Inter', sans-serif; background: #f8faf9; }
@@ -72,7 +72,7 @@ include("include/connect.php");
             <div class="plan-card-modern w-100">
                 <div>
                     <div class="plan-name">Silver Plan</div>
-                    <div class="plan-price" style="font-family: Arial, sans-serif;">₹3,000<span>/6 Months Validity</span></div>
+                    <div class="plan-price" style="font-family: Arial, sans-serif;">&#8377;3,000<span>/6 Months Validity</span></div>
                 </div>
                 <ul class="plan-features">
                     <li><i class="bi bi-check-circle-fill"></i> 6 Months Validity</li>
@@ -88,7 +88,7 @@ include("include/connect.php");
             <div class="plan-card-modern w-100">
                 <div>
                     <div class="plan-name">Gold Plan</div>
-                    <div class="plan-price">₹4,000<span>/1 Year Validity</span></div>
+                    <div class="plan-price">&#8377;4,000<span>/1 Year Validity</span></div>
                 </div>
                 <ul class="plan-features">
                     <li><i class="bi bi-check-circle-fill"></i> 1 Year Validity</li>
@@ -104,7 +104,7 @@ include("include/connect.php");
             <div class="plan-card-modern w-100">
                 <div>
                     <div class="plan-name">Platinum Plan</div>
-                    <div class="plan-price">₹7,000<span>/Valid Upto Marriage</span></div>
+                    <div class="plan-price">&#8377;7,000<span>/Valid Upto Marriage</span></div>
                 </div>
                 <ul class="plan-features">
                     <li><i class="bi bi-check-circle-fill"></i> Valid Upto Marriage</li>
@@ -143,3 +143,4 @@ include("include/connect.php");
 
 </body>
 </html>
+
