@@ -16,7 +16,7 @@ mysqli_query($con,"update register set status='0' where id='$h'");
 else if($sts1==0)
 {
 $a=rand(100000,999999);
-$b='HM';
+$b='DW';
 $username=$b.$a;
 $s=rand(10000,99999);	
 mysqli_query($con,"update register set status='1' where id='$h'");	

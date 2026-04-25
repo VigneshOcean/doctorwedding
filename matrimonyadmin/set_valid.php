@@ -7,7 +7,7 @@ $valid_for=$_POST['valid_for'];
 $valid_string=strtotime($valid_for);
 
 $a=rand(100000,999999);
-$b="HM";
+$b="DW";
 $profile_id=$b.$a;
 
 $rand_no=rand(100000,999999);

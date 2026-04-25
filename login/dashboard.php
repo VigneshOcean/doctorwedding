@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 include("../include/connect.php");
 session_start();
 $id=$_SESSION['id'];
@@ -110,9 +110,7 @@ $username=$ar1['name'];
 							</h1>
 							</div>
 							<div style="   display: none;">
-<span style="color:#009933; font-weight:bold;">	<?php echo $username; ?> 
- à®¤à®¿à®°à¯à®®à®£à®®à¯ à®®à¯à®Ÿà®¿à®¨à¯à®¤à®¤à¯ à®Žà®© à®
-à®±à®¿à®µà®¿à®•à¯à®• :</span>
+<span style="color:#009933; font-weight:bold;">	<?php echo $username; ?> திருமணம் முடிந்தது என அறிவிக்க :</span>
 <a  onclick="marriage_notify(<?php echo $id; ?>)" class="btn btn-danger" href="javascript:void(0)" >
 <i class="icon-exclamation-sign"></i>Notify us</a>
 </div>
@@ -142,11 +140,9 @@ if(isset($riw_ghj['valid_for']) && $riw_ghj['valid_for']!='')
     <div class="infobox infobox-green" style="width: 500px; height:auto;">
   <div class="infobox-data">
     <div class="infobox-content" style="color:red; font-weight:bold;">
-      <span class="blinking">à®®à¯à®•à¯à®•à®¿à®¯ à®
-à®±à®¿à®µà®¿à®ªà¯à®ªà¯ :  </span><br/>
-        à®¨à®®à®•à¯à®•à¯ à®µà¯‡à®±à¯ à®Žà®™à¯à®•à¯à®®à¯ à®•à®¿à®³à¯ˆà®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®¯à®¾à®¤à¯.<br/>
-        à®•à¯Šà®°à®¿à®¯à®°à¯ à®
-à®©à¯à®ªà¯à®ªà®¿ à®ªà®£à®®à¯ à®ªà¯†à®± à®®à¯à®¯à®©à¯à®±à®¾à®²à¯ à®à®®à®¾à®± à®µà¯‡à®£à¯à®Ÿà®¾à®®à¯ <br/>      
+      <span class="blinking">முக்கிய அறிவிப்பு :  </span><br/>
+        நமக்கு வேறு எங்கும் கிளைகள் கிடையாது.<br/>
+        கொரியர் அனுப்பி பணம் பெற முயன்றால் ஏமாற வேண்டாம் <br/>
     For Security reason, We have introduced wallet for your profile. Contact admin for upgrading your wallet balance.
     </div>
   </div>
@@ -310,7 +306,7 @@ $count_a3=mysqli_num_rows($a3);
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;">
- <p>   	<?php echo $username; ?> à®‰à®™à¯à®•à®³à¯à®•à¯à®•à¯ à®¤à®¿à®°à¯à®®à®£à®®à¯ à®®à¯à®Ÿà®¿à®¤à¯à®¤à®¾à®²à¯ à®¤à¯†à®°à®¿à®¯à®ªà¯à®ªà®Ÿà¯à®¤à¯à®¤à®µà¯à®®à¯
+ <p>   	<?php echo $username; ?> உங்களுக்கு திருமணம் முடித்திருந்தால் தெரியப்படுத்தவும் </p>
  </p><a  onclick="marriage_notify(<?php echo $id; ?>)" class="btn btn-danger" href="javascript:void(0)" >
 <i class="icon-exclamation-sign"></i>Notify us</a>
 </div>

@@ -976,7 +976,7 @@ h2 {
 
 /* Button */
 .about-section .btn {
-    background: #689f38;
+    background: #07642f;
     color: #fff;
     border: none;
     padding: 12px 28px;
@@ -2910,14 +2910,14 @@ body {
     padding: 10px;
     background: transparent;
     border: 2px solid #07642f;
-    color: #689f38;
+    color: #07642f;
     border-radius: 6px;
     font-weight: 600;
     transition: 0.3s;
 }
 
 .profile-action-btn:hover {
-    background: #689f38;
+    background: #07642f;
     color: white;
 }
 
@@ -3690,7 +3690,7 @@ body {
 }
 
 .dev-link:hover {
-    color: #689f38 !important;
+    color: #07642f !important;
 }
 
 .footer h4 {
@@ -3705,7 +3705,7 @@ body {
     bottom: 0;
     width: 30px;
     height: 2px;
-    background: #689f38;
+    background: #07642f;
 }
 
 /* Mobile App Section */
@@ -3716,7 +3716,7 @@ body {
 }
 
 .mobile-section-heading .small-title {
-    color: #689f38;
+    color: #07642f;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -3732,7 +3732,7 @@ body {
 }
 
 .mobile-section-heading .main-title span {
-    color: #689f38;
+    color: #07642f;
 }
 
 .app-description {
@@ -3758,7 +3758,7 @@ body {
     width: 50px;
     height: 50px;
     background: #e8f5e9;
-    color: #689f38;
+    color: #07642f;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3899,7 +3899,7 @@ body {
 }
 
 .badge-text small {
-    color: #689f38;
+    color: #07642f;
     font-weight: 700;
 }
 
@@ -3933,13 +3933,13 @@ body {
 
 .search-nav-link:hover {
     background: #f8fcf5;
-    color: #689f38;
+    color: #07642f;
 }
 
 .search-nav-link.active {
-    background: #689f38;
+    background: #07642f;
     color: #fff !important;
-    border-color: #689f38;
+    border-color: #07642f;
     box-shadow: 0 -5px 15px rgba(104, 159, 56, 0.1);
 }
 
@@ -4082,7 +4082,7 @@ body {
     font-weight: 700;
     color: #1b2e1b;
     margin-bottom: 30px;
-    border-left: 5px solid #689f38;
+    border-left: 5px solid #07642f;
     padding-left: 20px;
 }
 
@@ -4149,13 +4149,13 @@ body {
 
     .search-nav-link:hover {
         background: #f8fcf5;
-        color: #689f38;
+        color: #07642f;
     }
 
     .search-nav-link.active {
-        background: #689f38;
+        background: #07642f;
         color: #fff !important;
-        border-color: #689f38;
+        border-color: #07642f;
         box-shadow: 0 -5px 15px rgba(104, 159, 56, 0.1);
     }
 
@@ -4298,7 +4298,7 @@ body {
         font-weight: 700;
         color: #1b2e1b;
         margin-bottom: 30px;
-        border-left: 5px solid #689f38;
+        border-left: 5px solid #07642f;
         padding-left: 20px;
     }
 

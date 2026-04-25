@@ -14,7 +14,7 @@ if($command=="verify")
     if($otp_verify==$otp)
     {
         $a=rand(100000,999999);
-        $b='HM';
+        $b='DW';
         $username=$b.$a;
         $s=rand(10000,99999);	
         mysqli_query($con,"update register set otp_status='1',status='1',username='$username',password='$s' where id='$reg_id'");	

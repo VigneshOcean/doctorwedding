@@ -175,15 +175,15 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
         <div class="row g-3">
             <div class="col-12">
                 <label class="form-label">Full Name <span class="text-danger">*</span></label>
-                <input class="form-control" name="firstname" id="firstname" placeholder="Enter your full name" value="<?php echo (empty($posted['firstname'])) ? '' : $posted['firstname']; ?>" required>
+                <input class="form-control" name="firstname" id="firstname" placeholder="Enter your full name" value="<?php echo (!empty($posted['firstname'])) ? $posted['firstname'] : ($_SESSION['reg_name'] ?? ''); ?>" required>
             </div>
             <div class="col-md-6">
                 <label class="form-label">Email Address <span class="text-danger">*</span></label>
-                <input class="form-control" type="email" name="email" id="email" placeholder="email@example.com" value="<?php echo (empty($posted['email'])) ? '' : $posted['email']; ?>" required>
+                <input class="form-control" type="email" name="email" id="email" placeholder="email@example.com" value="<?php echo (!empty($posted['email'])) ? $posted['email'] : ($_SESSION['reg_email'] ?? ''); ?>" required>
             </div>
             <div class="col-md-6">
                 <label class="form-label">Mobile Number <span class="text-danger">*</span></label>
-                <input class="form-control" name="phone" id="phone" placeholder="10-digit mobile" maxlength="10" onkeypress="return numbersonly(event)" value="<?php echo (empty($posted['phone'])) ? '' : $posted['phone']; ?>" required>
+                <input class="form-control" name="phone" id="phone" placeholder="10-digit mobile" maxlength="10" onkeypress="return numbersonly(event)" value="<?php echo (!empty($posted['phone'])) ? $posted['phone'] : ($_SESSION['reg_mobile'] ?? ''); ?>" required>
             </div>
             
             <div class="col-12 mt-5">
