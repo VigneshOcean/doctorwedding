@@ -4,6 +4,10 @@ error_reporting(0);
 ini_set('display_errors', '0');
 
 @ob_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 
 // Auto-detect environment
 if ($_SERVER['HTTP_HOST'] == 'localhost' || $_SERVER['REMOTE_ADDR'] == '127.0.0.1' || $_SERVER['REMOTE_ADDR'] == '::1' || strpos($_SERVER['HTTP_HOST'], '192.168.') === 0 || strpos($_SERVER['HTTP_HOST'], '192.168.') !== false) {

@@ -205,6 +205,8 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 1) {
         .search-nav-link { padding: 10px 25px; background: #f8f9fa; border: 1px solid #ddd; border-bottom: none; border-radius: 10px 10px 0 0; text-decoration: none !important; color: #666; font-weight: 600; font-size: 14px; transition: 0.2s; }
         .search-nav-link:hover { background: #e9ecef; color: #333; }
         .search-nav-link.active { background: #07642f; color: #fff; border-color: #07642f; }
+        .text-success { color: #07642f !important; }
+        .btn-success { background-color: #07642f !important; border-color: #07642f !important; }
     </style>
 </head>
 <body>

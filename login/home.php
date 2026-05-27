@@ -240,8 +240,7 @@ if (!isset($_SESSION['id'])) {
 								<h1>Profile Details</h1>
 							</div>
 							<div style=" ">
-								<span style="color:#009933; font-weight:bold;"> <?php echo $username; ?> à®‰à®™à¯à®•à®³à¯à®•à¯à®•à¯ à®¤à®¿à®°à¯à®®à®£à®®à¯
-									à®®à¯à®Ÿà®¿à®¤à¯à®¤à®¾à®²à¯ à®¤à¯†à®°à®¿à®¯à®ªà¯à®ªà®Ÿà¯à®¤à¯à®¤à®µà¯à®®à¯
+								<span style="color:#07642f; font-weight:bold;"> <?php echo $username; ?> உங்களுக்கு திருமணம் முடித்திருந்தால் தெரியப்படுத்தவும் </span>
 									<a onclick="marriage_notify(<?php echo $id; ?>)" class="btn btn-danger"
 										href="javascript:void(0)">
 										<i class="icon-exclamation-sign"></i>Notify us</a>

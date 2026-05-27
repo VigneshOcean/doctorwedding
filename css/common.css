@@ -459,7 +459,7 @@ hr { height:1px; color:#ccc; background:#ccc; border:0; }
 
 .amem{margin-bottom:5px;border-top:1px solid #dee7d1;text-align:right;width:100%;padding:10px 0;}
 .amem a{color:#c00;}
-.jn_g2{background:url(http://static.matrimonialsindia.com/images/jn_g2.gif) repeat-x;color:#fff;}
+.jn_g2{background:#07642F;color:#fff;}
 .jn_g2 b{font-size:18px;font-weight:normal;}
 .jn_g2 span{font-size:15px;float:right;}
 .joinNow{}
@@ -470,10 +470,10 @@ hr { height:1px; color:#ccc; background:#ccc; border:0; }
 .join_bul{padding:5px 10px 5px 24px; background:url(http://static.matrimonialsindia.com/images/join_bul.gif) no-repeat left 8px;}
 .hr22{background:url(http://static.matrimonialsindia.com/images/hr22.gif) repeat-x; margin:25px 0;}
 
-.heading h1{font-size:20px;font-weight:normal;display:block;color:#690;}
+.heading h1{font-size:20px;font-weight:normal;display:block;color:#07642F;}
 
 .rn_btn{margin:8px 5px 8px 0;}
-.rn_btn button{border:0; background-color: #65A900;cursor:pointer;width:215px; height:35px; margin-left:-4px;!margin-left:0;_margin-left:0;}
+.rn_btn button{border:0; background-color: #07642F;cursor:pointer;width:215px; height:35px; margin-left:-4px;!margin-left:0;_margin-left:0;}
 .rn_btn p{background:url(http://static.matrimonialsindia.com/images/bg.png) repeat-x 0 -2955px;line-height:42px;display:inline-block;text-align:center;color:#fff;border:0;font-size:22px;font-weight:bold;}
 .rn_btn i{float:right;background:url(http://static.matrimonialsindia.com/images/bg.png) repeat-x right -2909px;width:15px;display:inline-block;height:44px;}
 .rn_btn b{float:left;background:url(http://static.matrimonialsindia.com/images/bg.png) repeat-x 0 -2909px;width:15px;display:inline-block;height:44px;}
@@ -600,7 +600,7 @@ border-image:url("http://static.matrimonialsindia.com/images/border.png") 15 15 
 .features > ul > li > a:hover{background:#fff url(http://static.matrimonialsindia.com/images/arrow_bottom.png) no-repeat 93% 55%;color:#c30;}
 
 
-#changeFontSize .fs18{font-size:18px;line-height:22px;color:#690;}
+#changeFontSize .fs18{font-size:18px;line-height:22px;color:#07642f;}
 .font_option .on_small,.font_option .off_small{width:23px;}
 .font_option .on_big,.font_option .off_big{width:22px;}
 

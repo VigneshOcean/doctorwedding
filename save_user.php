@@ -1,247 +1,156 @@
 <?php
-include("include/connect.php"); 
-error_reporting(0);
-$command=$_POST['command'];
-if($command=="register")
-{
-$name=$_POST['name'];
-$rad_gen=$_POST['gender_type'];
-$profile=$_POST['profile'];
-$refernce=$_POST['refernce'];
+include("include/connect.php");
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
+ini_set('log_errors', '1');
+ini_set('error_log', dirname(__FILE__).'/php_error.log');
 
-$dob=$_POST['dob'];
-$age=$_POST['age'];
-$tob=$_POST['birthtime'];
-$p_birth=$_POST['p_birth'];
-$status1=$_POST['status1'];
-$mobile=$_POST['mobile'];
-$email=$_POST['email'];
-$religion=$_POST['religion'];
-$caste=$_POST['caste'];
-$star=$_POST['star'];
-$moonsign=$_POST['moonsign'];
-$education=$_POST['education'];
-$edu_det=$_POST['edu_det'];
-$job=$_POST['job'];
-$job_cmpy=$_POST['job_cmpy'];
-$job_loc=$_POST['job_loc'];
+$command = isset($_POST['command']) ? $_POST['command'] : '';
 
-$skin=$_POST['skin'];
-$height=$_POST['height'];
-$salary=$_POST['salary'];
-$address=$_POST['address'];
-$no_of_brothers=$_POST['no_of_brothers'];
-$bro_married=$_POST['bro_married'];
-$no_of_sisters=$_POST['no_of_sisters'];
-$sis_married=$_POST['sis_married'];
-$falive=$_POST['falive'];
-$malive=$_POST['malive'];
-$fathername=$_POST['fathername'];
-$mother_name=$_POST['mother_name'];
-$father_occupation=$_POST['father_occupation'];
-$mother_occupation=$_POST['mother_occupation'];
-$self_desc=$_POST['self_desc'];
-$expectation=$_POST['expectation'];
-$home_type=$_POST['home_type'];
-$house_type=$_POST['house_type'];
-$dosam=$_POST['dosam'];
-$self_dosam=$_POST['self_dosam'];
-$area=$_POST['area'];
-$random_no=rand(10000000,99999999);
-$file=$_FILES['uploadedfile']['name'];
-if(!empty($file))
-{	
-$target_path = "profile/";
-$uploaded_files=$random_no."_".$_FILES['uploadedfile']['name'];
-move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path .$random_no."_".$_FILES['uploadedfile']['name']);
-}
-	$c_date=date("d/m/Y");
-	
+if ($command == "register") {
+    // LOG TABLE STRUCTURE ONCE TO DEBUG DIFF BETWEEN LOCAL AND LIVE
+    $res = mysqli_query($con, "DESCRIBE register");
+    $cols = [];
+    while($row = mysqli_fetch_assoc($res)) { $cols[] = $row['Field'] . "(" . $row['Type'] . ")"; }
+    error_log("LIVE TABLE STRUCTURE: " . implode(", ", $cols));
 
-$find = mysqli_query($con,"SELECT * FROM register where name='$name' and dob='$dob' and fathername='$fathername' and mother_name='$mother_name'")or die(mysqli_error($con));
-$row1=mysqli_fetch_array($find);
-$use_id=$row1['id'];
-$count_find=mysqli_num_rows($find);
-if($count_find>0)
-{
-echo "<script type=text/javascript>alert('Already Registered Profile .kindly upload new profile')
-window.location='register.php'
-</script>";
-}
-else
-{	
-if(!mysqli_query($con,"insert into register(name,gender,profile,refernce,dob,age,tob,p_birth,status1,mobile,email,religion,caste,star,moonsign,education,edu_det,job,job_cmpy,job_loc,skin,height,salary,address,no_of_brothers,bro_married,no_of_sisters,sis_married,falive,malive,fathername,mother_name,father_occupation,mother_occupation,self_desc,expectation,home_type,uploadedfile,c_date,status,dosam,self_dosam,profile_id,area,house_type) values('$name','$rad_gen','$profile','$refernce','$dob','$age','$tob','$p_birth','$status1','$mobile','$email','$religion','$caste','$star','$moonsign','$education','$edu_det','$job','$job_cmpy','$job_loc','$skin','$height','$salary','$address','$no_of_brothers','$bro_married','$no_of_sisters','$sis_married','$falive','$malive','$fathername','$mother_name','$father_occupation','$mother_occupation','$self_desc','$expectation','$home_type','$uploaded_files','$c_date','0','$dosam','$self_dosam','$profile_id','$area','$house_type')"))
-{  
-		 echo "Error".mysqli_error($con);
-}
+    try {
+        // Sanitize and collect all POST data
+        $name = mysqli_real_escape_string($con, $_POST['name'] ?? '');
+        $rad_gen = mysqli_real_escape_string($con, $_POST['gender_type'] ?? '');
+        $profile = mysqli_real_escape_string($con, $_POST['profile'] ?? '');
+        $refernce = mysqli_real_escape_string($con, $_POST['refernce'] ?? '');
+        $dob = mysqli_real_escape_string($con, $_POST['dob'] ?? '');
+        $age = mysqli_real_escape_string($con, $_POST['age'] ?? '');
+        $tob = mysqli_real_escape_string($con, $_POST['birthtime'] ?? '');
+        $p_birth = mysqli_real_escape_string($con, $_POST['p_birth'] ?? '');
+        $status1 = mysqli_real_escape_string($con, $_POST['status1'] ?? '');
+        $house_type = mysqli_real_escape_string($con, $_POST['house_type'] ?? '');
+        $mobile = mysqli_real_escape_string($con, $_POST['mobile'] ?? '');
+        $email = mysqli_real_escape_string($con, $_POST['email'] ?? '');
+        $religion = mysqli_real_escape_string($con, $_POST['religion'] ?? '');
+        $caste = mysqli_real_escape_string($con, $_POST['caste'] ?? '');
+        $star = mysqli_real_escape_string($con, $_POST['star'] ?? '');
+        $moonsign = mysqli_real_escape_string($con, $_POST['moonsign'] ?? '');
+        $education = mysqli_real_escape_string($con, $_POST['education'] ?? '');
+        $edu_det = mysqli_real_escape_string($con, $_POST['edu_det'] ?? '');
+        $job = mysqli_real_escape_string($con, $_POST['job'] ?? '');
+        $job_cmpy = mysqli_real_escape_string($con, $_POST['job_cmpy'] ?? '');
+        $job_loc = mysqli_real_escape_string($con, $_POST['job_loc'] ?? '');
+        $skin = mysqli_real_escape_string($con, $_POST['skin'] ?? '');
+        $height = mysqli_real_escape_string($con, $_POST['height'] ?? '');
+        $salary = mysqli_real_escape_string($con, $_POST['salary'] ?? '');
+        $address = mysqli_real_escape_string($con, $_POST['address'] ?? '');
+        $no_of_brothers = mysqli_real_escape_string($con, $_POST['no_of_brothers'] ?? '');
+        $bro_married = mysqli_real_escape_string($con, $_POST['bro_married'] ?? '');
+        $no_of_sisters = mysqli_real_escape_string($con, $_POST['no_of_sisters'] ?? '');
+        $sis_married = mysqli_real_escape_string($con, $_POST['sis_married'] ?? '');
+        $falive = mysqli_real_escape_string($con, $_POST['falive'] ?? '');
+        $malive = mysqli_real_escape_string($con, $_POST['malive'] ?? '');
+        $fathername = mysqli_real_escape_string($con, $_POST['fathername'] ?? '');
+        $mother_name = mysqli_real_escape_string($con, $_POST['mother_name'] ?? '');
+        $father_occupation = mysqli_real_escape_string($con, $_POST['father_occupation'] ?? '');
+        $mother_occupation = mysqli_real_escape_string($con, $_POST['mother_occupation'] ?? '');
+        $self_desc = mysqli_real_escape_string($con, $_POST['self_desc'] ?? '');
+        $expectation = mysqli_real_escape_string($con, $_POST['expectation'] ?? '');
+        $home_type = mysqli_real_escape_string($con, $_POST['home_type'] ?? '');
+        $dosam = mysqli_real_escape_string($con, $_POST['dosam'] ?? '');
+        $self_dosam = mysqli_real_escape_string($con, $_POST['self_dosam'] ?? '');
+        $area = mysqli_real_escape_string($con, $_POST['area'] ?? '');
 
-$to12=$email;
-$sub12="Greetings from Doctor Wedding";
-$msg12='<table width="372"  border="0" cellpadding="0" cellspacing="0" style="border:1px solid; border-color:#0099FF">
- <tr class="fnt">
-    <td height="31" colspan="3" bgcolor="#84c8f8" class="fnt" align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:15px; font-weight:bold; color:#000000">Greetings From Doctor Wedding </td>
-  </tr>
-  <tr class="fnt">
-    <td width="23"  >&nbsp;</td>
-    <td width="113" height="27" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#666; font-weight:bold;" >Dear Sir/Madam</td>
-    <td width="218">&nbsp;</td>
-  </tr>
-<tr bgcolor="#c8e6fb" class="fnt">
-    <td>&nbsp;</td>
-    <td height="34" colspan="2" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#666; font-weight:bold;">Thanks for your Registration, we will get back to you soon</td>
-  </tr>
-<tr  class="fnt">
-  <td>&nbsp;</td>
-  <td height="37" colspan="2" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#666; font-weight:bold;">
-  Do not Reply to this Mail,</td> 
-  </tr>
-</table>
-';
-//echo $msg1;exit;
-$sender="doctorwedding2026@gmail.com";
-// now we'll build the message headers
-       $headers1 = "From: $sender\r\n" .
-         "MIME-Version: 1.0\r\n" .
-         "Content-Type: multipart/mixed;\r\n" .
-         " boundary=\"{$mime_boundary1}\"";
-			
-      // next, we'll build the message body
-      // note that we insert two dashes in front of the
-      // MIME boundary when we use it
-      $msg12 .= "This is a multi-part message in MIME format.\n\n" . 
-                "--{$mime_boundary1}\n" . 
-                "Content-Type:text/html; charset=\"iso-8859-1\"\n" . 
-               "Content-Transfer-Encoding: 7bit\n\n" . 
-         $msg12 . "\n\n";
-		 if (@mail($to1, $sub1, $msg1, $headers1))
-			$r=1;
-      else
-			$r=0;
-			
+        $random_no = rand(1000000, 9999999);
+        $profile_id = "DW" . $random_no; 
+        
+        $uploaded_files = "";
+        $file = $_FILES['uploadedfile']['name'] ?? '';
+        if (!empty($file)) {
+            $target_path = "profile/";
+            if (!is_dir($target_path)) {
+                mkdir($target_path, 0777, true);
+            }
+            $uploaded_files = $random_no . "_" . $file;
+            move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path . $uploaded_files);
+        }
+        
+        $c_date = date("d/m/Y");
 
-$to1=$email;
-$sub1="Greetings from Doctor Wedding";
-$msg1="<table width='372'  border='0' cellpadding='0' cellspacing='0' style='border:1px solid; border-color:#0099FF'>
- <tr class='fnt'>
-    <td height='31' colspan='3' bgcolor='#84c8f8' class='fnt' align='center' style='font-family:Arial, Helvetica, sans-serif; font-size:15px; font-weight:bold; color:#000000'>Greetings From Doctor Wedding </td>
-  </tr>
-<tr class='fnt'>
-    <td width='23'  >&nbsp;</td>
-    <td width='113' height='27' style='font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#666; font-weight:bold;' >Dear Sir/Madam</td>
-    <td width='218'>&nbsp;</td>
-  </tr>
-  <tr bgcolor='#c8e6fb' class='fnt'>
-    <td>&nbsp;</td>
-    <td height='34' colspan='2' style='font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#666; font-weight:bold;'>Thanks for your Registration, we will get back to you soon</td>
-  </tr>
-<tr  class='fnt'>
-  <td>&nbsp;</td>
-  <td height='37' colspan='2' style='font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#666; font-weight:bold;'>
-  Do not Reply to this Mail,</td> 
-  </tr>
-</table>
-";
-//echo $msg1;exit;
-$sender="doctorwedding2026@gmail.com";
-// now we'll build the message headers
-       $headers = 'From: $sender'."\r\n" .
-          'X-Mailer:PHP/'.phpversion();
-		  $headers='MIME-Version: 1.0'."\r\n" ;
-		 $headers .="Content-Type:text/html;charset=iso-8859-1"."\r\n";
-		 
-      // next, we'll build the message body
-      // note that we insert two dashes in front of the
-      // MIME boundary when we use it
-		 if (@mail($to1, $sub1, $msg1, $headers))
-			$r=1;
-      else
-			$r=0;
-}
+        // Duplicate check
+        $find = mysqli_query($con, "SELECT id FROM register WHERE name='$name' AND dob='$dob' AND fathername='$fathername' AND mother_name='$mother_name' LIMIT 1");
+        if ($find && mysqli_num_rows($find) > 0) {
+            echo "<script>alert('Already Registered Profile. Kindly use login.'); window.location='register.php';</script>";
+            exit;
+        }
 
-echo "<script type=text/javascript>alert('Thank you for your Registration.')
-window.location='register.php'
-</script>";
+        // DYNAMICALY BUILD INSERT QUERY TO AVOID SCHEMA MISMATCH
+        $data = [
+            'name' => $name, 'gender' => $rad_gen, 'profile' => $profile, 'refernce' => $refernce,
+            'dob' => $dob, 'age' => $age, 'tob' => $tob, 'p_birth' => $p_birth, 'status1' => $status1,
+            'house_type' => $house_type, 'mobile' => $mobile, 'email' => $email, 'religion' => $religion,
+            'caste' => $caste, 'star' => $star, 'moonsign' => $moonsign, 'education' => $education,
+            'edu_det' => $edu_det, 'job' => $job, 'job_cmpy' => $job_cmpy, 'job_loc' => $job_loc,
+            'skin' => $skin, 'height' => $height, 'salary' => $salary, 'address' => $address,
+            'no_of_brothers' => $no_of_brothers, 'bro_married' => $bro_married, 'no_of_sisters' => $no_of_sisters,
+            'sis_married' => $sis_married, 'falive' => $falive, 'malive' => $malive, 'fathername' => $fathername,
+            'mother_name' => $mother_name, 'father_occupation' => $father_occupation, 'mother_occupation' => $mother_occupation,
+            'self_desc' => $self_desc, 'expectation' => $expectation, 'home_type' => $home_type,
+            'uploadedfile' => $uploaded_files, 'c_date' => $c_date, 'status' => '0', 'dosam' => $dosam,
+            'self_dosam' => $self_dosam, 'profile_id' => $profile_id, 'area' => $area
+        ];
+
+        // Filter data based on actual columns in the table
+        $table_cols_res = mysqli_query($con, "SHOW COLUMNS FROM register");
+        $table_cols = [];
+        while($c = mysqli_fetch_assoc($table_cols_res)) { $table_cols[] = $c['Field']; }
+        
+        $final_data = [];
+        foreach($data as $key => $val) {
+            if (in_array($key, $table_cols)) { $final_data[$key] = "'$val'"; }
+        }
+        
+        // Add defaults for required columns that were missing
+        $required_missing = [
+            'wallet_validity_start' => "''", 'wallet_validity_end' => "''",
+            'wallet_validity_star_string' => "''", 'wallet_validity_end_string' => "''",
+            'wallet' => "'0'", 'login_status' => "0", 'otp_status' => "0", 
+            'print_count' => "0", 'premium_customer' => "0", 'govt_job' => "'No'"
+        ];
+        foreach($required_missing as $key => $val) {
+            if (in_array($key, $table_cols) && !isset($final_data[$key])) {
+                $final_data[$key] = $val;
+            }
+        }
+
+        $fields = implode(", ", array_keys($final_data));
+        $values = implode(", ", array_values($final_data));
+        $query = "INSERT INTO register ($fields) VALUES ($values)";
+
+        if (!mysqli_query($con, $query)) {
+            $error = mysqli_error($con);
+            error_log("DB INSERT ERROR: " . $error);
+            die("Database Error: " . $error);
+        }
+
+        // Success Alert and Redirect
+        // Store user info in session for auto-filling payment form
+        $_SESSION['reg_name'] = $_POST['name'] ?? '';
+        $_SESSION['reg_email'] = $_POST['email'] ?? '';
+        $_SESSION['reg_mobile'] = $_POST['mobile'] ?? '';
+
+        echo "<script>alert('Thank you for your Registration. Your Profile ID is $profile_id'); window.location='plans.php';</script>";
+        exit;
+    } catch (Exception $e) {
+        error_log("PHP EXCEPTION: " . $e->getMessage());
+        die("An error occurred: " . $e->getMessage());
     }
-elseif($command=='mail_form')
-{
-$name=$_POST['name'];
-$email=$_POST['email'];
-$mobile=$_POST['mobile'];
-$msg=$_POST['msg'];
-$c_date=date('d-m-Y');
-//echo "insert into contact(name,email,mobile,msg)values ('$name','$email','$mobile','$msg')";
-mysqli_query($con,"insert into contact(name,email,mobile,msg,c_date)values ('$name','$email','$mobile','$msg','$c_date')") or die(mysqli_error($con));
 
-
-$to="doctorwedding2026@gmail.com";
- 	$from = stripslashes($_POST['email']);
-    $mime_boundary="==Multipart_Boundary_x".md5(mt_rand())."x";
-    $subject="$name Enquiry Details"; 
- $message ='<table width="771" height="344" border="0" cellpadding="0" cellspacing="0" style="border:1px solid; border-color:#0099FF">
- <tr class="fnt">
-    <td height="20" colspan="4" bgcolor="#84c8f8" class="fnt" align="center">Enquiry  Details</td>
-  </tr>
-  <tr class="fnt">
-    <td width="23"  >&nbsp;</td>
-    <td width="113" height="37">Name</td>
-    <td width="16" align="center" >:</td>
-    <td width="218">'.$name.'</td>
-  </tr>
-  <tr class="fnt">
-    <td>&nbsp;</td>
-    <td height="44">Email</td>
-    <td align="center">:</td>
-    <td>'.$email.'</td>
-  </tr>
-  <tr class="fnt">
-  <td>&nbsp;</td>
-    <td height="60">Mobile</td>
-    <td align="center">:</td>
-    <td>'.$mobile.'</td>
-  </tr>
-  <tr class="fnt">
-  <td>&nbsp;</td>
-    <td height="121">Message:</td>
-    <td align="center">:</td>
-    <td>'.$msg.'</td>
-  </tr>
-  
-</table>
-
-';
-
-     // now we'll build the message headers
-       $headers = "From: $from\r\n" .
-         "MIME-Version: 1.0\r\n" .
-         "Content-Type: multipart/mixed;\r\n" .
-         " boundary=\"{$mime_boundary}\"";
-			
-      // next, we'll build the message body
-      // note that we insert two dashes in front of the
-      // MIME boundary when we use it
-      $message .= "This is a multi-part message in MIME format.\n\n" . 
-                "--{$mime_boundary}\n" . 
-                "Content-Type:text/html; charset=\"iso-8859-1\"\n" . 
-               "Content-Transfer-Encoding: 7bit\n\n" . 
-         $message . "\n\n";
- 
-      // now we'll insert a boundary to indicate we're starting the attachment
-      // we have to specify the content type, file name, and disposition as
-      // an attachment, then add the file content and set another boundary to
-      // indicate that the end of the file has been reached
-     /* $message .= "--{$mime_boundary}\n" .
-         "Content-Type: {$type};\n" .
-         " name=\"{$name}\"\n" .
-         "--{$mime_boundary}--\n";
- */
-     
-      if (@mail($to, $subject, $message, $headers))
-			$g=1;
-      else
-			$g=0;
-echo "<script type=text/javascript>alert('Enquiry Submited Successfully.Your Enquiry Will be Shortly Process')
-window.location='contact.php'
-</script>";
+} elseif ($command == 'mail_form') {
+    $name = mysqli_real_escape_string($con, $_POST['name'] ?? '');
+    $email = mysqli_real_escape_string($con, $_POST['email'] ?? '');
+    $mobile = mysqli_real_escape_string($con, $_POST['mobile'] ?? '');
+    $msg = mysqli_real_escape_string($con, $_POST['msg'] ?? '');
+    $c_date = date('d-m-Y');
+    mysqli_query($con, "INSERT INTO contact(name,email,mobile,msg,c_date) VALUES ('$name','$email','$mobile','$msg','$c_date')");
+    echo "<script>alert('Enquiry Submitted Successfully.'); window.location='contact.php';</script>";
 }
 ?>
-

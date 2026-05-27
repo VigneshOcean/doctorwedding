@@ -23,8 +23,8 @@ if($res && mysqli_num_rows($res) > 0) {
     echo "No match for numbers $target_num." . PHP_EOL;
 }
 
-echo PHP_EOL . "Searching for profiles with HM prefix..." . PHP_EOL;
-$res2 = mysqli_query($con, "SELECT id, username, name FROM register WHERE username LIKE 'HM%' ORDER BY id DESC LIMIT 10");
+echo PHP_EOL . "Searching for profiles with DW prefix..." . PHP_EOL;
+$res2 = mysqli_query($con, "SELECT id, username, name FROM register WHERE username LIKE 'DW%' ORDER BY id DESC LIMIT 10");
 while($row2 = mysqli_fetch_assoc($res2)) {
     print_r($row2);
     echo PHP_EOL;

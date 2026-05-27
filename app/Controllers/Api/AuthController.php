@@ -178,7 +178,7 @@ class AuthController extends ApiController {
 
         if ($user['otp'] == $otp) {
             $rand_no = rand(100000, 999999);
-            $username = 'HM' . $rand_no;
+            $username = 'DW' . $rand_no;
             $password = (string)rand(10000, 99999); 
 
             $stmtUpdate = $this->db->prepare("
