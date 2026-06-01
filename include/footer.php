@@ -70,7 +70,7 @@
         <div class="row g-4 footer-container">
             <!-- Column 1: Logo & Social -->
             <div class="col-lg-4 col-md-6 footer-box">
-                <img src="image/footerlogo.svg" class="footer-logo mb-4" alt="Footer Logo">
+                <img src="image/footerlogo_new.svg" class="footer-logo mb-4" alt="Footer Logo">
                 <p style="color: #ccc !important; font-size: 15px; line-height: 1.7; margin-bottom: 20px;">
                     Trusted matrimony service helping lakhs of people find their perfect life partner across India.
                 </p>
@@ -133,7 +133,7 @@
         
         <div class="row align-items-center">
             <div class="col-md-6 text-center text-md-start">
-                <p class="mb-0 copyright-text" style="color: #888; font-size: 14px;">© 2026 DOCTOR WEDDING. All Rights Reserved.</p>
+                <p class="mb-0 copyright-text" style="color: #888; font-size: 14px;">© 2026 DOCTOR LIFE WEDDING. All Rights Reserved.</p>
             </div>
             <div class="col-md-6 text-center text-md-end">
                 <p class="mb-0 copyright-text" style="color: #888; font-size: 14px;">

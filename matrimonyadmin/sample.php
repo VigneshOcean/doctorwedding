@@ -13,7 +13,7 @@ $usprod=mysqli_fetch_array($prod);
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Doctor Wedding [www.doctorwedding.com]</title>
+<title>Doctor Life Matrimony [whttp://doctorlifematrimony.com]</title>
 </head>
 <body onload="window.print();">
 <table width="100%" cellpadding="5" cellspacing="5">

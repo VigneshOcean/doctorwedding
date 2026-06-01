@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Child Safety Policy - Doctor Wedding</title>
+    <title>Child Safety Policy - Doctor Life Matrimony</title>
     <link rel="stylesheet" href="css/modern-design.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -151,12 +151,12 @@
     <div class="container">
         <div class="page-container">
             <h1 class="section-title">Child Safety Policy</h1>
-            <span class="subtitle">Effective Date: June 2025 | Doctor Wedding is committed to maintaining a safe,
+            <span class="subtitle">Effective Date: June 2025 | Doctor Life Matrimony is committed to maintaining a safe,
                 responsible, and trusted matrimonial platform exclusively for adults.</span>
 
             <div class="policy-section">
                 <h3><span>1</span> Minimum Age Requirement</h3>
-                <p>Doctor Wedding is strictly a platform for adults. Registration and use of our services is permitted
+                <p>Doctor Life Matrimony is strictly a platform for adults. Registration and use of our services is permitted
                     only for individuals who are:</p>
                 <ul class="policy-list">
                     <li>18 years of age or older (as per the legal marriageable age in India)</li>
@@ -213,7 +213,7 @@
             <div class="policy-section">
                 <h3><span>5</span> Protection from Exploitation</h3>
                 <ul class="policy-list">
-                    <li>Doctor Wedding does not permit any form of child exploitation, grooming, or abuse on this
+                    <li>Doctor Life Matrimony does not permit any form of child exploitation, grooming, or abuse on this
                         platform.</li>
                     <li>Any member found attempting to contact or exploit a minor will be immediately banned and
                         reported to the Tamil Nadu Police Cybercrime Division.</li>
@@ -223,7 +223,7 @@
 
             <div class="policy-section">
                 <h3><span>6</span> Parental Responsibility</h3>
-                <p>Parents and guardians are advised to monitor their children's internet activity. Doctor Wedding is not
+                <p>Parents and guardians are advised to monitor their children's internet activity. Doctor Life Matrimony is not
                     designed for or accessible to minors, but we encourage responsible digital parenting to ensure
                     children do not access adult matrimonial platforms.</p>
             </div>

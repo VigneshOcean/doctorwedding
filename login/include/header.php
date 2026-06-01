@@ -5,7 +5,7 @@
 				<i class="icon-heart"></i>
 
 
-				Doctor Wedding
+				Doctor Life Matrimony
 
 
 			</small>

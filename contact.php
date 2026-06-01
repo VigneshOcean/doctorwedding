@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Doctor Wedding</title>
+    <title>Contact Us - Doctor Life Matrimony</title>
     <link rel="stylesheet" href="css/modern-design.css">
     <!-- Header included later but we need dependencies here for early scripts if any -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -136,7 +136,7 @@
                 <h6>Axis Bank Details</h6>
                 <div class="bank-info-item">
                     <span class="bank-info-label"><i class="bi bi-caret-right-fill text-primary me-2"></i>Account Holder Name</span>
-                    <span class="bank-info-value">Doctor Wedding</span>
+                    <span class="bank-info-value">Doctor Life Matrimony</span>
                 </div>
                 <div class="bank-info-item">
                     <span class="bank-info-label"><i class="bi bi-caret-right-fill text-primary me-2"></i>Bank Name</span>

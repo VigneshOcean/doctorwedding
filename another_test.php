@@ -191,7 +191,7 @@ function process_image_upload($uploadedfile,$new_extension)
     $result = create_watermark_from_string(
         $uploaded_file_path,
         $processed_file_path,
-        'www.doctorwedding.com',
+        'www.doctorlifewedding.com',
         'Font.ttf',
         $font_size,
         'CCCCCC',

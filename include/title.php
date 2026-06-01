@@ -1,10 +1,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Looking for Doctor Wedding in Chennai? Find your perfect Chennai Adi Dravida Brides / Grooms for Marriage on Doctor Wedding.
-The No. 1 & most successful Matrimony Site from Doctor Wedding." />
-<meta name="keywords" content="Doctor Wedding, Doctor Wedding in chennai" />
+<meta name="keywords" content="Looking for Doctor Life Matrimony in Chennai? Find your perfect Chennai Adi Dravida Brides / Grooms for Marriage on Doctor Life Matrimony.
+The No. 1 & most successful Matrimony Site from Doctor Life Matrimony." />
+<meta name="keywords" content="Doctor Life Matrimony, Doctor Life Matrimony in chennai" />
 <meta name="author" content="matrimonial.com" /> 
 
-<title>Doctor Wedding in Chennai | Doctor Wedding</title>
+<title>Doctor Life Matrimony in Chennai | Doctor Life Matrimony</title>
 
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -20,8 +20,8 @@ The No. 1 & most successful Matrimony Site from Doctor Wedding." />
 {
 "@context": "https://schema.org",
 "@type": "WebSite",
-"description":"Doctor Wedding in Chennai"
-"name": "Doctor Wedding",
+"description":"Doctor Life Matrimony in Chennai"
+"name": "Doctor Life Matrimony",
 "image": "https://doctorwedding.com/images/logo.png",
 "url": "https://doctorwedding.com/" 
 }

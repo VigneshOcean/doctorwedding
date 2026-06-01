@@ -27,7 +27,7 @@
                             <span class="red">Admin Space </span>
                             <span class="gray">(MVC)</span>
                         </h1>
-                        <h4 class="blue">&copy; Doctor Wedding</h4>
+                        <h4 class="blue">&copy; Doctor Life Matrimony</h4>
                     </div>
 
                     <div class="space-6"></div>

@@ -15,7 +15,7 @@ $c_id12=$_REQUEST['c_id'];
 <!DOCTYPE html>
 <html lang="en">
 <head><meta charset="utf-8" />
-<title>Doctor Wedding:Read Message</title>
+<title>Doctor Life Matrimony:Read Message</title>
 <meta name="description" content="Common form elements and layouts" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />

@@ -76,10 +76,10 @@ if(!mysqli_query($con, "insert into register(name,gender,profile,refernce,dob,ag
 }
 
 $to12=$email;
-$sub12="Greetings from Doctor Wedding";
+$sub12="Greetings from Doctor Life Matrimony";
 $msg12='<table width="372"  border="0" cellpadding="0" cellspacing="0" style="border:1px solid; border-color:#0099FF">
  <tr class="fnt">
-    <td height="31" colspan="3" bgcolor="#84c8f8" class="fnt" align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:15px; font-weight:bold; color:#000000">Greetings From Doctor Wedding </td>
+    <td height="31" colspan="3" bgcolor="#84c8f8" class="fnt" align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:15px; font-weight:bold; color:#000000">Greetings From Doctor Life Matrimony </td>
   </tr>
   <tr class="fnt">
     <td width="23"  >&nbsp;</td>
@@ -120,10 +120,10 @@ $sender="doctorwedding2026@gmail.com";
 			
 
 $to1=$email;
-$sub1="Greetings from Doctor Wedding";
+$sub1="Greetings from Doctor Life Matrimony";
 $msg1="<table width='372'  border='0' cellpadding='0' cellspacing='0' style='border:1px solid; border-color:#0099FF'>
  <tr class='fnt'>
-    <td height='31' colspan='3' bgcolor='#84c8f8' class='fnt' align='center' style='font-family:Arial, Helvetica, sans-serif; font-size:15px; font-weight:bold; color:#000000'>Greetings From Doctor Wedding </td>
+    <td height='31' colspan='3' bgcolor='#84c8f8' class='fnt' align='center' style='font-family:Arial, Helvetica, sans-serif; font-size:15px; font-weight:bold; color:#000000'>Greetings From Doctor Life Matrimony </td>
   </tr>
 <tr class='fnt'>
     <td width='23'  >&nbsp;</td>

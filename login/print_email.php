@@ -63,7 +63,7 @@ $subcaste1=$man111['subcaste'];
 ?>
 <body>
 
-<h3 style='margin-left:5%;'>Doctor Wedding [www.doctorwedding.com]</h3>
+<h3 style='margin-left:5%;'>Doctor Life Matrimony [whttp://doctorlifematrimony.com]</h3>
 <table width="90%" cellspacing="0" cellpadding="0" border="0" align="center" class="table_reg" style="border:solid 1px #000000;">
   <tbody>
     <tr>
@@ -116,12 +116,12 @@ $subcaste1=$man111['subcaste'];
 <?php 
 if($ma1['uploadedfile']!='') {
 ?>
- <tr> <td height="34"></td> <td class="topic">Profile Picture</td> <td colspan="5"><img src="http://www.doctorwedding.com/profile/<?php echo $ma1['uploadedfile']; ?>" height="266" width="365" /><td></tr>
+ <tr> <td height="34"></td> <td class="topic">Profile Picture</td> <td colspan="5"><img src="http://whttp://doctorlifematrimony.com/profile/<?php echo $ma1['uploadedfile']; ?>" height="266" width="365" /><td></tr>
 <?php
 } 
 if($ma1['horo']!='') {
 ?>
-<tr> <td height="34"></td> <td class="topic">Horoscope</td> <td colspan="5"><img src="http://www.doctorwedding.com/admin/horo/<?php echo $ma1['horo']; ?>" height="270" width="517" /></td>
+<tr> <td height="34"></td> <td class="topic">Horoscope</td> <td colspan="5"><img src="http://whttp://doctorlifematrimony.com/admin/horo/<?php echo $ma1['horo']; ?>" height="270" width="517" /></td>
     </tr>
 <?php } ?>
 </tbody>

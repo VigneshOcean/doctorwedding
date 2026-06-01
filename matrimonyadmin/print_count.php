@@ -15,7 +15,7 @@ if (!isset($_SESSION['id'])) {
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Doctor Wedding: Print taken Profiles</title>
+    <title>Doctor Life Matrimony: Print taken Profiles</title>
     <meta name="description" content="Profiles with print count" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />

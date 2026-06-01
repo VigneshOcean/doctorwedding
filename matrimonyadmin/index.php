@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 		<meta charset="utf-8" />
-		<title>Login Page - Doctor Wedding</title>
+		<title>Login Page - Doctor Life Matrimony</title>
 		<meta name="description" content="User login page" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -50,9 +50,9 @@ return true;
 							<div class="center">
 								<h1 style="font-size:22px;">
 									<i class="icon-heart  green"></i>
-									<span class="red">Doctor Wedding </span>
+									<span class="red">Doctor Life Matrimony </span>
 								</h1>
-								<h4 class="blue">&copy; www.doctorwedding.com</h4>
+								<h4 class="blue">&copy; whttp://doctorlifematrimony.com</h4>
 							</div>
 							<div class="space-6"></div>
 							<div class="position-relative">

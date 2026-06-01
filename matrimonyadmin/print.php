@@ -135,7 +135,7 @@ $subcaste1=$man111['subcaste'];
         <td colspan="3"> <?php echo $expectation; ?></td>
      </tr>
       <tr>   <td  width="23%" >Horoscope</td> 
-        <td colspan="3"><img src="http://www.doctorwedding.com/matrimonyadmin/horo/<?php echo $ma1['horo']; ?>" height="270" width="500" /></td>
+        <td colspan="3"><img src="http://whttp://doctorlifematrimony.com/matrimonyadmin/horo/<?php echo $ma1['horo']; ?>" height="270" width="500" /></td>
      </tr>
   </tbody>
 </table>

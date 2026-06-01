@@ -19,7 +19,7 @@ include("include/connect.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile Verification - Doctor Wedding</title>
+    <title>Mobile Verification - Doctor Life Matrimony</title>
     <link rel="stylesheet" href="css/modern-design.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <style>

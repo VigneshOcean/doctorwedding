@@ -25,11 +25,11 @@ if (isset($_POST['submit'])) {
 <html lang="en">
 
 <head>
-    <title>Doctor Wedding in Chennai | Doctor Wedding</title>
+    <title>Doctor Life Matrimony in Chennai | Doctor Life Matrimony</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" type="image/png" href="image/newfavicon.svg">
+    <link rel="icon" type="image/png" href="image/favicon_new.svg">
     <link rel="stylesheet" href="css/modern-design.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -474,7 +474,7 @@ if (isset($_POST['submit'])) {
                     <div class="video-heading">
                         <h2>About Our <span>Matrimony Service</span></h2>
                     </div>
-                    <p>Doctor Wedding is a trusted platform helping families find the perfect life partner
+                    <p>Doctor Life Matrimony is a trusted platform helping families find the perfect life partner
                         within the community.</p>
                     <div class="features-list">
                         <ul>
