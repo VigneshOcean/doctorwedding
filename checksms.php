@@ -2,9 +2,9 @@
 if (! function_exists ( 'curl_version' )) {
     exit ( "Enable cURL in PHP" );
 }
-$message=urlencode ("Doctor Wedding.Your OTP is :55555 Kindly use : www.doctorwedding.com -DOCTOR");
+$message=urlencode ("Doctor Life Matrimony.Your OTP is :55555 Kindly use : whttp://doctorlifematrimony.com -DOCTOR");
 
-// Doctor Wedding.Your OTP is :{#var#} Kindly use : www.doctorwedding.com -DOCTOR
+// Doctor Life Matrimony.Your OTP is :{#var#} Kindly use : whttp://doctorlifematrimony.com -DOCTOR
 $ch = curl_init ();
 $timeout = 0; // 100; // set to zero for no timeout
 //$myHITurl = "http://bhashsms.com/api/sendmsg.php?user=doctorwedding&pass=success&sender=DOCTOR&priority=ndnd&stype=normal&phone=9788180320&text=".$message."";

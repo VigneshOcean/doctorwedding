@@ -6,7 +6,7 @@ include("include/connect.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Membership Plans - Doctor Wedding</title>
+    <title>Membership Plans - Doctor Life Matrimony</title>
     <link rel="stylesheet" href="css/modern-design.css">
     <style>
         body { font-family: 'Inter', sans-serif; background: #f8faf9; }

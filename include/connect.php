@@ -17,9 +17,9 @@ if ($_SERVER['HTTP_HOST'] == 'localhost' || $_SERVER['REMOTE_ADDR'] == '127.0.0.
     $dbname = "matrimony";
 } else {
     $servername = "localhost";
-    $username = "doctorweddihm_doctorwed";
-    $password = "zGhJ@]&168W^w;tK";
-    $dbname = "doctorweddihm_doctorwedding";
+    $username = "doctorlifematrim_manikandan";
+    $password = "pQZX*iN1v~%)Y;2K";
+    $dbname = "doctorlifematrim_matrimonialdb";
 }
 
 // Direct connect with database

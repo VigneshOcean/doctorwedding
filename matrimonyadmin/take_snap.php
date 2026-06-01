@@ -13,7 +13,7 @@ $usprod=mysqli_fetch_array($prod);
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Doctor Wedding [www.doctorwedding.com]</title>
+<title>Doctor Life Matrimony [whttp://doctorlifematrimony.com]</title>
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="./jquery/html2canvas.js">
@@ -64,7 +64,7 @@ a:hover, a:active {
 <table width="100%" cellpadding="5" cellspacing="5">
 <tr>
     <td colspan="6" align="center" style="font-weight: bold; font-size: 20px;">
-        Doctor Wedding
+        Doctor Life Matrimony
     </td>
 </tr>
 <tr>

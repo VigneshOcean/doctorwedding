@@ -14,7 +14,7 @@ $row_f=mysqli_fetch_array($f);
 <!DOCTYPE html>
 <html lang="en">
 <head><meta charset="utf-8" />
-<title>Doctor Wedding:Wallet</title>
+<title>Doctor Life Matrimony:Wallet</title>
 <meta name="description" content="Static &amp; Dynamic Tables" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link href="assets/css/bootstrap.min.css" rel="stylesheet" />

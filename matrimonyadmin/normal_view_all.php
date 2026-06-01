@@ -15,7 +15,7 @@ if (!isset($_SESSION['id'])) {
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Doctor Wedding: View Registered Profiles</title>
+    <title>Doctor Life Matrimony: View Registered Profiles</title>
     <meta name="description" content="All registered profiles" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />

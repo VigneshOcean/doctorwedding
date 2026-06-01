@@ -15,7 +15,7 @@ if (!isset($_SESSION['id'])) {
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Doctor Wedding: Waiting for renewal Wallet</title>
+    <title>Doctor Life Matrimony: Waiting for renewal Wallet</title>
     <meta name="description" content="Expiring wallets tracking" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />

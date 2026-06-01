@@ -141,7 +141,7 @@ class AuthController extends ApiController {
                 $reg_id = $this->db->lastInsertId();
                 
                 // Send OTP SMS as per save_profile.php (Line 134-140)
-                $otpMessage = "Doctor Wedding.Your OTP is :".$otp." Kindly use : www.doctorwedding.com -DOCTOR";
+                $otpMessage = "Doctor Life Matrimony.Your OTP is :".$otp." Kindly use : whttp://doctorlifematrimony.com -DOCTOR";
                 $this->sendSms($data['mobile'], $otpMessage, "1207162823560830391");
                 
                 return $this->jsonResponse([
@@ -195,7 +195,7 @@ class AuthController extends ApiController {
             ]);
 
             // Send Credentials SMS as per save_profile.php (Line 22-28)
-            $credMessage = "Thanks for registration with Doctor Wedding.Username:".$username." and Password: ".$password." -DOCTOR";
+            $credMessage = "Thanks for registration with Doctor Life Matrimony.Username:".$username." and Password: ".$password." -DOCTOR";
             $this->sendSms($user['mobile'], $credMessage, "1207162823556605196");
 
             $token = base64_encode($reg_id . ':' . $username);

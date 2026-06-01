@@ -170,7 +170,7 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 1) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Advance Search - Doctor Wedding</title>
+    <title>Advance Search - Doctor Life Matrimony</title>
     <link type="text/css" rel="stylesheet" href="css/header-footer.css" />
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>

@@ -469,7 +469,7 @@ $row_e122=mysqli_fetch_array($e122);
         <ul class="links">
           <li><a href="#">Web Design by Ocean Softwares</a></li>
         </ul>
-        <p>Copyright &copy; 2018 <a href="#">www.doctorwedding.com - only for Adidravidar</a>. All Rights reserved.</p>
+        <p>Copyright &copy; 2018 <a href="#">whttp://doctorlifematrimony.com - only for Adidravidar</a>. All Rights reserved.</p>
       </div>
     </div>
     <!-- end .uou-block-4a -->

@@ -86,7 +86,7 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Gateway - Doctor Wedding</title>
+    <title>Payment Gateway - Doctor Life Matrimony</title>
     <link rel="stylesheet" href="css/modern-design.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>

@@ -289,7 +289,7 @@ while ($kal11 = mysqli_fetch_array($kal)) {
                  <div class="col-sm-8">
                   <div class="row">
                     <div class="col-sm-6 price-plancss1">
-                      <h6 class="text-center mt10 mb10" style="color:#f104e7;"><span style="color:#fff;">Doctor Wedding</span><br> News and Events</h6>
+                      <h6 class="text-center mt10 mb10" style="color:#f104e7;"><span style="color:#fff;">Doctor Life Matrimony</span><br> News and Events</h6>
                       <?php
 
 //echo "select * from  product where mf_name='$mf_name' order by pro_name asc";
@@ -426,7 +426,7 @@ if (isset($_REQUEST['sucess'])) {
     <ul class="links">
       <li><a href="#">Web Design by Ocean Softwares</a></li>
     </ul>
-    <p>Copyright &copy; 2018 <a href="#">www.doctorwedding.com - only for Adidravidar</a>. All Rights reserved.</p>
+    <p>Copyright &copy; 2018 <a href="#">whttp://doctorlifematrimony.com - only for Adidravidar</a>. All Rights reserved.</p>
   </div>
 </div>
 <!-- end .uou-block-4a -->

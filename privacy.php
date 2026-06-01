@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Doctor Wedding</title>
+    <title>Privacy Policy - Doctor Life Matrimony</title>
     <link rel="stylesheet" href="css/modern-design.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -36,7 +36,7 @@
 <div class="container">
     <div class="page-container">
         <h1 class="section-title">Privacy Policy</h1>
-        <span class="subtitle">Effective Date: June 2025 | Doctor Wedding (Professional Matrimonial Service)</span>
+        <span class="subtitle">Effective Date: June 2025 | Doctor Life Matrimony (Professional Matrimonial Service)</span>
 
         <div class="policy-section">
             <h3><span>1</span> Information We Collect</h3>
@@ -62,7 +62,7 @@
 
         <div class="policy-section">
             <h3><span>3</span> Profile Visibility</h3>
-            <p>Your profile, including name, photo, age, education, and caste is visible to other registered members of Doctor Wedding. Sensitive details such as your full address and phone number are shared only upon mutual interest or as per your privacy settings.</p>
+            <p>Your profile, including name, photo, age, education, and caste is visible to other registered members of Doctor Life Matrimony. Sensitive details such as your full address and phone number are shared only upon mutual interest or as per your privacy settings.</p>
         </div>
 
         <div class="policy-section">
@@ -72,7 +72,7 @@
 
         <div class="policy-section">
             <h3><span>5</span> Data Security</h3>
-            <p>We use industry-standard security measures including secure servers and encrypted connections to protect your personal data. However, members are advised not to share login credentials or personal financial details with anyone claiming to represent Doctor Wedding.</p>
+            <p>We use industry-standard security measures including secure servers and encrypted connections to protect your personal data. However, members are advised not to share login credentials or personal financial details with anyone claiming to represent Doctor Life Matrimony.</p>
         </div>
 
         <div class="policy-section">
@@ -92,12 +92,12 @@
 
         <div class="policy-section">
             <h3><span>8</span> Children's Privacy</h3>
-            <p>Doctor Wedding is strictly for adults aged 18 and above. We do not knowingly collect data from minors. Any profile found to belong to a minor will be immediately removed.</p>
+            <p>Doctor Life Matrimony is strictly for adults aged 18 and above. We do not knowingly collect data from minors. Any profile found to belong to a minor will be immediately removed.</p>
         </div>
 
         <div class="contact-info-footer">
             <h4>Privacy Concerns?</h4>
-            <p><i class="bi bi-globe"></i> Website: www.doctorwedding.com</p>
+            <p><i class="bi bi-globe"></i> Website: whttp://doctorlifematrimony.com</p>
             <p><i class="bi bi-envelope"></i> Email: doctorwedding2026@gmail.com</p>
             <p><i class="bi bi-telephone"></i> Phone: 7338821446</p>
         </div>

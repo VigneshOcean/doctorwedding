@@ -104,7 +104,7 @@ else
 								<!-- PAGE CONTENT BEGINS -->
 <div class="alert alert-block alert-success">
 <button type="button" class="close" data-dismiss="alert"><i class="icon-remove"></i></button>
-<i class="icon-ok green"></i>Welcome to<strong class="green"> Doctor Wedding</strong> !</div>
+<i class="icon-ok green"></i>Welcome to<strong class="green"> Doctor Life Matrimony</strong> !</div>
 <div class="row">
 <div class="space-6"></div>
 <div class="col-sm-7 infobox-container">

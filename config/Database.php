@@ -20,9 +20,9 @@ class Database {
             $this->dbname = "matrimony";
         } else {
             $this->host = "localhost";
-            $this->user = "doctorweddihm_doctorwed";
-            $this->pass = "zGhJ@]&168W^w;tK";
-            $this->dbname = "doctorweddihm_doctorwedding";
+            $this->user = "doctorlifematrim_manikandan";
+            $this->pass = "pQZX*iN1v~%)Y;2K";
+            $this->dbname = "doctorlifematrim_matrimonialdb";
         }
        
 

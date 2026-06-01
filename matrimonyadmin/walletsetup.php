@@ -13,7 +13,7 @@ $userid=$_REQUEST['userid'];
 <!DOCTYPE html>
 <html lang="en">
 <head><meta charset="utf-8" />
-<title>Doctor Wedding:Add Wallet Amount</title>
+<title>Doctor Life Matrimony:Add Wallet Amount</title>
 <meta name="description" content="Common form elements and layouts" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />

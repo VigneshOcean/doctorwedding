@@ -18,7 +18,7 @@ ini_set('max_execution_time', 900);
 <!DOCTYPE html>
 <html lang="en">
 <head><meta charset="utf-8" />
-<title>Doctor Wedding:Waiting for renewal Wallet</title>
+<title>Doctor Life Matrimony:Waiting for renewal Wallet</title>
 <meta name="description" content="Common form elements and layouts" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />

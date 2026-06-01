@@ -962,7 +962,7 @@
 									<tr valign="top">
 										<td class="p20px" style="padding-left:316px;" colspan="2">
 											<p> <input class="vam" type="checkbox" name="terms" id="terms"
-													checked="checked" /> I agree to the Doctor Wedding <span
+													checked="checked" /> I agree to the Doctor Life Matrimony <span
 													class="red">
 													<a href="#">Terms and Conditions.</a>
 													<!--<a href="javascript:openwin('terms.html', 600, 450);">Terms and Conditions.</a>-->
