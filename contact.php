@@ -57,7 +57,7 @@
                 </div>
                 <div>
                     <span class="text-muted small d-block">Support Email:</span>
-                    <span class="fw-bold text-success">doctorwedding2026@gmail.com</span>
+                    <span class="fw-bold text-success">doctorlife2026@doctorlifematrimony.com</span>
                 </div>
             </div>
         </div>

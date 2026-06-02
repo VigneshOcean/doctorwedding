@@ -4,6 +4,12 @@ namespace App\Controllers\Api;
 class AuthController extends ApiController {
     public function login() {
         $data = $this->getJsonPayload();
+        
+        // Check if payload is valid JSON
+        if (!is_array($data)) {
+            return $this->jsonResponse(['error' => 'Invalid JSON payload'], 400);
+        }
+        
         if (!isset($data['identifier']) || !isset($data['password'])) {
             return $this->jsonResponse(['error' => 'Missing identifier or password'], 400);
         }
@@ -39,8 +45,14 @@ class AuthController extends ApiController {
     public function register() {
         $data = $this->getJsonPayload();
         
+        // Check if payload is valid JSON
+        if (!is_array($data)) {
+            return $this->jsonResponse(['error' => 'Invalid JSON payload'], 400);
+        }
+        
         // Basic validation
         $required = ['name', 'mobile', 'gender', 'dob'];
+       
         foreach ($required as $field) {
             if (empty($data[$field])) {
                 return $this->jsonResponse(['error' => "Missing required field: $field"], 400);
@@ -66,7 +78,12 @@ class AuthController extends ApiController {
         }
 
         // Generate 6-digit OTP as per save_profile.php
-        $otp = rand(100000, 999999);
+        // Static OTP for testing with mobile 9876543210
+        if ($data['mobile'] === '9876543210') {
+            $otp = 123456;
+        } else {
+            $otp = rand(100000, 999999);
+        }
         $c_date = date('d/m/Y');
         
         // Map fields from payload to database columns
@@ -141,8 +158,8 @@ class AuthController extends ApiController {
                 $reg_id = $this->db->lastInsertId();
                 
                 // Send OTP SMS as per save_profile.php (Line 134-140)
-                $otpMessage = "Doctor Life Matrimony.Your OTP is :".$otp." Kindly use : whttp://doctorlifematrimony.com -DOCTOR";
-                $this->sendSms($data['mobile'], $otpMessage, "1207162823560830391");
+                $otpMessage = "Doctor Life Matrimony: Your OTP is ".$otp.". It will expire in 5 minutes -HMMATR";
+                $this->sendSms($data['mobile'], $otpMessage, "1607100000000382544");
                 
                 return $this->jsonResponse([
                     'status' => 'success',
@@ -178,7 +195,7 @@ class AuthController extends ApiController {
 
         if ($user['otp'] == $otp) {
             $rand_no = rand(100000, 999999);
-            $username = 'DW' . $rand_no;
+            $username = 'HM' . $rand_no;
             $password = (string)rand(10000, 99999); 
 
             $stmtUpdate = $this->db->prepare("
@@ -195,8 +212,8 @@ class AuthController extends ApiController {
             ]);
 
             // Send Credentials SMS as per save_profile.php (Line 22-28)
-            $credMessage = "Thanks for registration with Doctor Life Matrimony.Username:".$username." and Password: ".$password." -DOCTOR";
-            $this->sendSms($user['mobile'], $credMessage, "1207162823556605196");
+            $credMessage = "Thanks for registration with Doctor Life Matrimony. Username:".$username." and Password: ".$password." -HMMATR";
+            $this->sendSms($user['mobile'], $credMessage, "1607100000000382546");
 
             $token = base64_encode($reg_id . ':' . $username);
 
@@ -219,5 +236,3 @@ class AuthController extends ApiController {
         return $this->jsonResponse(['error' => 'Invalid OTP'], 401);
     }
 }
-
-

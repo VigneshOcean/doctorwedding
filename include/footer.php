@@ -113,7 +113,7 @@
                         <div class="contact-icon me-3">
                             <i class="bi bi-envelope-fill"></i>
                         </div>
-                        <p class="mb-0" style="color: #ccc !important; font-size: 15px;">doctorwedding2026@gmail.com</p>
+                        <p class="mb-0" style="color: #ccc !important; font-size: 15px;">doctorlife2026@doctorlifematrimony.com</p>
                     </div>
                     <div class="d-flex align-items-start mb-3">
                         <div class="contact-icon me-3 mt-1">

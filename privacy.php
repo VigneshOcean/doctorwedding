@@ -86,7 +86,7 @@
                 <li>Request access to or correction of your personal profile information at any time</li>
                 <li>Request deletion of your account and associated data</li>
                 <li>Opt out of promotional SMS/email communications</li>
-                <li>Contact us for any privacy concerns at doctorwedding2026@gmail.com</li>
+                <li>Contact us for any privacy concerns at doctorlife2026@doctorlifematrimony.com</li>
             </ul>
         </div>
 
@@ -98,7 +98,7 @@
         <div class="contact-info-footer">
             <h4>Privacy Concerns?</h4>
             <p><i class="bi bi-globe"></i> Website: whttp://doctorlifematrimony.com</p>
-            <p><i class="bi bi-envelope"></i> Email: doctorwedding2026@gmail.com</p>
+            <p><i class="bi bi-envelope"></i> Email: doctorlife2026@doctorlifematrimony.com</p>
             <p><i class="bi bi-telephone"></i> Phone: 7338821446</p>
         </div>
     </div>

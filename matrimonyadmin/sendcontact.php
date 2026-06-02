@@ -14,7 +14,7 @@ $useremail=$b['email'];
 $address=$b['address'];
 
 		
-		$from="doctorwedding2026@gmail.com";
+		$from="doctorlife2026@doctorlifematrimony.com";
 	$to = stripslashes($_POST['email']);
     $mime_boundary="==Multipart_Boundary_x".md5(mt_rand())."x";
     $subject="Contact Details from Doctor Life Matrimony"; 

@@ -44,10 +44,9 @@
 # ========================
 <IfModule mod_rewrite.c>
     RewriteEngine On
+    RewriteBase /
 
     # Prevent accessing hidden directories and files like .env or .git
-    RewriteCond %{SCRIPT_FILENAME} -d
-    RewriteCond %{SCRIPT_FILENAME} -f
     RewriteRule "(^|/)\." - [F]
 
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]

@@ -26,9 +26,9 @@ $current_wallet=($row['wallet']+$wallet);
 
 
 /*
-$message=urlencode ("Thanks for registration with Doctor Life Matrimony.Username:".$username." and Password: ".$pass." -DOCTOR");
+$message=urlencode ("Thanks for registration with Doctor Life Matrimony. Username:".$username." and Password: ".$pass." -HMMATR");
 $curl = curl_init();
-curl_setopt($curl, CURLOPT_URL, "http://site.ping4sms.com/api/httpapi?username=DOCTORimony&password=success&sender=DOCTOR&route=2&number=".$clientmobile."&sms=".$message."&templateid=1207162823556605196");
+curl_setopt($curl, CURLOPT_URL, "http://site.ping4sms.com/api/httpapi?username=hmmatrimony&password=success&sender=HMMATR&route=2&number=".$clientmobile."&sms=".$message."&templateid=1607100000000382546");
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 $result = curl_exec($curl);
 curl_close($curl);

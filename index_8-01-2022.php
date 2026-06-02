@@ -404,7 +404,7 @@ if (isset($_REQUEST['sucess'])) {
   <ul class="contact-info has-bg-image contain" data-bg-image="images/footer-map-bg.png">
     <li> <i class="fa fa-mobile"></i> <a href="tel:#">7338821446</a> </li>
     <li> <i class="fa fa-phone"></i> <a href="tel:#">7338821446</a> </li>
-    <li> <i class="fa fa-envelope"></i> <a href="mailto:#">doctorwedding2026@gmail.com</a> </li>
+    <li> <i class="fa fa-envelope"></i> <a href="mailto:#">doctorlife2026@doctorlifematrimony.com</a> </li>
   </ul>
 </div>
 <div class="col-md-3 col-sm-6">

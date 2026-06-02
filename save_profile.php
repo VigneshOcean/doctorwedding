@@ -19,10 +19,10 @@ if($command=="verify")
         $s=rand(10000,99999);	
         mysqli_query($con,"update register set otp_status='1',status='1',username='$username',password='$s' where id='$reg_id'");	
         //$message=urlencode ("Doctor Life Matrimony - Username:".$username." and Password: ".$s." Kindly use : whttp://doctorlifematrimony.com");
-        $message=urlencode ("Thanks for registration with Doctor Life Matrimony.Username:".$username." and Password: ".$s." -DOCTOR");
+        $message=urlencode ("Thanks for registration with Doctor Life Matrimony. Username:".$username." and Password: ".$s." -HMMATR");
         $curl = curl_init();
-        //curl_setopt($curl, CURLOPT_URL, "http://bhashsms.com/api/sendmsg.php?user=DOCTORimony&pass=success&sender=DOCTOR&priority=ndnd&stype=normal&phone=".$mobile_no."&text=".$message."");
-        curl_setopt($curl, CURLOPT_URL, "http://site.ping4sms.com/api/httpapi?username=DOCTORimony&password=success&sender=DOCTOR&route=2&number=".$mobile_no."&sms=".$message."&templateid=1207162823556605196");
+        //curl_setopt($curl, CURLOPT_URL, "http://bhashsms.com/api/sendmsg.php?user=hmmatrimony&pass=success&sender=HMMATR&priority=ndnd&stype=normal&phone=".$mobile_no."&text=".$message."");
+        curl_setopt($curl, CURLOPT_URL, "http://site.ping4sms.com/api/httpapi?username=hmmatrimony&password=success&sender=HMMATR&route=2&number=".$mobile_no."&sms=".$message."&templateid=1607100000000382546");
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
         $result = curl_exec($curl);
         curl_close($curl);
@@ -131,10 +131,10 @@ else
         if($profile!='admin')
         {
             //$message=urlencode ("Doctor Life Matrimony.Your OTP is :".$a." Kindly use : whttp://doctorlifematrimony.com");
-            $message=urlencode ("Doctor Life Matrimony.Your OTP is :".$a." Kindly use : whttp://doctorlifematrimony.com -DOCTOR");
+            $message=urlencode ("Doctor Life Matrimony: Your OTP is ".$a.". It will expire in 5 minutes -HMMATR");
             $curl = curl_init();
-            //curl_setopt($curl, CURLOPT_URL, "http://bhashsms.com/api/sendmsg.php?user=DOCTORimony&pass=success&sender=DOCTOR&priority=ndnd&stype=normal&phone=".$mobile."&text=".$message.""); 
-            curl_setopt($curl, CURLOPT_URL, "http://site.ping4sms.com/api/httpapi?username=DOCTORimony&password=success&sender=DOCTOR&route=2&number=".$mobile."&sms=".$message."&templateid=1207162823560830391");
+            //curl_setopt($curl, CURLOPT_URL, "http://bhashsms.com/api/sendmsg.php?user=hmmatrimony&pass=success&sender=HMMATR&priority=ndnd&stype=normal&phone=".$mobile."&text=".$message.""); 
+            curl_setopt($curl, CURLOPT_URL, "http://site.ping4sms.com/api/httpapi?username=hmmatrimony&password=success&sender=HMMATR&route=2&number=".$mobile."&sms=".$message."&templateid=1607100000000382544");
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
             $result = curl_exec($curl);
             curl_close($curl);

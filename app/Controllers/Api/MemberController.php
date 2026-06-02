@@ -19,7 +19,7 @@ class MemberController extends ApiController {
             'education_details' => (string)($member['edu_det'] ?? ''),
             'location' => (string)$member['native_place'],
             'about' => (string)$member['self_desc'],
-            'profileImage' => AvatarHelper::getAvatar($member['gender'], '/'),
+            'profileImage' => !empty($member['uploadedfile']) ? '/profile/' . $member['uploadedfile'] : AvatarHelper::getAvatar($member['gender'], '/'),
             'religion' => (string)$member['religion'],
             'horoscopeImage' => !empty($member['horo']) ? '/matrimonyadmin/horo/' . $member['horo'] : null,
             'dateOfBirth' => (string)$member['dob'],
@@ -27,6 +27,7 @@ class MemberController extends ApiController {
             'star' => (string)$member['star'],
             'moonsign' => (string)$member['moonsign'],
             'salary' => (string)$member['salary'],
+            'isUnlocked' => isset($member['is_unlocked']) ? (bool)$member['is_unlocked'] : false,
             // Optional fields from join tables
             'likedAt' => isset($member['liked_at']) ? $member['liked_at'] : null,
             'interestStatus' => isset($member['send_interest']) ? ($member['send_interest'] == 'yes' ? 'Accepted' : 'Pending') : null,
@@ -79,7 +80,7 @@ class MemberController extends ApiController {
             'expectation' => $profile['expectation'],
             'dosam' => $profile['dosam'],
             'self_dosam' => $profile['self_dosam'],
-            'profile_image' => AvatarHelper::getAvatar($profile['gender'], '/'),
+            'profile_image' => !empty($profile['uploadedfile']) ? '/profile/' . $profile['uploadedfile'] : AvatarHelper::getAvatar($profile['gender'], '/'),
             'profile_image_2' => null,
             'horoscope_image' => !empty($profile['horo']) ? '/matrimonyadmin/horo/' . $profile['horo'] : null,
             'raasi_grid' => [
@@ -102,8 +103,8 @@ class MemberController extends ApiController {
         $minAge = $currentAge - 7;
         $maxAge = $currentAge + 7;
 
-        $query = "SELECT id, username, name, age, gender, height, job, education, edu_det, native_place, self_desc, uploadedfile, religion, horo, dob, tob, star, moonsign, salary 
-                  FROM register 
+        $query = "SELECT r.*, (SELECT COUNT(*) FROM getcontact_history WHERE sender_id = :my_id_unlock AND to_id = r.id AND CURDATE() BETWEEN valid_from AND valid_to) as is_unlocked 
+                  FROM register r 
                   WHERE LOWER(gender) = :gender 
                   AND status = '1'
                   AND id != :my_id
@@ -116,6 +117,7 @@ class MemberController extends ApiController {
             'min_age' => $minAge,
             'max_age' => $maxAge,
             'my_id' => $user['id'],
+            'my_id_unlock' => $user['id'],
             'my_id2' => $user['id'],
             'my_id3' => $user['id'],
             'my_id4' => $user['id']
@@ -140,6 +142,11 @@ class MemberController extends ApiController {
             $params['my_dob'] = $myDob;
         }
 
+        // Photo Only filter
+        if (isset($_GET['photo_only']) && ($_GET['photo_only'] === '1' || $_GET['photo_only'] === 'true')) {
+            $query .= " AND uploadedfile != '' AND uploadedfile IS NOT NULL";
+        }
+
         $query .= " ORDER BY id DESC LIMIT :limit OFFSET :offset";
 
         $stmt = $this->db->prepare($query);
@@ -152,8 +159,47 @@ class MemberController extends ApiController {
         
         $members = $stmt->fetchAll();
         $formattedMembers = array_map([$this, 'mapMemberData'], $members);
+
+        // Get total count for pagination
+        $countQuery = "SELECT COUNT(*) FROM register r 
+                      WHERE LOWER(gender) = :gender 
+                      AND status = '1'
+                      AND id != :my_id
+                      AND id NOT IN (SELECT to_id FROM blocked_users WHERE sender_id = :my_id2)
+                      AND id NOT IN (SELECT sender_id FROM blocked_users WHERE to_id = :my_id3)
+                      AND id NOT IN (SELECT to_id FROM reported_users WHERE sender_id = :my_id4)
+                      AND age >= :min_age AND age <= :max_age";
         
-        return $this->jsonResponse(array('members' => $formattedMembers, 'page' => $page, 'limit' => $limit));
+        if (!empty($user['education']) && strtoupper($user['education']) !== 'DOCTOR') {
+            $countQuery .= " AND education != 'DOCTOR'";
+        }
+        if (!empty($user['dob'])) {
+            if (strtolower($user['gender'] ?? '') === 'male') {
+                $countQuery .= " AND STR_TO_DATE(REPLACE(dob, '-', '/'), '%d/%m/%Y') >= STR_TO_DATE(REPLACE(:my_dob, '-', '/'), '%d/%m/%Y')";
+            } else {
+                $countQuery .= " AND STR_TO_DATE(REPLACE(dob, '-', '/'), '%d/%m/%Y') <= STR_TO_DATE(REPLACE(:my_dob, '-', '/'), '%d/%m/%Y')";
+            }
+        }
+        if (isset($_GET['photo_only']) && ($_GET['photo_only'] === '1' || $_GET['photo_only'] === 'true')) {
+            $countQuery .= " AND uploadedfile != '' AND uploadedfile IS NOT NULL";
+        }
+
+        $countStmt = $this->db->prepare($countQuery);
+        foreach ($params as $key => $val) {
+            if (strpos($countQuery, ':' . $key) !== false) {
+                $countStmt->bindValue(':' . $key, $val);
+            }
+        }
+        $countStmt->execute();
+        $totalRecords = (int)$countStmt->fetchColumn();
+        
+        return $this->jsonResponse(array(
+            'members' => $formattedMembers, 
+            'page' => $page, 
+            'limit' => $limit,
+            'total_records' => $totalRecords,
+            'total_pages' => ceil($totalRecords / $limit)
+        ));
     }
 
     public function show($id) {
@@ -204,8 +250,8 @@ class MemberController extends ApiController {
         $user = $this->authenticate();
         $oppositeGender = (strtolower($user['gender']) == 'male') ? 'female' : 'male';
 
-        $query = "SELECT id, username, name, age, gender, height, job, education, edu_det, native_place, self_desc, uploadedfile, religion, horo, dob, tob, star, moonsign, salary 
-                  FROM register 
+        $query = "SELECT r.*, (SELECT COUNT(*) FROM getcontact_history WHERE sender_id = :my_id_unlock AND to_id = r.id AND CURDATE() BETWEEN valid_from AND valid_to) as is_unlocked 
+                  FROM register r 
                   WHERE LOWER(gender) = :gender 
                   AND status = '1'
                   AND id != :my_id
@@ -215,6 +261,7 @@ class MemberController extends ApiController {
         $params = [
             'gender' => $oppositeGender,
             'my_id' => $user['id'],
+            'my_id_unlock' => $user['id'],
             'my_id2' => $user['id'],
             'my_id3' => $user['id'],
             'my_id4' => $user['id']
@@ -313,6 +360,8 @@ class MemberController extends ApiController {
             } elseif ($_GET['photo_selection'] === 'without_photo') {
                 $query .= " AND (uploadedfile = '' OR uploadedfile IS NULL)";
             }
+        } elseif (isset($_GET['photo_only']) && ($_GET['photo_only'] === '1' || $_GET['photo_only'] === 'true')) {
+            $query .= " AND uploadedfile != '' AND uploadedfile IS NOT NULL";
         }
 
         if (isset($_GET['isgovt']) && ($_GET['isgovt'] === 'true' || $_GET['isgovt'] === '1')) {
@@ -337,10 +386,69 @@ class MemberController extends ApiController {
         
         $formattedMembers = array_map([$this, 'mapMemberData'], $members);
 
+        // Get total count for pagination
+        $countQuery = "SELECT COUNT(*) FROM register 
+                      WHERE LOWER(gender) = :gender 
+                      AND status = '1'
+                      AND id != :my_id
+                      AND id NOT IN (SELECT to_id FROM blocked_users WHERE sender_id = :my_id2)
+                      AND id NOT IN (SELECT sender_id FROM blocked_users WHERE to_id = :my_id3)
+                      AND id NOT IN (SELECT to_id FROM reported_users WHERE sender_id = :my_id4)";
+        
+        // Apply the same filters as the search query
+        if (!empty($_GET['profile_id'])) $countQuery .= " AND (profile_id = :profile_id OR username = :profile_id)";
+        if (!empty($_GET['religion'])) $countQuery .= " AND religion = :religion";
+        if (!empty($_GET['caste'])) $countQuery .= " AND caste = :caste";
+        if (!empty($_GET['dosam'])) $countQuery .= " AND dosam = :dosam";
+        if (!empty($_GET['from_date'])) $countQuery .= " AND c_date >= :from_date";
+        if (!empty($_GET['to_date'])) $countQuery .= " AND c_date <= :to_date";
+        if (!empty($_GET['location'])) $countQuery .= " AND (native_place LIKE :location OR area LIKE :location)";
+        
+        $countQuery .= " AND age >= :min_age_limit AND age <= :max_age_limit";
+        if (!empty($_GET['min_age'])) $countQuery .= " AND age >= :min_age";
+        if (!empty($_GET['max_age'])) $countQuery .= " AND age <= :max_age";
+        if (!empty($user['education']) && strtoupper($user['education']) !== 'DOCTOR') $countQuery .= " AND education != 'DOCTOR'";
+        if (!empty($user['dob'])) {
+            if (strtolower($user['gender'] ?? '') === 'male') {
+                $countQuery .= " AND STR_TO_DATE(REPLACE(dob, '-', '/'), '%d/%m/%Y') >= STR_TO_DATE(REPLACE(:my_dob, '-', '/'), '%d/%m/%Y')";
+            } else {
+                $countQuery .= " AND STR_TO_DATE(REPLACE(dob, '-', '/'), '%d/%m/%Y') <= STR_TO_DATE(REPLACE(:my_dob, '-', '/'), '%d/%m/%Y')";
+            }
+        }
+        if (!empty($_GET['education']) && strtolower($_GET['education']) !== 'all') {
+            $edu = $_GET['education'];
+            if (strpos($edu, ',') !== false) {
+                $eduArray = explode(',', $edu);
+                $placeholders = [];
+                foreach ($eduArray as $i => $e) { $placeholders[] = ':edu_' . $i; }
+                $countQuery .= " AND education IN (" . implode(',', $placeholders) . ")";
+            } else {
+                $countQuery .= " AND education = :education";
+            }
+        }
+        if (!empty($_GET['photo_selection'])) {
+            if ($_GET['photo_selection'] === 'with_photo') $countQuery .= " AND uploadedfile != '' AND uploadedfile IS NOT NULL";
+            elseif ($_GET['photo_selection'] === 'without_photo') $countQuery .= " AND (uploadedfile = '' OR uploadedfile IS NULL)";
+        } elseif (isset($_GET['photo_only']) && ($_GET['photo_only'] === '1' || $_GET['photo_only'] === 'true')) {
+            $countQuery .= " AND uploadedfile != '' AND uploadedfile IS NOT NULL";
+        }
+        if (isset($_GET['isgovt']) && ($_GET['isgovt'] === 'true' || $_GET['isgovt'] === '1')) $countQuery .= " AND govt_job = 'Yes'";
+
+        $countStmt = $this->db->prepare($countQuery);
+        foreach ($params as $key => $val) {
+            if (strpos($countQuery, ':' . $key) !== false) {
+                $countStmt->bindValue(':' . $key, $val);
+            }
+        }
+        $countStmt->execute();
+        $totalRecords = (int)$countStmt->fetchColumn();
+
         return $this->jsonResponse(array(
             'members' => $formattedMembers,
             'page' => $page,
-            'limit' => $limitVal
+            'limit' => $limitVal,
+            'total_records' => $totalRecords,
+            'total_pages' => ceil($totalRecords / $limitVal)
         ));
     }
 
@@ -431,8 +539,8 @@ class MemberController extends ApiController {
         $user = $this->authenticate();
         $senderId = $user['id'];
 
-        // Resolve numeric ID if username was provided
-        $stmtMember = $this->db->prepare("SELECT id FROM register WHERE id = :id1 OR username = :id2");
+        // Resolve numeric ID and get details if username was provided
+        $stmtMember = $this->db->prepare("SELECT id, name, mobile FROM register WHERE id = :id1 OR username = :id2");
         $stmtMember->execute(['id1' => $id, 'id2' => $id]);
         $target = $stmtMember->fetch();
 
@@ -461,6 +569,14 @@ class MemberController extends ApiController {
             $ins = $this->db->prepare("INSERT INTO likes (sender_id, to_id, c_date, c_time, ip_add) VALUES (:s, :t, :d, :tm, :ip)");
             $ins->execute(['s' => $senderId, 't' => $targetId, 'd' => $c_date, 'tm' => $c_time, 'ip' => $ip]);
             
+            // Send SMS Notification
+            if (!empty($target['mobile'])) {
+                $targetName = $target['name'];
+                $senderName = $user['name'];
+                $likeMessage = "Mr/Miss " . $targetName . ",Your profile has been liked by " . $senderName . "- please visit- doctorlifematrimony.com only for Doctors -HMMATR";
+                $this->sendSms($target['mobile'], $likeMessage, "1607100000000382545");
+            }
+
             return $this->jsonResponse(['status' => 'success', 'message' => 'Profile liked', 'liked' => true]);
         }
     }
@@ -484,10 +600,11 @@ class MemberController extends ApiController {
         }
         $targetId = $targetRecord['id'];
 
-        // Fetch user wallet and target education cost
+        // Fetch user wallet, credits and target education cost
         $stmt = $this->db->prepare("
-            SELECT r.wallet, target.education, e.cost 
+            SELECT r.wallet, uc.credits, target.education, e.cost 
             FROM register r 
+            LEFT JOIN user_credits uc ON r.id = uc.user_id
             CROSS JOIN register target ON target.id = :t 
             LEFT JOIN education e ON target.education = e.education
             WHERE r.id = :s
@@ -500,10 +617,15 @@ class MemberController extends ApiController {
         }
 
         $wallet = (float)$data['wallet'];
+        $credits = (int)$data['credits'];
         $cost = (float)$data['cost'];
+        $useCredits = false;
 
-        if ($wallet < $cost) {
-            return $this->jsonResponse(['error' => 'Insufficient balance. Contact cost: ' . $cost], 402);
+        if ($credits > 0) {
+            $useCredits = true;
+            $cost = 0; // No wallet deduction if using credits
+        } elseif ($wallet < $cost) {
+            return $this->jsonResponse(['error' => 'Insufficient balance or credits.'], 402);
         }
 
         // Proceed with unlock
@@ -519,9 +641,14 @@ class MemberController extends ApiController {
             $ins = $this->db->prepare("INSERT INTO getcontact_history (sender_id, to_id, c_date, c_time, ip_add, cost, valid_from, valid_to) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
             $ins->execute([$senderId, $targetId, $c_date, $c_time, $ip, $cost, $c_date, $valid_to]);
 
-            // Deduct balance
-            $upd = $this->db->prepare("UPDATE register SET wallet = wallet - ? WHERE id = ?");
-            $upd->execute([$cost, $senderId]);
+            // Deduct balance or credits
+            if ($useCredits) {
+                $upd = $this->db->prepare("UPDATE user_credits SET credits = credits - 1 WHERE user_id = ?");
+                $upd->execute([$senderId]);
+            } else {
+                $upd = $this->db->prepare("UPDATE register SET wallet = wallet - ? WHERE id = ?");
+                $upd->execute([$cost, $senderId]);
+            }
 
             $this->db->commit();
             

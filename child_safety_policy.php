@@ -195,7 +195,7 @@
                 <h3><span>4</span> Reporting Underage Profiles</h3>
                 <p>If you come across a profile that appears to belong to a minor, please report it immediately:</p>
                 <ul class="policy-list">
-                    <li><strong>Email:</strong> doctorwedding2026@gmail.com with the profile ID and your concern.</li>
+                    <li><strong>Email:</strong> doctorlife2026@doctorlifematrimony.com with the profile ID and your concern.</li>
                     <li><strong>Phone:</strong> +91 7338821446.</li>
                     <li><strong>Visit:</strong> 28/49, South Usman Road, T Nagar, Chennai - 600 017.</li>
                 </ul>
@@ -204,7 +204,7 @@
                 <p class="mt-3 small text-muted">If you come across a profile that appears to belong to a minor, please
                     report it immediately:</p>
                 <ul class="policy-list">
-                    <li>Email: doctorwedding2026@gmail.com with the profile ID and your concern</li>
+                    <li>Email: doctorlife2026@doctorlifematrimony.com with the profile ID and your concern</li>
                 </ul>
                 <p class="mt-3 small text-muted">All reports will be reviewed within 24 hours and appropriate action
                     will be taken promptly.</p>
@@ -238,7 +238,7 @@
 
             <div class="contact-info-footer">
                 <h4>Safety Concerns?</h4>
-                <p><i class="bi bi-envelope"></i> Email: doctorwedding2026@gmail.com</p>
+                <p><i class="bi bi-envelope"></i> Email: doctorlife2026@doctorlifematrimony.com</p>
                 <p><i class="bi bi-telephone"></i> Phone: 7338821446</p>
                 <p><i class="bi bi-geo-alt"></i> 28/49, South Usman Road, T Nagar, Chennai - 600017</p>
             </div>

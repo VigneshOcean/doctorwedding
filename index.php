@@ -79,6 +79,13 @@ $router->get('/api/v1/metadata/castes', [App\Controllers\Api\MetadataController:
 $router->get('/api/v1/metadata/castes/{id}/subcastes', [App\Controllers\Api\MetadataController::class, 'getSubcastes']);
 
 $router->post('/api/v1/profile/delete-account', [App\Controllers\Api\ProfileController::class, 'deleteAccount']);
+// Payment Routes
+$router->get('/api/v1/payments/plans', [App\Controllers\Api\PaymentController::class, 'getPlans']);
+$router->get('/api/v1/payments/credit-packages', [App\Controllers\Api\PaymentController::class, 'getCreditPackages']);
+$router->post('/api/v1/payments/initiate', [App\Controllers\Api\PaymentController::class, 'initiatePayment']);
+$router->post('/api/v1/payments/verify', [App\Controllers\Api\PaymentController::class, 'verifyPayment']);
+$router->post('/api/v1/payments/verify-iap', [App\Controllers\Api\PaymentController::class, 'verifyIAP']);
+$router->post('/api/v1/payments/webhook', [App\Controllers\Api\PaymentController::class, 'handleWebhook']);
 // ==========================================
 
 // Get current URI and HTTP Method

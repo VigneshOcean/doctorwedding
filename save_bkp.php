@@ -98,7 +98,7 @@ $msg12='<table width="372"  border="0" cellpadding="0" cellspacing="0" style="bo
 </table>
 ';
 //echo $msg1;exit;
-$sender="doctorwedding2026@gmail.com";
+$sender="doctorlife2026@doctorlifematrimony.com";
 // now we'll build the message headers
        $headers1 = "From: $sender\r\n" .
          "MIME-Version: 1.0\r\n" .
@@ -142,7 +142,7 @@ $msg1="<table width='372'  border='0' cellpadding='0' cellspacing='0' style='bor
 </table>
 ";
 //echo $msg1;exit;
-$sender="doctorwedding2026@gmail.com";
+$sender="doctorlife2026@doctorlifematrimony.com";
 // now we'll build the message headers
        $headers = 'From: $sender'."\r\n" .
           'X-Mailer:PHP/'.phpversion();
@@ -173,7 +173,7 @@ $c_date=date('d-m-Y');
 mysqli_query($con, "insert into contact(name,email,mobile,msg,c_date)values ('$name','$email','$mobile','$msg','$c_date')") or die(mysqli_error($con));
 
 
-$to="doctorwedding2026@gmail.com";
+$to="doctorlife2026@doctorlifematrimony.com";
  	$from = stripslashes($_POST['email']);
     $mime_boundary="==Multipart_Boundary_x".md5(mt_rand())."x";
     $subject="$name Enquiry Details"; 
