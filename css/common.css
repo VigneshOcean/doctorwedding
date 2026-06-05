@@ -359,30 +359,6 @@ input.button:hover { background:#060; }
 
 .ffa { font-family:Arial, Helvetica, sans-serif; }
 .ffab { font-family:"Arial Black", Gadget, sans-serif; }
-.ffc { font-family:"Courier New", Courier, monospace; }
-.ffg { font-family:Georgia, "Times New Roman", Times, serif; }
-.fft { font-family:Tahoma, Geneva, sans-serif; }
-.fftms { font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; }
-.fftnr { font-family:"Times New Roman", Times, serif; }
-.ffv { font-family:Verdana, Geneva, sans-serif; }
-.ffpl { font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif; }
-.fflsu { font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif; }
-.ffmss { font-family:"MS Serif", "New York", serif; }
-.fflc { font-family:"Lucida Console", Monaco, monospace; }
-.ffcsms { font-family:"Comic Sans MS", cursive; }
-.ffm{font-family:"Microsoft Sans Serif", Times, serif;}
-
-/***** OTHER STYLES *****/
-.w1{width:1%;}
-.w5 { width:5%; }
-.w10 { width:10%; }
-.w15 { width:15%; }
-.w18{width:18.5%;}
-.w195 { width:19.5%; }
-.w20 { width:20%; }
-.w23 { width:23%; }
-.w245 { width:24.5%; }
-.w25 { width:25%; }
 .w30 { width:30%; }
 .w31 { width:31%; }
 .w33 { width:33%; }
@@ -608,3 +584,35 @@ border-image:url("http://static.matrimonialsindia.com/images/border.png") 15 15 
 .font_option .on_big,.font_option .off_big:hover{background-position:-23px 0;}
 .font_option .off_small{background-position:0 -25px;}
 .font_option .off_small:hover,.font_option .on_small{background-position:0 0;}
+/***** RESTORED FONT FAMILY CLASSES *****/
+.ffc { font-family:"Courier New", Courier, monospace; }
+.ffg { font-family:Georgia, "Times New Roman", Times, serif; }
+.fft { font-family:Tahoma, Geneva, sans-serif; }
+.fftms { font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; }
+.fftnr { font-family:"Times New Roman", Times, serif; }
+.ffv { font-family:Verdana, Geneva, sans-serif; }
+.ffpl { font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif; }
+.fflsu { font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif; }
+.ffmss { font-family:"MS Serif", "New York", serif; }
+.fflc { font-family:"Lucida Console", Monaco, monospace; }
+.ffcsms { font-family:"Comic Sans MS", cursive; }
+.ffm{font-family:"Microsoft Sans Serif", Times, serif;}
+.w1{width:1%;}
+.w5 { width:5%; }
+.w10 { width:10%; }
+.w15 { width:15%; }
+.w18{width:18.5%;}
+.w195 { width:19.5%; }
+.w20 { width:20%; }
+.w23 { width:23%; }
+.w245 { width:24.5%; }
+.w25 { width:25%; }
+
+/***** TAMIL LANGUAGE SUPPORT *****/
+/* Hind Madurai supports Tamil script (loaded via Google Fonts in header) */
+.tamil-text {
+    font-family: 'Hind Madurai', 'Latha', 'Tamil Sangam MN', 'Noto Sans Tamil', Arial Unicode MS, sans-serif;
+    font-size: 13px;
+    color: #555;
+    vertical-align: middle;
+}

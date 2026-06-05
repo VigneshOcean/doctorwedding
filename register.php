@@ -1,12 +1,24 @@
-<?php include("include/connect.php"); ?>
-<!DOCTYPE html
-	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
-
+<?php
+header('Content-Type: text/html; charset=utf-8');
+include("include/connect.php");
+?>
+<!DOCTYPE html>
+<html lang="ta">
 <head>
+	<meta charset="UTF-8" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<?php include("include/title.php"); ?>
+	<!-- Tamil Font Support -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+	<style>
+	.tamil-text {
+		font-family: 'Hind Madurai', 'Latha', 'Tamil Sangam MN', Arial Unicode MS, sans-serif;
+		font-size: 13px;
+		color: #555;
+	}
+	</style>
 	<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
 	<script type="text/javascript" src="js/register.js"></script>
 	<script type="text/javascript" src="js/form-field-tooltip.js"></script>
@@ -262,7 +274,7 @@
 											<table style="font-size:15px;" width="100%" border="0" cellpadding="0"
 												cellspacing="0">
 												<tr>
-													<td class="p5px10px">Name/ <font face="Latha" size="-3">பெயர்</font>
+													<td class="p5px10px">Name/ <span class="tamil-text">பெயர்</span>
 														<span class="star">*</span></td>
 													<td class="p5px b gray">:</td>
 													<td class="p5px10px">
@@ -273,8 +285,8 @@
 													</td>
 												</tr>
 												<tr>
-													<td class="p5px10px">Gender/ <font face="Latha" size="-3">பாலினம்
-														</font> <span class="star">*</span></td>
+													<td class="p5px10px">Gender/ <span class="tamil-text">பாலினம்
+														</span> <span class="star">*</span></td>
 													<td class="p5px b gray">:</td>
 													<td class="p5px10px"><input name="gender_type" type="radio"
 															class="vam" value="male" checked="checked">Male &nbsp;
@@ -312,8 +324,8 @@
 													</td>
 												</tr>
 												<tr>
-													<td class="p5px10px">DOB/ <font face="Latha" size="-3">பிறந்த நாள்
-														</font> <span class="star">*</span></td>
+													<td class="p5px10px">DOB/ <span class="tamil-text">பிறந்த நாள்
+														</span> <span class="star">*</span></td>
 													<td class="p5px b gray">:</td>
 													<td class="p5px10px">
 														<input type="text" class="input w90" style="padding:3px;"
@@ -323,8 +335,8 @@
 													</td>
 												</tr>
 												<tr>
-													<td class="p5px10px">TOB/ <font face="Latha" size="-3">பிறந்த நேரம்
-														</font>
+													<td class="p5px10px">TOB/ <span class="tamil-text">பிறந்த நேரம்
+														</span>
 													</td>
 													<td class="p5px b gray">:</td>
 													<td class="p5px10px">
@@ -427,8 +439,7 @@
 												</tr>
 
 												<tr>
-													<td width="35%" class="p5px10px">Star(Nakshatra)/ <font face="Latha"
-															size="-3">நட்சத்திரம்</font>
+													<td width="35%" class="p5px10px">Star(Nakshatra)/ <span class="tamil-text">நட்சத்திரம்</span>
 													</td>
 													<td class="p5px b gray">:</td>
 													<td class="p5px10px">
@@ -468,8 +479,7 @@
 												</tr>
 
 												<tr>
-													<td width="35%" class="p5px10px">Moonsign/ <font face="Latha"
-															size="-3">ராசி</font>
+													<td width="35%" class="p5px10px">Moonsign/ <span class="tamil-text">ராசி</span>
 													</td>
 													<td class="p5px b gray">:</td>
 													<td class="p5px10px">
@@ -531,8 +541,7 @@
 													</td>
 												</tr>
 												<tr>
-													<td width="35%" class="p5px10px">Height/ <font face="Latha"
-															size="-3">உயரம்</font>
+													<td width="35%" class="p5px10px">Height/ <span class="tamil-text">உயரம்</span>
 													</td>
 													<td class="p5px b gray">:</td>
 													<td class="p5px10px">
@@ -640,8 +649,7 @@
 													</td>
 												</tr>
 												<tr valign="top">
-													<td width="35%" class="p5px10px">Email/ <font face="Latha"
-															size="-3">மின்னஞ்சல்</font>
+													<td width="35%" class="p5px10px">Email/ <span class="tamil-text">மின்னஞ்சல்</span>
 													</td>
 													<td class="p5px b gray" width="5">:</td>
 													<td class="p5px10px"><input type="text" class="input w90"
@@ -669,8 +677,7 @@
 												cellspacing="0">
 
 												<tr>
-													<td width="35%" class="p5px10px">Education/ <font face="Latha"
-															size="-3">கல்வி</font>
+													<td width="35%" class="p5px10px">Education/ <span class="tamil-text">கல்வி</span>
 													</td>
 													<td class="p5px b gray">:</td>
 													<td class="p5px10px">
@@ -700,8 +707,8 @@
 													</td>
 												</tr>
 												<tr>
-													<td width="35%" class="p5px10px">Job/ <font face="Latha" size="-3">
-															வேலை</font>
+													<td width="35%" class="p5px10px">Job/ <span class="tamil-text">
+															வேலை</span>
 													</td>
 													<td class="p5px b gray">:</td>
 													<td class="p5px10px"><input type="text" class="input w90" name="job"
@@ -727,8 +734,7 @@
 													</td>
 												</tr>
 												<tr>
-													<td width="35%" class="p5px10px">Salary/ <font face="Latha"
-															size="-3">சம்பளம்</font>
+													<td width="35%" class="p5px10px">Salary/ <span class="tamil-text">சம்பளம்</span>
 													</td>
 													<td class="p5px b gray">:</td>
 													<td class="p5px10px"><input type="text" class="input w90"
@@ -753,8 +759,7 @@
 													</td>
 												</tr>
 												<tr valign="top">
-													<td width="35%" class="p5px10px">Father's Name/ <font face="Latha"
-															size="-3">தந்தை பெயர்</font>
+													<td width="35%" class="p5px10px">Father's Name/ <span class="tamil-text">தந்தை பெயர்</span>
 													</td>
 													<td class="p5px b gray" width="5">:</td>
 													<td class="p5px10px"><input type="text" class="input w90"
@@ -782,8 +787,7 @@
 													</td>
 												</tr>
 												<tr valign="top">
-													<td width="35%" class="p5px10px">Mother's Name/ <font face="Latha"
-															size="-3"> தாய் பெயர்</font>
+													<td width="35%" class="p5px10px">Mother's Name/ <span class="tamil-text"> தாய் பெயர்</span>
 													</td>
 													<td class="p5px b gray" width="5">:</td>
 													<td class="p5px10px"><input type="text" class="input w90"
@@ -793,7 +797,7 @@
 												</tr>
 												<tr valign="top">
 													<td width="35%" class="p5px10px">Mother's Occupation/ <font
-															face="Latha" size="-3">தாய் பதவி்</font>
+															face="Latha" size="-3">தாய் பதவி்</span>
 													</td>
 													<td class="p5px b gray" width="5">:</td>
 													<td class="p5px10px"><input type="text" class="input w90"
@@ -802,8 +806,7 @@
 													</td>
 												</tr>
 												<tr>
-													<td width="35%" class="p5px10px"> No of Brothers/ <font face="Latha"
-															size="-3">சகோதரர்கள் எண்ணிக்கை்</font>
+													<td width="35%" class="p5px10px"> No of Brothers/ <span class="tamil-text">சகோதரர்கள் எண்ணிக்கை்</span>
 													</td>
 													<td class="p5px b gray">:</td>
 													<td class="p5px10px">
@@ -822,7 +825,7 @@
 												</tr>
 												<tr>
 													<td width="35%" class="p5px10px">No of Brothers Married/ <font
-															face="Latha" size="-3">திருமணமான சகோதரன் எண்ணிக்கை</font>
+															face="Latha" size="-3">திருமணமான சகோதரன் எண்ணிக்கை</span>
 													</td>
 													<td class="p5px b gray">:</td>
 													<td class="p5px10px">
@@ -846,8 +849,7 @@
 													</td>
 												</tr>
 												<tr>
-													<td width="35%" class="p5px10px"> No of Sisters/ <font face="Latha"
-															size="-3">சகோதரிகள் எண்ணிக்கை</font>
+													<td width="35%" class="p5px10px"> No of Sisters/ <span class="tamil-text">சகோதரிகள் எண்ணிக்கை</span>
 													</td>
 													<td class="p5px b gray">:</td>
 													<td class="p5px10px">
@@ -866,7 +868,7 @@
 												</tr>
 												<tr>
 													<td width="35%" class="p5px10px">No of Sisters Married/ <font
-															face="Latha" size="-3">திருமணமான சகோதரிகள் எண்ணிக்கை</font>
+															face="Latha" size="-3">திருமணமான சகோதரிகள் எண்ணிக்கை</span>
 													</td>
 													<td class="p5px b gray">:</td>
 													<td class="p5px10px">
@@ -905,8 +907,7 @@
 												</tr>
 
 												<tr valign="top">
-													<td width="35%" class="p5px10px">Expectation/ <font face="Latha"
-															size="-3">எதிர்பார்த்து இருத்தல்</font>
+													<td width="35%" class="p5px10px">Expectation/ <span class="tamil-text">எதிர்பார்த்து இருத்தல்</span>
 													</td>
 													<td class="p5px b gray" width="5">:</td>
 													<td class="p5px10px"><textarea name="expectation" id="expectation"

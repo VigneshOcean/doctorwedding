@@ -1,10 +1,24 @@
-<?php include("include/connect.php"); ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<?php
+header('Content-Type: text/html; charset=utf-8');
+include("include/connect.php");
+?>
+<!DOCTYPE html>
+<html lang="ta">
 <head>
+<meta charset="UTF-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php include("include/title.php"); ?>
+<!-- Tamil Font Support -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+.tamil-text {
+    font-family: 'Hind Madurai', 'Latha', 'Tamil Sangam MN', Arial Unicode MS, sans-serif;
+    font-size: 13px;
+    color: #555;
+}
+</style>
 <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
 <script type="text/javascript" src="js/register.js"></script>
 <script type="text/javascript" src="js/form-field-tooltip.js"></script>
@@ -274,7 +288,7 @@ function validateForm()
 
 <table  style="font-size:15px;" width="100%"  border="0" cellpadding="0" cellspacing="0">
 <tr>
-<td class="p5px10px">Name/ <font face="Latha" size="-3">à®ªà¯†à®¯à®°à¯</font> <span class="star">*</span></td>
+<td class="p5px10px">Name/ <span class="tamil-text">பெயர்</span> <span class="star">*</span></td>
 <td class="p5px b gray">:</td>
 <td class="p5px10px">
 <input type="text" class="input w90" style="padding:3px;" name="name" id="name" value="" tooltipText="Plz specify the name for whom u r searching a match." />
@@ -282,7 +296,7 @@ function validateForm()
 </td>
 </tr>
 <tr>
-<td class="p5px10px">Gender/ <font face="Latha" size="-3">à®ªà®¾à®²à®¿à®©à®®à¯</font> <span class="star">*</span></td>
+<td class="p5px10px">Gender/ <span class="tamil-text">பாலினம்</span> <span class="star">*</span></td>
 <td class="p5px b gray">:</td>
 <td class="p5px10px"><input name="gender_type" type="radio" class="vam" value="male" checked="checked"  >Male &nbsp;
 <input class="vam" name="gender_type" type="radio" value="female"  />Female
@@ -316,7 +330,7 @@ function validateForm()
 </td>
 </tr>
 <tr>
-<td class="p5px10px">DOB/ <font face="Latha" size="-3">à®ªà®¿à®±à®¨à¯à®¤ à®¨à®¾à®³à¯</font> <span class="star">*</span></td>
+<td class="p5px10px">DOB/ <span class="tamil-text">பிறந்த நாள்</span> <span class="star">*</span></td>
 <td class="p5px b gray">:</td>
 <td class="p5px10px">
 <input type="text" class="input w90" style="padding:3px;" name="dob" id="dob" value="" tooltipText="Plz specify the Date of birth in this format(ie.01/12/1990)" />
@@ -324,7 +338,7 @@ function validateForm()
 </td>
 </tr>
 <tr>
-<td class="p5px10px">TOB/ <font face="Latha" size="-3">à®ªà®¿à®±à®¨à¯à®¤ à®¨à¯‡à®°à®®à¯</font></td>
+<td class="p5px10px">TOB/ <span class="tamil-text">பிறந்த நேரம்</span></td>
 <td class="p5px b gray">:</td>
 <td class="p5px10px">
 <input type="text" class="input w90" style="padding:3px;" name="birthtime" id="birthtime" value="" tooltipText="Plz specify the Time of birth in this format(Eg:07:05AM,08:50PM)" />
@@ -432,7 +446,7 @@ while($caste_row = mysqli_fetch_array($caste))
 </tr>
 
 <tr>
-<td width="35%" class="p5px10px">Star(Nakshatra)/ <font face="Latha" size="-3">à®¨à®Ÿà¯à®šà®¤à¯à®¤à®¿à®°à®®à¯</font> </td>
+<td width="35%" class="p5px10px">Star(Nakshatra)/ <span class="tamil-text">நட்சத்திரம்</span> </td>
 <td class="p5px b gray">:</td>
 <td class="p5px10px">
 <select name="star" id="star" class="input" style="width:290px;" >
@@ -470,7 +484,7 @@ while($caste_row = mysqli_fetch_array($caste))
 </tr>
 
 <tr>
-<td width="35%" class="p5px10px">Moonsign/ <font face="Latha" size="-3">à®°à®¾à®šà®¿à¯</font> </td>
+<td width="35%" class="p5px10px">Moonsign/ <span class="tamil-text">ராசி</span> </td>
 <td class="p5px b gray">:</td>
 <td class="p5px10px">
 <select name="moonsign" id="moonsign" class="input" style="width:290px;" >
@@ -524,7 +538,7 @@ while($caste_row = mysqli_fetch_array($caste))
 </td>
 </tr>
 <tr>
-<td width="35%" class="p5px10px">Height/ <font face="Latha" size="-3">à®‰à®¯à®°à®®à¯</font> </td>
+<td width="35%" class="p5px10px">Height/ <span class="tamil-text">உயரம்</span> </td>
 <td class="p5px b gray">:</td>
 <td class="p5px10px">
 <select name="height" id="height" class="input" style="width:290px;" >
@@ -588,7 +602,7 @@ while($caste_row = mysqli_fetch_array($caste))
 </td>
 </tr>
 <tr valign="top">
-<td width="35%" class="p5px10px">Email/ <font face="Latha" size="-3">à®®à®¿à®©à¯à®©à®žà¯à®šà®²à¯</font> </td>
+<td width="35%" class="p5px10px">Email/ <span class="tamil-text">மின்னஞ்சல்</span> </td>
 <td class="p5px b gray" width="5">:</td>
 <td class="p5px10px"><input type="text" class="input w90"  name="email" id="email"  value="" tooltipText="Example abc@yahoo.com <br>Email address will not be shared with anyone. You will receive matches on this email address."   onblur="return validate_Email(this);" />
 <p class="error" id="username_error"></p>
@@ -610,7 +624,7 @@ while($caste_row = mysqli_fetch_array($caste))
 <table style="font-size:15px;" width="100%"  border="0" cellpadding="0" cellspacing="0">
 
 <tr>
-<td width="35%" class="p5px10px">Education/ <font face="Latha" size="-3">à®•à®²à¯à®µà®¿</font> </td>
+<td width="35%" class="p5px10px">Education/ <span class="tamil-text">கல்வி</span> </td>
 <td class="p5px b gray">:</td>
 <td class="p5px10px">
 <select name="education" id="education" class="input" style="width:290px;" >
@@ -636,7 +650,7 @@ while($education_row = mysqli_fetch_array($education))
 </td>
 </tr>
 <tr>
-<td width="35%" class="p5px10px">Job/ <font face="Latha" size="-3">à®µà¯‡à®²à¯ˆ</font></td>
+<td width="35%" class="p5px10px">Job/ <span class="tamil-text">வேலை</span></td>
 <td class="p5px b gray">:</td>
 <td class="p5px10px"><input type="text" class="input w90"  name="job" id="job"  value="" tooltipText="Enter Desgination name"  />
 <p class="error" id="username_error"></p>   
@@ -658,7 +672,7 @@ while($education_row = mysqli_fetch_array($education))
 </td>
 </tr>
 <tr>
-<td width="35%" class="p5px10px">Salary/ <font face="Latha" size="-3">à®šà®®à¯à®ªà®³à®®à¯</font></td>
+<td width="35%" class="p5px10px">Salary/ <span class="tamil-text">சம்பளம்</span></td>
 <td class="p5px b gray">:</td>
 <td class="p5px10px"><input type="text" class="input w90"  name="salary" id="salary"  value="" />
 <p class="error" id="username_error"></p>   
@@ -678,14 +692,14 @@ while($education_row = mysqli_fetch_array($education))
 </td>
 </tr>
 <tr valign="top">
-<td width="35%" class="p5px10px">Father's Name/ <font face="Latha" size="-3">à®¤à®¨à¯à®¤à¯ˆ à®ªà¯†à®¯à®°à¯</font> </td>
+<td width="35%" class="p5px10px">Father's Name/ <span class="tamil-text">தந்தை பெயர்</span> </td>
 <td class="p5px b gray" width="5">:</td>
 <td class="p5px10px"><input type="text" class="input w90"  name="fathername" id="fathername"  value="" />
 <p class="error" id="username_error"></p>
 </td>
 </tr>
 <tr valign="top">
-<td width="35%" class="p5px10px">Father's Occupation/ <font face="Latha" size="-3">à®¤à®¨à¯à®¤à¯ˆ à®ªà®¤à®µà®¿à¯</font> </td>
+<td width="35%" class="p5px10px">Father's Occupation/ <span class="tamil-text">தந்தை பதவி</span> </td>
 <td class="p5px b gray" width="5">:</td>
 <td class="p5px10px"><input type="text" class="input w90"  name="father_occupation" id="father_occupation"  value="" />
 <p class="error" id="username_error"></p>
@@ -699,21 +713,21 @@ while($education_row = mysqli_fetch_array($education))
 </td>
 </tr>
 <tr valign="top">
-<td width="35%" class="p5px10px">Mother's Name/ <font face="Latha" size="-3">à®¤à®¾à®¯à¯ à®ªà¯†à®¯à®°à¯</font> </td>
+<td width="35%" class="p5px10px">Mother's Name/ <span class="tamil-text">தாய் பெயர்</span> </td>
 <td class="p5px b gray" width="5">:</td>
 <td class="p5px10px"><input type="text" class="input w90"  name="mother_name" id="mother_name"  value="" />
 <p class="error" id="username_error"></p>
 </td>
 </tr>
 <tr valign="top">
-<td width="35%" class="p5px10px">Mother's Occupation/ <font face="Latha" size="-3">à®¤à®¾à®¯à¯ à®ªà®¤à®µà®¿à¯</font> </td>
+<td width="35%" class="p5px10px">Mother's Occupation/ <span class="tamil-text">தாய் பதவி</span> </td>
 <td class="p5px b gray" width="5">:</td>
 <td class="p5px10px"><input type="text" class="input w90"  name="mother_occupation" id="father_occupation"  value="" />
 <p class="error" id="username_error"></p>
 </td>
 </tr>
 <tr>
-<td width="35%" class="p5px10px"> No of Brothers/ <font face="Latha" size="-3">à®šà®•à¯‹à®¤à®°à®°à¯à®•à®³à¯ à®Žà®£à¯à®£à®¿à®•à¯à®•à¯ˆà¯</font> </td>
+<td width="35%" class="p5px10px"> No of Brothers/ <span class="tamil-text">சகோதரர்கள் எண்ணிக்கை</span> </td>
 <td class="p5px b gray">:</td>
 <td class="p5px10px">
 <select name="no_of_brothers" id="no_of_brothers" class="input" style="width:290px;" >
@@ -729,7 +743,7 @@ while($education_row = mysqli_fetch_array($education))
 </td>
 </tr>
 <tr>
-<td width="35%" class="p5px10px">No of Brothers Married/ <font face="Latha" size="-3">à®¤à®¿à®°à¯à®®à®£à®®à®¾à®© à®šà®•à¯‹à®¤à®°à®©à¯ à®Žà®£à¯à®£à®¿à®•à¯à®•à¯ˆ</font></td>
+<td width="35%" class="p5px10px">No of Brothers Married/ <span class="tamil-text">திருமணமான சகோதரன் எண்ணிக்கை</span></td>
 <td class="p5px b gray">:</td>
 <td class="p5px10px">
 <select name="bro_married" id="bro_married" class="input" style="width:290px;" >
@@ -745,7 +759,7 @@ while($education_row = mysqli_fetch_array($education))
 </td>
 </tr>
 <tr>
-<td width="35%" class="p5px10px">  No of Sisters/ <font face="Latha" size="-3">à®šà®•à¯‹à®¤à®°à®¿à®•à®³à¯ à®Žà®£à¯à®£à®¿à®•à¯à®•à¯ˆ</font> </td>
+<td width="35%" class="p5px10px">  No of Sisters/ <span class="tamil-text">சகோதரிகள் எண்ணிக்கை</span> </td>
 <td class="p5px b gray">:</td>
 <td class="p5px10px">
 <select name="no_of_sisters" id="no_of_sisters" class="input" style="width:290px;" >
@@ -761,7 +775,7 @@ while($education_row = mysqli_fetch_array($education))
 </td>
 </tr>
 <tr>
-<td width="35%" class="p5px10px">No of Sisters Married/ <font face="Latha" size="-3">à®¤à®¿à®°à¯à®®à®£à®®à®¾à®© à®šà®•à¯‹à®¤à®°à®¿à®•à®³à¯ à®Žà®£à¯à®£à®¿à®•à¯à®•à¯ˆ</font></td>
+<td width="35%" class="p5px10px">No of Sisters Married/ <span class="tamil-text">திருமணமான சகோதரிகள் எண்ணிக்கை</span></td>
 <td class="p5px b gray">:</td>
 <td class="p5px10px">
 <select name="sis_married" id="sis_married" class="input" style="width:290px;" >
@@ -791,7 +805,7 @@ while($education_row = mysqli_fetch_array($education))
 </tr>
 
 <tr valign="top">
-<td width="35%" class="p5px10px">Expectation/ <font face="Latha" size="-3">à®Žà®¤à®¿à®°à¯à®ªà®¾à®°à¯à®¤à¯à®¤à¯ à®‡à®°à¯à®¤à¯à®¤à®²à¯</font> </td>
+<td width="35%" class="p5px10px">Expectation/ <span class="tamil-text">எதிர்பார்த்து இருத்தல்</span> </td>
 <td class="p5px b gray" width="5">:</td>
 <td class="p5px10px"><textarea name="expectation" id="expectation" style="width: 263px; height: 70px;"></textarea>
 <p class="error" id="username_error"></p>
